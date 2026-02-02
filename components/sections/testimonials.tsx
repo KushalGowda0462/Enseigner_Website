@@ -21,14 +21,16 @@ export default function Testimonials() {
     }
 
     return (
-        <div className="py-12 md:py-24 lg:py-32 relative overflow-hidden bg-muted/30">
+        <div className="py-24 relative overflow-hidden bg-muted/30">
             <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-background"></div>
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
             <div className="px-4 md:px-6 relative z-10 mx-auto flex flex-col items-center">
                 <div className="flex flex-col items-center space-y-4 text-center">
-                    <div className="space-y-2">
-                        <div className="text-sm font-medium tracking-wider text-primary uppercase">Testimonials</div>
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                    <div className="space-y-4">
+                        <div className="flex justify-center mb-4">
+                            <span className="label-pill">TESTIMONIALS</span>
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                             Don&apos;t take our word for it
                         </h2>
                     </div>
@@ -64,7 +66,7 @@ export default function Testimonials() {
                         {testimonials.map((testimonial, index) => (
                             <Card
                                 key={index}
-                                className="flex-shrink-0 snap-center rounded-xl border bg-card/50 backdrop-blur-sm w-full max-w-lg"
+                                className="card-glow flex-shrink-0 snap-center rounded-xl w-full max-w-lg"
                             >
                                 <CardContent className="p-6">
                                     <blockquote className="space-y-6">

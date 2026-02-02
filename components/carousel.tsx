@@ -19,7 +19,7 @@ export function InfiniteCarousel() {
               alt={partner.name}
               width={240}
               height={60}
-              className="object-contain h-12 w-24 lg:h-16 md:w-52 filter grayscale hover:grayscale-0"
+              className="object-contain h-12 w-24 lg:h-16 md:w-52 filter grayscale dark:invert"
             />
           </div>
         ))}

@@ -3,21 +3,21 @@ import { SuccessStories } from '@/data/data'
 
 export default function CustomerStories() {
   return (
-    <section className="py-16 bg-muted/30">
-      <div className="text-center space-y-4 mb-12">
-            <div className="space-y-4 text-center">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                SUCCESS STORIES
-              </h3>
-              <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                Our Customers Stories
-              </h2>
-            </div>
-            <p className="text-muted-foreground">See how we&apos;ve helped organizations achieve their goals</p>
+    <section className="py-24 bg-muted/30">
+      <div className="text-center space-y-4 mb-16">
+        <div className="space-y-4 text-center">
+          <div className="flex justify-center mb-4">
+            <span className="label-pill">SUCCESS STORIES</span>
           </div>
-        <div className="container mx-auto px-4">
-          <CardsSection cardsData={SuccessStories} linkprev='/succes-story'/>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+            Our Customer Stories
+          </h2>
         </div>
-      </section>
-    )
-  }
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">See how we&apos;ve helped organizations achieve their goals</p>
+      </div>
+      <div className="container mx-auto px-4">
+        <CardsSection cardsData={SuccessStories} linkprev='/succes-story' />
+      </div>
+    </section>
+  )
+}

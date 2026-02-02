@@ -2,68 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer base {
   :root {
-    /* Bright theme with vibrant blue accents */
+    /* Electric-Meteorite Light Mode */
     --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --foreground: 222 84% 5%;
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 222 84% 5%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 221 83% 53%;
+    --popover-foreground: 222 84% 5%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 40% 96%;
+    --secondary: 214 32% 91%;
     --secondary-foreground: 222 47% 11%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222 47% 11%;
-    --destructive: 0 84.2% 60.2%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
-    --chart-1: 221 83% 53%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 262 83% 58%;
+    --chart-3: 173 58% 39%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.75rem;
+
+    /* Custom semantic colors */
+    --surface: 0 0% 100%;
+    --surface-2: 220 14% 98%;
+    --text-primary: 222 84% 5%;
+    --text-secondary: 215 16% 47%;
+    --accent-blue: 217 91% 60%;
+    --accent-purple: 262 83% 58%;
   }
-  
+
   .dark {
-    --background: 222 47% 8%;
-    --foreground: 210 40% 96%;
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 96%;
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 96%;
-    --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217 19% 16%;
-    --secondary-foreground: 210 40% 96%;
-    --muted: 217 19% 16%;
-    --muted-foreground: 215 20% 70%;
-    --accent: 217 19% 20%;
-    --accent-foreground: 210 40% 96%;
-    --destructive: 0 62.8% 30.6%;
+    /* Electric-Meteorite Dark Mode */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+    --card: 217 33% 9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 217 33% 9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 12%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217 19% 20%;
-    --input: 217 19% 20%;
-    --ring: 221 83% 53%;
-    --chart-1: 221 83% 53%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
+    --border: 217 33% 15%;
+    --input: 217 33% 15%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 262 83% 58%;
+    --chart-3: 173 58% 39%;
+    --chart-4: 43 74% 66%;
     --chart-5: 340 75% 55%;
+
+    /* Custom semantic colors */
+    --surface: 217 33% 9%;
+    --surface-2: 217 33% 12%;
+    --text-primary: 210 40% 98%;
+    --text-secondary: 215 20% 65%;
+    --accent-blue: 217 91% 60%;
+    --accent-purple: 262 83% 58%;
   }
 }
 
@@ -71,22 +89,92 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
 @layer components {
+
+  /* Background Patterns */
+  .bg-stars {
+    background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.08) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Gradient Utilities */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--accent-blue)) 0%, hsl(var(--accent-purple)) 100%);
+  }
+
+  .gradient-card {
+    background: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(262 83% 58%) 100%);
+  }
+
+  /* Button Styles */
   .btn-primary-glow {
-    @apply bg-primary text-primary-foreground shadow-lg shadow-primary/50;
+    @apply bg-primary text-primary-foreground shadow-lg shadow-primary/30;
     transition: all 0.3s ease;
   }
+
   .btn-primary-glow:hover {
-    @apply shadow-xl shadow-primary/60;
-    transform: translateY(-1px);
+    @apply shadow-xl shadow-primary/50;
+    transform: translateY(-2px);
   }
-  
+
+  .btn-secondary-outline {
+    @apply bg-transparent border-2 border-primary text-primary;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary-outline:hover {
+    @apply bg-primary/10 shadow-lg shadow-primary/20;
+  }
+
+  /* Card Styles */
   .card-hover {
-    @apply transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10;
+    @apply transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10;
+  }
+
+  .card-glow {
+    @apply border border-border/40 bg-card/50 backdrop-blur-sm;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-glow:hover {
+    @apply border-primary/30 shadow-2xl;
+    box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.15);
+    transform: translateY(-4px);
+  }
+
+  /* Icon Badge */
+  .icon-badge {
+    @apply rounded-xl p-3 bg-primary/10 text-primary;
+    transition: all 0.3s ease;
+  }
+
+  .icon-badge:hover {
+    @apply bg-primary/20 scale-110 rotate-6;
+  }
+
+  /* Label Pill */
+  .label-pill {
+    @apply inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full;
+    @apply bg-primary/10 text-primary border border-primary/20;
+  }
+
+  /* Text Gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(262 83% 58%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

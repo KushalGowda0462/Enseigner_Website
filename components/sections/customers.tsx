@@ -3,9 +3,14 @@ import Image from "next/image"
 
 export default function CustomerLogos() {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Trusted by Industry Leaders</h2>
+        <div className="text-center space-y-4 mb-16">
+          <div className="flex justify-center mb-4">
+            <span className="label-pill">TRUSTED BY</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold">Industry Leaders</h2>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 items-center">
           {customers.map((customer) => (
             <div key={customer.name} className="flex justify-center">
@@ -16,6 +21,7 @@ export default function CustomerLogos() {
                   fill
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
                   style={{ objectFit: "contain" }}
+                  className="filter grayscale dark:invert"
                 />
               </div>
             </div>

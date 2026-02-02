@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { MobileMenu } from "./MobileSheet"
 import { components, resources, training } from "@/data/data"
+import { ModeToggle } from "./mode-toggle"
 
 const content = getContent();
 
@@ -23,10 +24,10 @@ function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/90 border-b border-border/40 flex justify-center mx-auto px-4">
       <div className="container flex h-16 items-center justify-between">
         <Link href={"/"}>
-          <Image 
-            src={content.brand.logoPath} 
-            alt={content.brand.name} 
-            className="h-8 md:h-10 w-auto object-contain" 
+          <Image
+            src={content.brand.logoPath}
+            alt={content.brand.name}
+            className="h-8 md:h-10 w-auto object-contain"
             width={673}
             height={123}
             priority
@@ -40,6 +41,7 @@ function Navbar() {
                 {content.nav.cta.label}
               </Button>
             </Link>
+            <ModeToggle />
           </div>
           <MobileMenu />
         </div>
@@ -56,13 +58,13 @@ export function NavigationMenuDemo() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/about" legacyBehavior passHref>
-            <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent transition-colors hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full`}>
+            <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent transition-colors hover:text-primary focus:text-primary data-[active]:text-primary data-[state=open]:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full`}>
               About Us
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent transition-colors hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+          <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent transition-colors hover:text-primary focus:text-primary data-[active]:text-primary data-[state=open]:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full">
             Consulting
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -80,7 +82,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent transition-colors hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+          <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent transition-colors hover:text-primary focus:text-primary data-[active]:text-primary data-[state=open]:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full">
             Training
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -98,7 +100,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent transition-colors hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+          <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent transition-colors hover:text-primary focus:text-primary data-[active]:text-primary data-[state=open]:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full">
             Resources
           </NavigationMenuTrigger>
           <NavigationMenuContent>

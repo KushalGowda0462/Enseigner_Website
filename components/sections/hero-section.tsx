@@ -8,43 +8,60 @@ export default function Hero() {
   const hero = content.hero;
 
   return (
-    <section className="relative overflow-hidden flex justify-center bg-gradient-to-br from-blue-50 via-white to-sky-50">
-      <div className="relative min-h-[70vh] py-24 md:py-0 w-full">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: 'url("/hero.avif")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-50/90 via-white/90 to-sky-50/90" />
-        </div>
-
+    <section className="relative overflow-hidden flex justify-center bg-background">
+      {/* Background with subtle pattern */}
+      <div className="absolute inset-0 bg-stars dark:opacity-100 opacity-0" />
+      
+      <div className="relative min-h-[85vh] py-24 md:py-32 w-full">
         <div className="relative z-10 min-h-[80vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
+            {/* Top Label Pill */}
             {hero.topLabel && (
-              <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-4">
-                {hero.topLabel}
-              </p>
+              <div className="mb-6 flex justify-center">
+                <span className="label-pill">
+                  {hero.topLabel}
+                </span>
+              </div>
             )}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6">
-              {hero.headline}
+            
+            {/* Headline with gradient highlight */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+              {hero.headline.split(' ').map((word, idx) => {
+                // Highlight key words (AI, Services, Sovereign, etc.)
+                const highlightWords = ['AI', 'Sovereign', 'Services', 'GCC', 'regulated'];
+                const shouldHighlight = highlightWords.some(hw => word.toLowerCase().includes(hw.toLowerCase()));
+                
+                return shouldHighlight ? (
+                  <span key={idx} className="text-gradient">{word} </span>
+                ) : (
+                  <span key={idx}>{word} </span>
+                );
+              })}
             </h1>
-            <p className="text-muted-foreground text-lg sm:text-xl max-w-3xl mx-auto mb-8">
+            
+            {/* Subheadline */}
+            <p className="text-muted-foreground text-lg sm:text-xl lg:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed">
               {hero.subheadline}
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <Link href={hero.primaryCta.href} className="btn-primary-glow h-12 px-6 py-2.5 rounded-3xl text-base font-bold flex items-center">
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap justify-center gap-4 mb-16">
+              <Link 
+                href={hero.primaryCta.href} 
+                className="btn-primary-glow h-12 px-8 py-3 rounded-full text-base font-semibold flex items-center"
+              >
                 {hero.primaryCta.label}
               </Link>
-              <Link href={hero.secondaryCta.href} className="h-12 px-6 py-2.5 bg-transparent border-2 border-primary text-primary rounded-3xl text-base font-bold flex items-center hover:bg-primary/10 transition-colors">
+              <Link 
+                href={hero.secondaryCta.href} 
+                className="btn-secondary-outline h-12 px-8 py-3 rounded-full text-base font-semibold flex items-center"
+              >
                 {hero.secondaryCta.label}
               </Link>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+            {/* Micro Highlights - Icon Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
               {hero.microHighlights && hero.microHighlights.map((micro, idx) => {
                 const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
                   "Server": Server,
@@ -53,10 +70,10 @@ export default function Hero() {
                 };
                 const Icon = iconMap[micro.icon] || Server;
                 return (
-                  <div key={idx} className="text-center">
+                  <div key={idx} className="text-center group">
                     <div className="flex justify-center mb-4">
-                      <div className="rounded-full bg-primary/20 p-4">
-                        <Icon className="h-8 w-8 text-primary" />
+                      <div className="icon-badge">
+                        <Icon className="h-8 w-8" />
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-foreground mb-2">{micro.title}</h3>
@@ -65,11 +82,13 @@ export default function Hero() {
                 );
               })}
             </div>
+            
+            {/* Highlights List */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {hero.highlights.map((highlight, idx) => (
-                <div key={idx} className="flex items-start gap-3 text-left">
-                  <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <p className="text-muted-foreground text-sm">{highlight}</p>
+                <div key={idx} className="flex items-start gap-3 text-left bg-card/30 backdrop-blur-sm border border-border/40 rounded-lg p-4 hover:border-primary/30 transition-all duration-300">
+                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-muted-foreground text-sm leading-relaxed">{highlight}</p>
                 </div>
               ))}
             </div>
