@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { getContent } from '@/lib/content'
-import { Check, Server, Cloud, Zap } from 'lucide-react'
+import { Brain, Check, Cloud, Server, Shield, Zap } from 'lucide-react'
 
 export default function Hero() {
   const content = getContent();
@@ -27,8 +27,7 @@ export default function Hero() {
             {/* Headline with gradient highlight */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
               {hero.headline.split(' ').map((word, idx) => {
-                // Highlight key words (AI, Services, Sovereign, etc.)
-                const highlightWords = ['AI', 'Sovereign', 'Services', 'GCC', 'regulated'];
+                const highlightWords = ['AI', 'Intelligent', 'Enterprise', 'Systems', 'Infrastructure'];
                 const shouldHighlight = highlightWords.some(hw => word.toLowerCase().includes(hw.toLowerCase()));
                 
                 return shouldHighlight ? (
@@ -67,6 +66,8 @@ export default function Hero() {
                   "Server": Server,
                   "Cloud": Cloud,
                   "Zap": Zap,
+                  "Brain": Brain,
+                  "Shield": Shield,
                 };
                 const Icon = iconMap[micro.icon] || Server;
                 return (

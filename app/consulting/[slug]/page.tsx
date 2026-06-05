@@ -168,7 +168,7 @@ export default async function ConsultingDetailPage({ params }: PageProps) {
                         <div className="md:col-span-5 bg-muted/50 p-8 md:p-12 flex flex-col justify-center">
                             <span className="label-pill w-fit mb-6">CASE EXAMPLE</span>
                             <h3 className="text-2xl font-bold mb-4">Real World Impact</h3>
-                            <p className="text-muted-foreground">See how we solved complex challenges for a regulated enterprise.</p>
+                            <p className="text-muted-foreground">See how we solve complex enterprise execution challenges.</p>
                         </div>
                         <div className="md:col-span-7 p-8 md:p-12 space-y-8">
                             <div className="space-y-2">

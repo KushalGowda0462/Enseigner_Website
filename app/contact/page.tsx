@@ -39,7 +39,32 @@ export default function Contact() {
 
       <section className="pt-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
+          <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr] max-w-5xl mx-auto">
+            <Card className="p-8 bg-card border-border/40 h-fit">
+              <h2 className="text-2xl font-bold mb-6 text-foreground">Company Contact</h2>
+              <div className="space-y-5 text-muted-foreground">
+                <div>
+                  <p className="text-sm font-medium text-foreground">Founder & MD</p>
+                  <p>{contact.founder}</p>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">Email</p>
+                  <a href={`mailto:${contact.email}`} className="text-primary hover:underline">
+                    {contact.email}
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">Website</p>
+                  <a href={`https://${contact.website}`} className="text-primary hover:underline">
+                    {contact.website}
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">Focus</p>
+                  <p>AI · Computer Vision · Enterprise Data Centre · Integrated Security Systems · Network Solutions · Audio Video Solutions</p>
+                </div>
+              </div>
+            </Card>
             <Card className="p-8 bg-card border-border/40">
               <h2 className="text-2xl font-bold mb-6 text-foreground">Get in Touch</h2>
               <form className="space-y-6">

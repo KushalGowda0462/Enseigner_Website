@@ -1,16 +1,16 @@
 {
   "brand": {
     "name": "Enseigner",
-    "product": "Sovereign AI",
-    "tagline": "Compliance-first GPU infrastructure and AI execution for regulated GCC enterprises",
-    "oneLiner": "Moving AI from pilot to production where governance matters",
-    "region": "UAE | Scope: Entire GCC",
-    "stage": "Pre-Seed",
+    "product": "Enterprise Systems Integration",
+    "tagline": "Engineering the Intelligent Enterprise",
+    "oneLiner": "Infrastructure-led. AI-enabled. Security-first. India-proven.",
+    "region": "India | Pan-India enterprise delivery",
+    "stage": "Company Profile 2026",
     "logoPath": "/enseigner-logo.png"
   },
   "seo": {
-    "title": "Enseigner — Sovereign AI for Regulated GCC Enterprises",
-    "description": "Compliance-first GPU infrastructure and AI execution for regulated GCC enterprises. Moving AI from pilot to production where governance matters.",
+    "title": "Enseigner — Engineers the Systems of the World",
+    "description": "Enseigner is an infrastructure-first enterprise technology company delivering AI, computer vision, data centre, security, networking, and command centre systems across India.",
     "ogImage": "/enseigner-logo.png"
   },
   "nav": {
@@ -23,148 +23,148 @@
     "cta": { "label": "Contact Us", "href": "/contact", "type": "route" }
   },
   "hero": {
-    "topLabel": "FUTURE-READY IT SERVICES",
-    "headline": "Sovereign AI for regulated GCC enterprises",
-    "subheadline": "Compliance-first GPU infrastructure and AI execution for production workloads — where data residency, auditability, and governance are non-negotiable.",
-    "primaryCta": { "label": "Request a Demo", "href": "/contact" },
-    "secondaryCta": { "label": "View Offerings", "href": "#offerings" },
+    "topLabel": "ENGINEERS THE SYSTEMS OF THE WORLD",
+    "headline": "Engineering the Intelligent Enterprise",
+    "subheadline": "Enseigner delivers end-to-end systems integration, infrastructure, security, networking, data centre, and AI-powered intelligent operations for Indian enterprises.",
+    "primaryCta": { "label": "Contact Enseigner", "href": "/contact" },
+    "secondaryCta": { "label": "View Capabilities", "href": "#offerings" },
     "highlights": [
-      "Always-on AI workloads with predictable GPU costs",
-      "Auditable AI pipelines aligned to regulatory requirements",
-      "Faster transition from pilot to production environments"
+      "12+ years of enterprise execution across India",
+      "10,000+ branch and site security installations delivered",
+      "AI, computer vision, data centre, networking, and command centre expertise"
     ],
     "microHighlights": [
       {
-        "title": "Future-Ready",
-        "subtitle": "Build AI ready infrastructure",
+        "title": "Infrastructure-Led",
+        "subtitle": "Data centre, compute, storage, networking, and structured cabling",
         "icon": "Server"
       },
       {
-        "title": "Resilient",
-        "subtitle": "Reliable Cloud and Data Center Solutions",
-        "icon": "Cloud"
+        "title": "AI-Enabled",
+        "subtitle": "Computer vision, video analytics, anomaly detection, and intelligent operations",
+        "icon": "Brain"
       },
       {
-        "title": "Robust",
-        "subtitle": "End to end Data Solutions",
-        "icon": "Zap"
+        "title": "Security-First",
+        "subtitle": "CCTV, access control, intrusion alarm, fire alarm, and command visibility",
+        "icon": "Shield"
       }
     ]
   },
   "market": {
-    "title": "The $50B AI Infrastructure Gold Rush",
+    "title": "Enterprise Technology Built for India",
     "items": [
-      { "label": "Global GPUaaS", "value": "$4.3B (2024) → $49.8B (2032)", "note": "26.5% CAGR" },
-      { "label": "GCC Market", "value": "$150M (2025 est.) → $450M+ (2030)", "note": "22% CAGR" },
-      { "label": "UAE Alone", "value": "$35.7M (2024) → $125.4M (2030)", "note": "24.6% CAGR" },
-      { "label": "Regional Investment", "value": "$10B+", "note": "UAE AI Strategy 2031, Saudi Vision 2030" }
+      { "label": "Execution History", "value": "12+ years", "note": "Enterprise delivery across India" },
+      { "label": "Enterprise Clients", "value": "100+", "note": "Banking, government, healthcare, logistics, retail, and infrastructure" },
+      { "label": "Installations", "value": "10,000+", "note": "Branch and site security deployments" },
+      { "label": "OEM Ecosystem", "value": "200+ brands", "note": "Security, compute, storage, networking, and safety partners" }
     ]
   },
   "whyNow": {
-    "title": "Why Now?",
+    "title": "Why Enseigner",
     "points": [
-      "Dubai is emerging as a global AI/Fintech hub with increasing priority on data sovereignty."
+      "Indian enterprises need operationally sound infrastructure before AI, security, and intelligent automation can succeed.",
+      "Fragmented vendors increase operational risk; Enseigner integrates infrastructure, security, networking, data centre, and intelligent operations under one accountable delivery model."
     ]
   },
   "problem": {
-    "title": "Problem Statement",
+    "title": "Enterprise Execution Gap",
     "points": [
-      "High CapEx for GPU clusters; security, compliance, and audit approvals stall deployments.",
-      "AI fails in production in regulated GCC enterprises for operational reasons — not model accuracy.",
-      "Hyperscalers (AWS/Azure UAE): volatile pricing + premiums + limited local/Arabic support.",
-      "No GCC-compliant sovereign cloud for sensitive data residency (UAE PDPL, Saudi NDMO).",
-      "85% of AI projects fail past pilots (Gartner/IDC) due to cost/compliance.",
-      "Fragmented providers: infrastructure, execution, and governance owned by different vendors."
+      "Technology adoption fails when infrastructure, security, networking, and operations are designed in silos.",
+      "Distributed enterprises need centralised command visibility across branches, campuses, ports, warehouses, and critical infrastructure.",
+      "Security and compliance requirements demand on-premise data processing, audit trails, and controlled operational access.",
+      "Enterprise teams need one partner from consultancy and design through supply, implementation, AMC, and managed operations."
     ]
   },
   "gap": {
-    "title": "Gap",
+    "title": "What We Close",
     "points": [
-      "Hyperscalers are optimized for elastic experimentation, not regulated production AI."
+      "The gap between technology ambition and field execution across Indian enterprise environments.",
+      "The gap between standalone surveillance or IT systems and unified, AI-enabled intelligent operations."
     ]
   },
   "offerings": {
     "id": "offerings",
-    "title": "Our Services",
-    "subtitle": "Comprehensive solutions for sovereign AI infrastructure and compliance-first execution.",
+    "title": "Core Competencies",
+    "subtitle": "Security-first. Infrastructure-led. AI-enabled. Enterprise-grade.",
     "cards": [
       {
-        "title": "Data Analytics",
-        "desc": "Harness diverse data sources for actionable insights and confident business decisions with GCC-compliant data warehousing."
+        "title": "Security Systems",
+        "desc": "CCTV video surveillance, access control, intrusion alarm, and fire alarm systems with end-to-end design, supply, installation, and maintenance."
       },
       {
-        "title": "AI Solutions",
-        "desc": "Infuse intelligence to solve complex problems and drive innovation with machine learning, built on sovereign GPU infrastructure."
+        "title": "Data Centre",
+        "desc": "Enterprise compute, storage, backup, network fabric, structured cabling, and disaster recovery architectures for mission-critical operations."
       },
       {
-        "title": "Data Center",
-        "desc": "Deploy high-performance servers and GPU-accelerated clusters with Cisco AI PODs for intensive AI/ML workloads."
+        "title": "Computer Vision",
+        "desc": "AI-powered video analytics for workforce attendance, access intelligence, retail analytics, anomaly detection, and enterprise monitoring."
       },
       {
-        "title": "Cloud Migration",
-        "desc": "Modernize with cost-effective, secure, high-performance cloud solutions for on-demand scalability with full GCC data residency compliance."
+        "title": "Command Centre",
+        "desc": "Centralised operational visibility, AIOps-driven automation, SLA tracking, multi-site command, and role-based enterprise dashboards."
       }
     ],
-    "note": "Local advantages justify a 10–20% cost premium through sovereignty and cultural optimization."
+    "note": "Consultancy -> design -> supply -> implementation -> AMC: one accountable partner across the full lifecycle."
   },
   "blogs": {
     "title": "OUR BLOGS",
-    "subtitle": "Insights, updates, and industry knowledge sharing",
+    "subtitle": "Insights on infrastructure, automation, data centre, cloud, and enterprise operations",
     "viewAllLabel": "View All Blogs",
     "viewAllHref": "/resources#blogs"
   },
   "advantage": {
     "id": "advantage",
-    "title": "Our Advantage",
-    "subtitle": "Why existing options fall short — and why we win.",
+    "title": "Operational Strengths",
+    "subtitle": "AI, data centre, computer vision, security systems, server and compute, and end-to-end delivery.",
     "wins": [
-      "Always-on AI workloads with predictable GPU costs",
-      "Auditable AI pipelines aligned to regulatory requirements",
-      "Clear operational ownership for infrastructure and execution",
-      "Faster transition from pilot to production environments"
+      "Pan-India execution team with enterprise deployment experience",
+      "10,000+ operational security deployments across banking, retail, government, and enterprise sites",
+      "200+ OEM relationships across compute, networking, storage, security, fire, and safety",
+      "On-premise AI processing designed for enterprise privacy and operational compliance"
     ]
   },
   "traction": {
-    "title": "Run-Rate Potential by End of Year-1",
+    "title": "Operational Track Record",
     "points": [
-      "Revenue scales with workload persistence, not customer volume.",
-      "Subscription-based sovereign GPU infrastructure."
+      "Enterprise deployments across BFSI, government, defence, ports, logistics, healthcare, education, retail, IT, manufacturing, and industrial sectors.",
+      "Security systems, data centre buildout, surveillance, access control, structured cabling, command/control, and operational support."
     ]
   },
   "investorTakeaways": {
-    "title": "Key Investor Takeaways",
+    "title": "Enterprise Takeaways",
     "points": [
-      "Year-1 is intentionally investment-heavy: infrastructure and compliance laid upfront; ARR deliberately conservative.",
-      "Strong margin expansion by Year-3: infrastructure largely fixed; revenue driven by vertical solutions and enterprise contracts.",
-      "Operating leverage visible by Year-2: minimal incremental CAPEX while ARR scales through solution-led revenue.",
-      "Capital efficiency improves each year: ARR/OPEX crosses >1× in Year-2 and accelerates thereafter."
+      "Infrastructure discipline is the foundation for successful enterprise technology adoption.",
+      "Integrated systems reduce fragmented vendor exposure and operational risk.",
+      "On-premise intelligent operations preserve control over biometric, security, and operational data.",
+      "Lifecycle delivery creates accountability from design to long-term maintenance."
     ]
   },
   "roadmap": {
     "id": "roadmap",
-    "title": "Operational Roadmap",
-    "endState": "Production AI approved by security, compliance, and finance."
+    "title": "Delivery Lifecycle",
+    "endState": "Consultancy, design, supply, implementation, and AMC delivered by one accountable partner."
   },
   "funding": {
     "id": "funding",
-    "title": "Funding Plan & Scale Optionality",
-    "headline": "Capital-efficient path to $5–6M ARR",
+    "title": "Scale Optionality",
+    "headline": "From single site to enterprise-wide deployment",
     "details": [
-      "$5M Pre-Seed",
-      "16-GPU cluster + Year 1 & 2 ops",
-      "20–24 month runway to $5–6M ARR"
+      "Single-site pilots without redesign",
+      "Multi-location rollout visibility",
+      "Pan-India managed operations and AMC"
     ]
   },
   "footer": {
-    "closing": "Let's Build GCC AI",
-    "copyright": "© 2025 Enseigner. All rights reserved.",
+    "closing": "Engineers the Systems of the World",
+    "copyright": "© 2026 Enseigner. All rights reserved.",
     "links": [
       { "label": "Company", "items": [
         { "label": "About", "href": "/about" },
         { "label": "Contact", "href": "/contact" }
       ]},
       { "label": "Services", "items": [
-        { "label": "Consulting", "href": "/services" },
+        { "label": "Core Competencies", "href": "/services" },
         { "label": "Training", "href": "/services#traing-programs" }
       ]},
       { "label": "Resources", "items": [
@@ -176,105 +176,108 @@
   },
   "contact": {
     "id": "contact",
-    "title": "Request a Demo",
-    "subtitle": "Talk to us about sovereign GPU infrastructure and compliance-first AI execution.",
+    "title": "Get in Touch",
+    "subtitle": "Talk to Enseigner about enterprise infrastructure, security systems, data centre, networking, computer vision, and intelligent operations.",
     "fields": ["Name", "Work Email", "Company", "Message"],
-    "email": "contact@enseigner.ai",
-    "whatsapp": "+971 XX XXX XXXX"
+    "email": "abu@enseigner.in",
+    "whatsapp": "+91 enterprise enquiries",
+    "website": "www.enseigner.in",
+    "founder": "Abubucker Mansoor Mohamed",
+    "role": "Founder & MD"
   },
   "finalCta": {
-    "headline": "Ready to Transform Your Business?",
-    "description": "Let's discuss how sovereign AI infrastructure can accelerate your digital transformation.",
-    "buttonLabel": "Get Started",
+    "headline": "Ready to engineer your intelligent enterprise?",
+    "description": "Let's discuss infrastructure integration, operational execution, and compliance-aligned intelligent systems for your enterprise.",
+    "buttonLabel": "Start the Conversation",
     "buttonHref": "/contact"
   },
   "about": {
     "companyOverview": {
-      "founded": "2024",
-      "headquarters": "UAE",
-      "region": "GCC (UAE, Saudi Arabia, Kuwait, Qatar, Bahrain, Oman)",
-      "certifications": "Microsoft Azure, GCP, NVIDIA, Cisco, NetApp, VMware, Fortinet",
-      "professionals": "15+ Certified Professionals"
+      "founded": "12+ years enterprise execution",
+      "headquarters": "India",
+      "region": "Pan-India",
+      "certifications": "ISO 14001 Certified · ASCB(E) Accredited · Electronic Security Association of India Member",
+      "professionals": "Direct-payroll delivery and managed operations teams"
     },
-    "mission": "Powering Sovereign AI Transformation for Regulated GCC Enterprises",
-    "description": "Enseigner provides compliance-first GPU infrastructure and AI execution for regulated GCC enterprises. We specialize in moving AI from pilot to production where governance, data residency, and auditability are non-negotiable.",
+    "mission": "To be India's most trusted infrastructure and enterprise technology company.",
+    "description": "Enseigner is an infrastructure-first enterprise technology company that has evolved into AI-enabled intelligent operations. Built on 12+ years of enterprise execution across banking, government, healthcare, logistics, and critical infrastructure, Enseigner closes the gap between technology ambition and operationally sound execution.",
+    "vision": "To be India's most trusted infrastructure and enterprise technology company — enabling enterprises to modernise their infrastructure, secure their operations, and adopt intelligent technology with confidence and operational permanence.",
     "capabilities": [
       {
-        "title": "Cloud",
-        "description": "Modernize with cost-effective, secure, high-performance cloud solutions for on-demand scalability with full GCC data residency compliance."
+        "title": "Security Systems & Integration",
+        "description": "CCTV surveillance, access control, intrusion alarm, and fire alarm systems across enterprise, banking, retail, and government sites."
       },
       {
-        "title": "AI/ML",
-        "description": "Infuse intelligence to solve complex problems and drive innovation with machine learning, built on sovereign GPU infrastructure."
+        "title": "Infrastructure Engineering",
+        "description": "Enterprise-grade compute, storage, and network architecture for data centre workloads, mission-critical operations, and structured cabling."
       },
       {
-        "title": "Managed Services",
-        "description": "Ensure always-on operations with expert management, reducing overhead and increasing uptime for production AI workloads."
+        "title": "Computer Vision & Intelligent Operations",
+        "description": "AI-powered operational visibility across access control, workforce management, security, retail intelligence, and enterprise monitoring."
       },
       {
-        "title": "Data & Analytics",
-        "description": "Harness diverse data sources for actionable insights and confident business decisions with GCC-compliant data warehousing."
+        "title": "PA, Voice & Command Centre",
+        "description": "Public address, voice evacuation, intercom, centralised command centre, and unified communication for institutional environments."
       },
       {
-        "title": "Security & Compliance",
-        "description": "Elevate protection with zero-trust strategies, superior visibility, and full alignment with UAE PDPL, Saudi NDMO, and GCC regulations."
+        "title": "OEM Partner Ecosystem",
+        "description": "Authorised relationships with leading infrastructure OEMs across compute, networking, storage, safety, and security."
       },
       {
-        "title": "Training",
-        "description": "Empower teams with expert-led certification programs across cloud, data, AI platforms, and GPU computing with NVIDIA DLI."
+        "title": "Managed Services & AMC",
+        "description": "Structured cabling, project delivery, post-installation maintenance, and long-term operational support."
       }
     ],
     "dataCenterSolutions": {
-      "compute": "Deploy high-performance servers and GPU-accelerated clusters (NVIDIA DGX) with Cisco AI PODs for intensive AI/ML workloads.",
-      "networking": "Design robust networks and storage with Cisco Nexus/ACI, FlexPod with NetApp, and FlashStack with Pure Storage.",
-      "virtualization": "Implement VMware, Hyper-V, and container platforms (Kubernetes, Red Hat OpenShift) for agile resource utilization.",
-      "hybrid": "Bridge on-premises and cloud for workload portability and burst capacity with security and control.",
-      "automation": "Utilize IT automation and AIOps for self-optimizing infrastructure with proactive issue resolution."
+      "compute": "Enterprise data centre design and build across compute, storage, networking, and backup infrastructure for mission-critical operations.",
+      "networking": "High-performance network fabrics, software-defined networking, policy-driven infrastructure, and multi-site data centre interconnect.",
+      "virtualization": "Enterprise compute platforms, storage solutions, backup infrastructure, virtualization, Kubernetes, and OpenShift for agile resource utilisation.",
+      "hybrid": "Hybrid infrastructure integration, disaster recovery, and workload portability across enterprise environments.",
+      "automation": "AIOps-driven automation, predictive analytics, anomaly detection, observability, SLA tracking, and proactive issue resolution."
     },
     "aiInfrastructure": {
-      "endToEnd": "Architect full-stack AI/ML platforms from data ingestion to model deployment, aligned for scalable operations with full auditability.",
-      "oemHardware": "Leverage NVIDIA DGX servers and integrated AI stacks for training complex models and real-time inference with GCC data residency.",
-      "cloudNative": "Utilize AWS Sagemaker, Azure ML, and Google Vertex AI for scalable training and automated ML pipelines with compliance-first execution.",
+      "endToEnd": "Architect AI-enabled enterprise operations from existing camera and operational infrastructure through on-premise inference and command dashboards.",
+      "oemHardware": "Leverage HPE, Dell, Cisco, Fortinet, NetApp, NVIDIA, and other OEM ecosystems for enterprise-ready infrastructure.",
+      "cloudNative": "Integrate enterprise systems such as HR, ERP, payroll, access control, and business intelligence to reduce implementation friction.",
       "applications": [
-        "Computer Vision: Image recognition and video analytics for surveillance and automation",
-        "Natural Language Processing: Chatbots, virtual assistants, and voice AI solutions",
-        "Generative AI: Content generation and predictive modeling for innovation"
+        "Workforce and attendance intelligence with contactless identification and exception alerting",
+        "Security and access intelligence with anomaly detection, intrusion prevention, and audit trails",
+        "Retail and commercial intelligence with visitor flow, dwell time, POS reconciliation, and behaviour analytics"
       ]
     },
     "dataEngineering": {
-      "warehousing": "Implement scalable warehouses consolidating enterprise data for high-performance analytics with GCC compliance.",
-      "pipelines": "Automate robust pipelines gathering, cleansing, and transforming data from diverse sources with full audit trails.",
-      "migration": "Safely migrate datasets to modern platforms, creating unified data lakes as single sources of truth.",
-      "dashboards": "Develop intuitive dashboards delivering real-time, actionable insights for all business levels."
+      "warehousing": "Design enterprise data centre and storage environments that consolidate operational data for reliable analytics.",
+      "pipelines": "Integrate surveillance, access control, HR, ERP, payroll, and BI systems into unified enterprise workflows.",
+      "migration": "Modernise legacy infrastructure through structured, low-risk migration and hybrid integration.",
+      "dashboards": "Deliver real-time command dashboards for workforce status, security posture, operational alerts, and compliance readiness."
     },
     "training": {
-      "description": "Expert-led training programs aligned with vendor certification paths, combining theory, hands-on labs, and real-world scenarios.",
+      "description": "Expert-led enablement across infrastructure, networking, cloud, automation, data centre, and AI operations, grounded in real enterprise deployment experience.",
       "categories": [
         {
-          "title": "Virtualization & Infrastructure",
-          "description": "VMware, Nutanix, Cisco solutions with VCP, CCNA/CCNP, NetApp certs."
+          "title": "Infrastructure & Data Centre",
+          "description": "Compute, storage, networking, virtualization, backup, DR, and structured cabling operations."
         },
         {
-          "title": "Cloud Platforms",
-          "description": "AWS, Azure, GCP training for architect, DevOps, data engineer certifications."
+          "title": "Security & Command Operations",
+          "description": "CCTV, access control, intrusion systems, fire alarm, command centre, SOC, and compliance workflows."
         },
         {
-          "title": "AI & Emerging Tech",
-          "description": "Generative AI, AI agents, GPU computing with NVIDIA DLI and infra specializations."
+          "title": "AI & Computer Vision",
+          "description": "Video analytics, anomaly detection, attendance intelligence, on-premise AI processing, and intelligent operations."
         }
       ],
       "benefits": [
-        "Certified by Major Vendors: Instructors hold certifications from Google, Microsoft, AWS, NVIDIA, Cisco, NetApp, VMware, and Nutanix",
-        "Real-World Experience: Trainers bring extensive practical experience from enterprise deployments",
-        "Hands-On Lab Environments: Dedicated lab environments for practical application and certification readiness"
+        "Real-world deployment experience from enterprise, BFSI, government, healthcare, logistics, and critical infrastructure environments",
+        "Hands-on operating models for security, data centre, networking, and intelligent operations teams",
+        "Lifecycle knowledge from CAD design and implementation through commissioning, AMC, and managed operations"
       ]
     },
     "compliance": {
-      "globalPrivacy": "We align your AI initiatives with GDPR, CCPA, UAE PDPL, Saudi NDMO, and evolving global regulations, including the EU AI Act.",
-      "aiGovernance": "Navigate emerging AI regulations. We implement AI governance frameworks, conduct algorithmic risk assessments, and enforce ethical AI principles.",
-      "securePipelines": "Compliance and security embedded from day one. We apply privacy-by-design, ensure data anonymization and consent, and enforce robust security controls.",
-      "riskReduction": "By proactively addressing compliance, we minimize legal and security risks while building customer trust."
+      "globalPrivacy": "On-premise data by design, with no biometric or operational data transmitted externally.",
+      "aiGovernance": "Audit-ready operational visibility with timestamped trails, role-based access, and evidence management.",
+      "securePipelines": "Security and compliance controls across enterprise, data centre, cloud, and distributed site environments.",
+      "riskReduction": "Aligned to DPDP Act expectations and enterprise standards including ISO 27001 and SOC2 where relevant."
     }
   }
 }
-

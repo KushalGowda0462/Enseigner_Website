@@ -16,10 +16,10 @@ export default function PartnersSection() {
               <span className="label-pill">PARTNERS</span>
             </div>
             <h2 className="mx-auto max-w-4xl text-center text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-              Enseigner: Sovereign AI Infrastructure
+              Technology Partners & OEM Ecosystem
             </h2>
             <p className="mx-auto max-w-2xl text-center text-lg text-muted-foreground">
-              Compliance-first GPU infrastructure and AI execution for regulated GCC enterprises.
+              200+ OEM relationships across security, networking, compute, storage, fire, safety, and enterprise infrastructure.
             </p>
           </div>
 
@@ -57,4 +57,3 @@ export default function PartnersSection() {
     </section>
   )
 }
-

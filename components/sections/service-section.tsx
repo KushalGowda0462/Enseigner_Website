@@ -1,16 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { getContent } from "@/lib/content"
-import { Cloud, Shield, Settings, Database, Brain, Server, ArrowRight } from "lucide-react"
+import { ArrowRight, Brain, Cloud, Database, MonitorCog, Server, Shield } from "lucide-react"
 import Link from "next/link"
 
 const iconMap = {
   "Data Analytics": Database,
   "AI Solutions": Brain,
   "Data Center": Server,
+  "Data Centre": Server,
   "Cloud Migration": Cloud,
-  "Sovereign GPU Infrastructure": Cloud,
-  "Compliance & Audit Readiness": Shield,
-  "Operational Ownership": Settings,
+  "Security Systems": Shield,
+  "Computer Vision": Brain,
+  "Command Centre": MonitorCog,
 };
 
 export default function ServicesSection() {

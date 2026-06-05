@@ -40,44 +40,44 @@ export const recentPosts: Post[] = [
 //thsi is case studies content
 export const caseStudies: Post[] = [
     {
-        "title": "Nutanix HCI Transformation",
-        "description": "Discover how Nutanix's hyper-converged infrastructure (HCI) improved scalability, security, and disaster recovery for organizations.",
+        "title": "Enterprise Data Centre Deployment",
+        "description": "Data centre design, enterprise compute and storage, disaster recovery architecture, and structured cabling for mission-critical operations.",
         "author": "Enseigner",
         "date": "2 Feb 2025",
         "image": "/studies/1.jpg",
-        "tags": ["HCI", "Cloud Infrastructure", "VDI"]
+        "tags": ["Data Centre", "Compute", "DR"]
     },
     {
-        "title": "DevOps Transformation for Retail Manufacturer",
-        "description": "Learn how a leading Indian retail manufacturer streamlined software development and increased efficiency with DevOps implementation.",
+        "title": "Pan-India Security Systems Rollout",
+        "description": "CCTV, access control, intrusion alarm, fire alarm, monitoring, and maintenance across branch and site networks.",
         "author": "Enseigner",
         "date": "2 Feb 2025",
         "image": "/studies/2.png",
-        "tags": ["DevOps", "CI/CD", "Automation"]
+        "tags": ["Security", "Access Control", "AMC"]
     },
     {
-        "title": "Automated ADO Pipeline for Node.js on Heroku",
-        "description": "Explore how Azure DevOps pipeline automation and SonarQube scanning optimized Node.js deployments for seamless delivery.",
+        "title": "Command Centre and AIOps Visibility",
+        "description": "Unified operational dashboards, anomaly detection, SLA tracking, and command visibility across distributed enterprise locations.",
         "author": "Enseigner",
         "date": "2 Feb 2025",
         "image": "/studies/3.avif",
-        "tags": ["CI/CD", "Heroku", "Azure DevOps"]
+        "tags": ["Command Centre", "AIOps", "Monitoring"]
     },
     {
-        "title": "Enterprise-Grade AI/ML Platform Deployment",
-        "description": "Enable scalable, secure, and GPU-accelerated AI/ML development with end-to-end MLOps and Gen AI capabilities.",
+        "title": "Computer Vision for Intelligent Operations",
+        "description": "On-premise video analytics, workforce intelligence, access monitoring, retail analytics, and audit-ready reporting.",
         "author": "Enseigner",
         "date": "15 Feb 2025",
         "image": "/studies/3.avif",
-        "tags": ["AI/ML", "Kubernetes", "NVIDIA GPU", "MLOps"]
+        "tags": ["Computer Vision", "Video Analytics", "On-Premise AI"]
     },
     {
-        "title": "Transforming Enterprise Communication with GenAI on Azure",
-        "description": "RAG-powered GenAI chatbot using Azure services delivering real-time, context-aware responses with enterprise-grade security.",
+        "title": "Hybrid Infrastructure Integration",
+        "description": "Multi-site enterprise networking, data centre interconnect, backup, DR, cloud integration, and proactive operations.",
         "author": "Enseigner",
         "date": "20 Feb 2025",
         "image": "/studies/3.avif",
-        "tags": ["GenAI", "Azure", "RAG", "Chatbot"]
+        "tags": ["Networking", "Hybrid Infra", "DRaaS"]
     }
 ]
 
@@ -85,29 +85,29 @@ export const caseStudies: Post[] = [
 //this is success stories content
 export const SuccessStories: Post[] = [
     {
-        title: "Azure DevOps Pipeline for Mobile App with Sonar Integration",
-        description: "Discover how we automated the React mobile app's deployment, including APK generation and SonarQube scanning for enhanced code quality.",
+        title: "BFSI Branch Security at Scale",
+        description: "Security systems, CCTV, access control, intrusion alarm, branch monitoring, and maintenance for large banking and finance networks.",
         author: "Enseigner",
         date: "10 Jan 2024",
         image: "/stories/1.avif",
-        tags: ["Azure DevOps", "CI/CD", "Mobile App"],
+        tags: ["BFSI", "Branch Security", "Monitoring"],
     },
     {
-        title: "Automated ADO Pipeline for Node.js Deployment to Heroku",
-        description: "Explore how we automated the Node.js application deployment to Heroku with continuous code quality checks via SonarQube.",
+        title: "Ports, Logistics and Critical Infrastructure",
+        description: "Data centre build, surveillance, access control, structured cabling, and critical operations support for infrastructure environments.",
         author: "Enseigner",
         date: "12 Jan 2024",
         image: "/stories/2.png",
-        tags: ["Node.js", "CI/CD", "Heroku"],
+        tags: ["Ports", "Logistics", "Critical Operations"],
     },
 
     {
-        title: "Transforming IT Infrastructure with Nutanix",
-        description: "Learn how Nutanix’s hyper-converged infrastructure enabled scalable VDI and private cloud solutions for enhanced security and simplified IT management.",
+        title: "Retail and Enterprise Multi-Site Rollouts",
+        description: "Multi-location CCTV, access control, monitoring, and rollout support for retail, e-commerce, campuses, and industrial clients.",
         author: "Enseigner",
         date: "15 Jan 2024",
         image: "/stories/3.jpeg",
-        tags: ["Nutanix", "Infrastructure", "VDI"],
+        tags: ["Retail", "Multi-Site", "AMC"],
     }
 
 ]
@@ -226,28 +226,25 @@ export const FullBlogs = [
 
 export const FullSuccessStories = [
     {
-        "badge": "Success Story",
-        "title": "Transforming Retail Manufacturing with DevOps Implementation on Azure Platform",
-        "description": "How Enseigner helped a leading GCC enterprise streamline their AI infrastructure and compliance processes with sovereign GPU infrastructure.",
+        "badge": "BFSI Security",
+        "title": "BFSI Branch Security at Scale",
+        "description": "Security systems, CCTV, access control, intrusion alarm, branch monitoring, and maintenance for large banking and finance networks.",
         "Author": {
-            "name": "Kumar S",
-            "date": "17 Jan 2025"
+            "name": "Enseigner",
+            "date": "Company Profile 2026"
         },
         "content": [
             {
-                "para": "Client Overview: Our client, a leading Indian retail manufacturer, faced significant challenges in its software development processes, which were impacting their ability to innovate, deliver products on time, and ensure reliable operations. The client’s existing workflows lacked the structure and automation necessary to support rapid growth and dynamic market demands. This led to inefficiencies, slow deployment cycles, and frequent production incidents that threatened product quality and data security."
+                "para": "Enseigner has delivered branch and site security systems across banking and finance environments, supporting CCTV surveillance, access control, intrusion alarm, monitoring, and maintenance requirements."
             },
             {
-                "para": "The Challenge: The client struggled with: Absence of a DevOps Framework: Without a structured DevOps approach, development and operational processes were fragmented, leading to inefficiencies and manual interventions. Direct Code Deployment: Code changes were deployed directly to production without sufficient testing or approval, resulting in frequent issues and a lack of quality assurance. Frequent Production Incidents: Continuous deployments and insufficient control over code quality created reliability issues in the application, along with concerns around data security and system downtime."
+                "para": "The company profile highlights deployments across Canara Bank, HDB Financial Services, Manappuram Finance, Muthoot Finance, South Indian Bank, IIFL, HDFC ERGO, Cholamandalam Finance, Karnataka Gramin Bank, and Reserve Bank of India."
             },
             {
-                "para": "Our Solution: Enseigner worked closely with the client to implement a comprehensive sovereign AI infrastructure strategy. By addressing the core challenges of compliance, data residency, and GPU cost predictability, we created a robust framework that enabled production AI workloads with full auditability. Sovereign Infrastructure: We established a dedicated GPU cluster designed for persistent enterprise workloads, ensuring data residency and regulatory compliance. Compliance & Audit Readiness: We configured auditable AI pipelines aligned to regulatory requirements, with governance-first execution. Operational Ownership: We provided clear ownership across infrastructure and execution to reduce production friction and accelerate time-to-production."
+                "para": "The delivery model combines site survey, design, supply, installation, commissioning, monitoring, and AMC support. This gives distributed branch teams a consistent security posture and one accountable partner for long-term operations."
             },
             {
-                "para": "Structured DevOps Framework: By implementing a structured DevOps framework, we ensured traceability, accountability, and streamlined collaboration between development, testing, and operations teams. Business Outcomes: The DevOps transformation delivered faster time to market, improved product quality, enhanced collaboration, and increased system reliability. Automation also brought cost efficiency, reducing manual interventions and production issues."
-            },
-            {
-                "para": "Improved Security (DevSecOps): Integrated security measures, such as SonarQube for vulnerability scanning, significantly enhanced the security of the client’s applications, protecting both data and user privacy. Conclusion: By adopting a structured DevOps framework, the client improved agility, collaboration, and security, enabling them to thrive in the fast-paced retail industry."
+                "para": "The outcome is security continuity at scale: branch systems remain maintainable, monitored, and audit-ready across large enterprise footprints."
             }
         ],
         "images": [
@@ -262,37 +259,25 @@ export const FullSuccessStories = [
         ]
     },
     {
-        "badge": "Automated ADO Pipeline",
-        "title": "Automated ADO Pipeline for Node.js Deployment to Heroku with Sonar Scanning",
-        "description": "We set up an Azure DevOps (ADO) pipeline that automates the deployment of the customer's Node.js application to Heroku. This pipeline not only streamlined the deployment process but also integrated SonarQube scanning for continuous code quality and security analysis.",
+        "badge": "Critical Infrastructure",
+        "title": "Ports, Logistics and Critical Infrastructure",
+        "description": "Data centre build, surveillance, access control, structured cabling, and critical operations support for infrastructure environments.",
         "Author": {
-            "name": "Kumar S",
-            "date": "12 Jan 2024"
+            "name": "Enseigner",
+            "date": "Company Profile 2026"
         },
         "content": [
             {
-                "para": "We implemented an Azure DevOps (ADO) pipeline for the customer's Node.js application, automating the build, test, and deployment processes to Heroku. This automation eliminated manual intervention and introduced SonarQube integration for code quality and security scanning, enhancing the reliability and security of the application."
+                "para": "Enseigner's portfolio includes ports, logistics, and critical infrastructure deployments such as Chennai Port Trust, Container Corporation of India, Dakshin Bharat Gateway Terminal, SANS CFS, and Distribution Logistics Infrastructure."
             },
             {
-                "para": "Issues Faced: The customer encountered several challenges, including manual build and deployment processes that were time-consuming and error-prone. APK generation required manual intervention, slowing down the release cycle. Additionally, there were no integrated code quality or security checks, exposing the application to potential risks. Developers also faced challenges in managing dependencies and ensuring a stable environment throughout the deployment stages."
+                "para": "These environments require reliable surveillance, access control, structured cabling, data centre readiness, and operational support because downtime or security blind spots can affect critical operations."
             },
             {
-                "para": "Solution Offered: To address these issues, we designed and implemented an Azure DevOps (ADO) pipeline for the customer's React mobile application. The key elements of the solution included:"
+                "para": "The company delivers design, supply, implementation, commissioning, and AMC across security and infrastructure layers, creating durable systems for complex, distributed sites."
             },
             {
-                "para": "Automated APK generation: The pipeline automatically builds the application and generates the APK file, eliminating the need for manual intervention and speeding up the release cycle."
-            },
-            {
-                "para": "SonarQube integration: We integrated Sonar scanning into the CI/CD pipeline to provide automated code quality and security checks, enabling early detection of issues and maintaining high code standards."
-            },
-            {
-                "para": "Consistency and Speed: By automating the workflow, the solution ensured consistency across builds and facilitated faster delivery of features and fixes, greatly improving efficiency."
-            },
-            {
-                "para": "Key Features: Automated deployment of the Node.js application to Heroku, SonarQube scanning for code quality and security, and a fully automated CI/CD pipeline, ensuring reliable and secure releases."
-            },
-            {
-                "para": "Benefits to the customer: The implementation of this pipeline significantly reduced deployment time, minimized errors, and ensured the application met quality and security standards before going live on Heroku. This automation enhanced the overall efficiency of the deployment process."
+                "para": "The result is stronger operational continuity and clearer visibility across infrastructure environments where reliability and accountability matter."
             }
         ],
         "images": [
@@ -307,25 +292,25 @@ export const FullSuccessStories = [
         ]
     },
     {
-        badge: "IT Infrastructure",
-        title: "Transforming IT Infrastructure with Nutanix",
-        description: "Discover how Nutanix’s hyper-converged infrastructure transformed the IT environment of a leading enterprise, enabling seamless VDI deployment and a private cloud solution.",
+        badge: "Multi-Site Operations",
+        title: "Retail and Enterprise Multi-Site Rollouts",
+        description: "Multi-location CCTV, access control, monitoring, and rollout support for retail, e-commerce, campuses, and industrial clients.",
         Author: {
             name: "Enseigner",
-            date: "15 Jan 2024"
+            date: "Company Profile 2026"
         },
         content: [
             {
-                para: "A leading enterprise faced growing challenges in managing its IT infrastructure, especially with scaling remote work, maintaining data security, and ensuring disaster recovery resilience. As they transitioned to a more remote workforce and dealt with inflexible traditional data centers, they needed a modern solution that could streamline virtual desktop environments (VDI) and meet strict security requirements."
+                para: "Enseigner supports multi-location rollouts for retail, e-commerce, consumer brands, campuses, IT, manufacturing, and industrial environments."
             },
             {
-                para: "Nutanix’s hyper-converged infrastructure (HCI) provided a seamless solution for deploying and scaling virtual desktops using Citrix, VMware Horizon, or Nutanix’s AHV hypervisor. The system automatically adjusted resources based on demand, ensuring consistent performance, and providing enhanced security across remote desktop environments. The implementation also simplified infrastructure management through Nutanix Prism, reducing complexity and enabling quick responses to fluctuating user demands."
+                para: "The company profile references engagements across Flipkart, Decathlon, Lenskart, The Chennai Silks, Nilgiris, Royal Enfield, Zudio, Westside, Indospace Facilities, TCS, Tata Communications, Vinfast, Godrej and Boyce, and other enterprise environments."
             },
             {
-                para: "In addition to the VDI solution, Nutanix enabled the enterprise to transition from inflexible, costly traditional data centers to a software-defined infrastructure. This new private cloud solution allowed them to achieve the scalability and self-service provisioning they needed, all while maintaining full control over their data security and regulatory compliance."
+                para: "The delivery focus is consistent: site readiness, surveillance, access control, monitoring, structured cabling, network/passive infrastructure, and long-term support."
             },
             {
-                para: "This transformation not only improved operational efficiency but also offered significant benefits, including consistent and responsive virtual desktop environments, enhanced security, and reduced complexity in managing IT infrastructure. By embracing Nutanix’s infrastructure, the client ensured scalability, data security, and simplified management across their organization."
+                para: "By standardising rollout and maintenance practices, enterprises gain repeatable site deployment quality and stronger operational control across distributed locations."
             }
         ],
         images: [
@@ -344,25 +329,25 @@ export const FullSuccessStories = [
 //full case studies
 export const FullCaseStudies = [
     {
-        badge: "HCI",
-        title: "Nutanix HCI: Enhancing IT Infrastructure for Remote Work and Beyond",
-        description: "Explore how Nutanix's hyper-converged infrastructure (HCI) revolutionizes desktop environments, data centers, and disaster recovery solutions for enterprises facing modern IT challenges.",
+        badge: "Data Centre",
+        title: "Enterprise Data Centre Deployment",
+        description: "Data centre design, enterprise compute and storage, disaster recovery architecture, and structured cabling for mission-critical operations.",
         Author: {
-            name: "Tech Advisory Team",
-            date: "18 Jan 2024"
+            name: "Enseigner",
+            date: "Company Profile 2026"
         },
         content: [
             {
-                para: "Organizations today face challenges in managing and scaling virtual desktop environments (VDI) for employees working remotely. Fluctuating resource demands, security concerns, and maintaining consistent performance are key issues that many businesses struggle with as their workforce shifts towards remote operations."
+                para: "Enseigner delivers enterprise data centre design and build services across compute, storage, networking, disaster recovery, backup, and passive infrastructure."
             },
             {
-                para: "Nutanix’s hyper-converged infrastructure (HCI) offers a robust solution for seamless VDI deployment, utilizing platforms such as Citrix, VMware Horizon, or Nutanix’s AHV hypervisor. Nutanix’s integrated compute and storage capabilities enable the VDI environment to efficiently scale and adapt to resource demands, ensuring consistent user experiences and high availability in case of hardware failure. Additionally, Nutanix Prism simplifies management with centralized monitoring and automation, reducing the complexity of managing virtual environments."
+                para: "The company profile highlights active data centre and enterprise infrastructure work including Chennai Port Trust, enterprise compute and storage deployments, HPE, Dell, NetApp infrastructure, DR architecture, and structured cabling across 100+ enterprise sites."
             },
             {
-                para: "Traditional data centers can be expensive, difficult to scale, and inflexible. Nutanix’s software-defined infrastructure provides businesses with the flexibility of a private cloud solution, offering scalability and self-service provisioning while maintaining full control over sensitive data and regulatory compliance. Nutanix integrates seamlessly with Kubernetes, VMware, and Nutanix Cloud Management services, enabling businesses to manage their workloads both on-premises and across public cloud environments with ease."
+                para: "The delivery model covers consultancy, design, supply, implementation, commissioning, and AMC. This ensures the same partner remains accountable from architecture through long-term operational continuity."
             },
             {
-                para: "Disaster recovery is another challenge faced by many organizations. Traditional disaster recovery (DR) solutions require separate, costly infrastructure and are often complex to manage. Nutanix Leap and Nutanix Mine offer built-in DR solutions that simplify the replication and recovery of workloads across locations. With automated failover and minimal recovery times, Nutanix helps businesses avoid downtime and reduces the overall cost of maintaining separate DR infrastructure."
+                para: "The outcome is modular, scalable infrastructure that can support mission-critical enterprise operations and future intelligent workloads."
             }
         ],
 
@@ -384,25 +369,25 @@ export const FullCaseStudies = [
         ]
     },
     {
-        badge: "DevOps",
-        title: "DevOps Transformation for a Leading Indian Retail Manufacturer",
-        description: "A comprehensive DevOps transformation enhanced software development efficiency, improved product quality, and ensured operational stability for a leading Indian retail manufacturer.",
+        badge: "Security Systems",
+        title: "Pan-India Security Systems Rollout",
+        description: "CCTV, access control, intrusion alarm, fire alarm, monitoring, and maintenance across branch and site networks.",
         Author: {
             name: "Enseigner",
-            date: "12 Jan 2024"
+            date: "Company Profile 2026"
         },
         content: [
             {
-                para: "A prominent Indian retail manufacturer faced significant challenges in their software development processes, which impacted product innovation, delivery timelines, and overall operational reliability. Their existing practices were inefficient, lacked structure, and were prone to frequent production incidents, threatening both product quality and data security."
+                para: "Enseigner's security systems track record includes 10,000+ branch and site installations across CCTV, access control, intrusion alarm, fire alarm, monitoring, and maintenance."
             },
             {
-                para: "One of the primary challenges was the absence of a well-defined DevOps framework. Development and operational processes were fragmented, often requiring manual interventions. Code changes were frequently deployed directly into production environments without sufficient testing or approval, leading to multiple production incidents, security vulnerabilities, and downtime."
+                para: "Large-scale deployments referenced in the profile include Muthoot Finance across 3,700 branches, Manappuram Finance across 3,000 branches, and Flipkart across 200 branches."
             },
             {
-                para: "Enseigner implemented a comprehensive sovereign AI infrastructure strategy, introducing a dedicated GPU cluster designed for persistent enterprise workloads to ensure data residency and regulatory compliance. The client's AI pipelines were configured with full auditability, aligned to regulatory requirements with governance-first execution. Additionally, clear operational ownership across infrastructure and execution reduced production friction and accelerated time-to-production."
+                para: "These engagements require repeatable site delivery, OEM coordination, installation quality, support discipline, and long-term serviceability."
             },
             {
-                para: "By implementing a structured DevOps framework, the client experienced improved traceability and accountability across development, testing, and operational teams. Automated testing, deployment pipelines, and strict code review processes helped reduce the risk of production incidents while enhancing overall security. The result was faster time to market, improved product quality, better collaboration among teams, and reduced costs."
+                para: "The outcome is a scalable security operations model for enterprises that need consistent standards across distributed sites."
             }
         ],
 
@@ -419,22 +404,25 @@ export const FullCaseStudies = [
         ]
     },
     {
-        badge: "AI/ML",
-        title: "Enterprise-Grade AI/ML Platform Deployment",
-        description: "Enable scalable, secure, and GPU-accelerated AI/ML development with end-to-end MLOps and Gen AI capabilities.",
+        badge: "Command Centre",
+        title: "Command Centre and AIOps Visibility",
+        description: "Unified operational dashboards, anomaly detection, SLA tracking, and command visibility across distributed enterprise locations.",
         Author: {
             name: "Enseigner",
-            date: "15 Feb 2025"
+            date: "Company Profile 2026"
         },
         content: [
             {
-                para: "A leading GCC enterprise sought to enable scalable, secure, and GPU-accelerated AI/ML development with end-to-end MLOps and Gen AI capabilities. The client needed a production-ready infrastructure that could support complex model training, real-time inference, and seamless deployment workflows while maintaining strict compliance with GCC data residency requirements."
+                para: "Indian enterprises increasingly need operational visibility platforms that are on-premise, reliable, and architecturally independent of external cloud dependency."
             },
             {
-                para: "Enseigner deployed a high-availability Rancher Kubernetes cluster on Cisco UCS, integrated Kubeflow + MLFlow + ArgoCD for robust MLOps pipeline, and configured RBAC with AD, private Harbor Registry, and secure namespaces. We deployed ELK Stack for real-time logging & monitoring, installed and validated NVIDIA GPU Operator for GPU-aware scheduling, and successfully deployed LLaMA 3.3 70B Gen AI model with Ollama API."
+                para: "Enseigner's command centre model unifies workforce status, security posture, operational alerts, compliance readiness, and multi-site command visibility in role-controlled dashboards."
             },
             {
-                para: "The solution delivered seamless CI/CD with GitOps, 3x faster model deployment cycles, 100% GPU utilization with scalable AI pipelines, and comprehensive training & documentation delivered remotely. The client now has a production-ready, enterprise-scale AI infrastructure with best-in-class automation, observability, and performance—all while maintaining full GCC compliance and data residency."
+                para: "AIOps-driven automation reduces manual intervention, detects anomalies before service impact, and supports SLA tracking for enterprise operations teams."
+            },
+            {
+                para: "This creates a scalable command layer from single-site pilots to enterprise-wide deployment."
             }
         ],
         images: [
@@ -449,25 +437,25 @@ export const FullCaseStudies = [
         ]
     },
     {
-        badge: "DevOps",
-        title: "Automated ADO Pipeline for Node.js Deployment to Heroku with Sonar Scanning",
-        description: "An automated Azure DevOps (ADO) pipeline was implemented for seamless Node.js deployment to Heroku with integrated SonarQube scanning, improving efficiency, security, and quality.",
+        badge: "Computer Vision",
+        title: "Computer Vision for Intelligent Operations",
+        description: "On-premise video analytics, workforce intelligence, access monitoring, retail analytics, and audit-ready reporting.",
         Author: {
             name: "Enseigner",
-            date: "12 Jan 2024"
+            date: "Company Profile 2026"
         },
         content: [
             {
-                para: "We set up an Azure DevOps (ADO) pipeline that automates the deployment of the customer's Node.js application to Heroku. The pipeline eliminated manual build processes, ensuring consistent deployments while integrating SonarQube scanning for continuous code quality and security analysis."
+                para: "Enseigner transforms existing camera infrastructure into an AI-powered enterprise operations platform that supports security, workforce, retail, and operational use cases."
             },
             {
-                para: "The client faced several challenges, including manual build and deployment processes that were time-consuming, error-prone, and inconsistent. APK generation required manual intervention, slowing down release cycles. There were also no integrated code quality and security checks, posing risks to the application's stability."
+                para: "Use cases include contactless identification, real-time presence monitoring, exception alerting, restricted zone access enforcement, anomaly detection, intrusion prevention, visitor flow analysis, dwell time analytics, POS reconciliation, and automated reporting."
             },
             {
-                para: "To resolve these issues, we developed an automated ADO pipeline. It eliminated manual intervention for APK generation, introduced SonarQube integration for continuous code analysis, and standardized the deployment workflow. The result was improved consistency and speed across all deployment stages, allowing for faster delivery of features and bug fixes."
+                para: "The architecture is on-premise by design, so AI inference can remain inside the client's own environment and reduce external data dependency."
             },
             {
-                para: "Key features of this solution include automated Node.js deployment to Heroku, integrated SonarQube scanning during CI/CD, and improved efficiency by catching issues early in the development process. The pipeline drastically reduced deployment times, ensured stable releases, and maintained high code standards for the customer’s application."
+                para: "The result is centralised command, distributed intelligence, and audit-ready operational visibility."
             }
         ],
         images: [
@@ -482,22 +470,25 @@ export const FullCaseStudies = [
         ]
     },
     {
-        badge: "AI/ML",
-        title: "Enterprise-Grade AI/ML Platform Deployment",
-        description: "Enable scalable, secure, and GPU-accelerated AI/ML development with end-to-end MLOps and Gen AI capabilities.",
+        badge: "Hybrid Infrastructure",
+        title: "Hybrid Infrastructure Integration",
+        description: "Multi-site enterprise networking, data centre interconnect, backup, DR, cloud integration, and proactive operations.",
         Author: {
             name: "Enseigner",
-            date: "15 Feb 2025"
+            date: "Company Profile 2026"
         },
         content: [
             {
-                para: "A leading GCC enterprise sought to enable scalable, secure, and GPU-accelerated AI/ML development with end-to-end MLOps and Gen AI capabilities. The client needed a production-ready infrastructure that could support complex model training, real-time inference, and seamless deployment workflows while maintaining strict compliance with GCC data residency requirements."
+                para: "Enseigner supports hybrid infrastructure integration for enterprises that need workload portability, burst capacity, disaster recovery, and operational control across on-premise and cloud environments."
             },
             {
-                para: "Enseigner deployed a high-availability Rancher Kubernetes cluster on Cisco UCS, integrated Kubeflow + MLFlow + ArgoCD for robust MLOps pipeline, and configured RBAC with AD, private Harbor Registry, and secure namespaces. We deployed ELK Stack for real-time logging & monitoring, installed and validated NVIDIA GPU Operator for GPU-aware scheduling, and successfully deployed LLaMA 3.3 70B Gen AI model with Ollama API."
+                para: "Capabilities include data centre networking, software-defined infrastructure, multi-site interconnect, observability, performance assurance, and proactive SLA management."
             },
             {
-                para: "The solution delivered seamless CI/CD with GitOps, 3x faster model deployment cycles, 100% GPU utilization with scalable AI pipelines, and comprehensive training & documentation delivered remotely. The client now has a production-ready, enterprise-scale AI infrastructure with best-in-class automation, observability, and performance—all while maintaining full GCC compliance and data residency."
+                para: "Security and compliance controls include zero-trust architecture, threat detection, incident response, encryption in transit and at rest, and continuous monitoring."
+            },
+            {
+                para: "The result is reliable infrastructure fabric for AI, data centre, and enterprise operations at multi-site scale."
             }
         ],
         images: [
@@ -520,8 +511,8 @@ export const FullCaseStudies = [
 export const services = [
     {
         id: "data-ai",
-        title: "Data and AI",
-        description: "Unlocking the true potential of your data through advanced analytics and AI-driven insights. Enseigner helps you modernize your AI infrastructure with sovereign GPU capacity, improving compliance and predictability. From data residency to auditability, we transform AI pilots into production workloads. Our compliance-first AI execution solutions allow regulated enterprises to automate processes, enhance productivity, and scale faster while meeting governance requirements. Let us help you harness the power of sovereign AI to drive business growth.",
+        title: "AI, Computer Vision and Intelligent Analytics",
+        description: "Transform existing surveillance and operational infrastructure into an AI-powered enterprise operations platform. Enseigner delivers computer vision models for video analytics, object detection, anomaly detection, workforce attendance intelligence, retail analytics, access intelligence, and real-time command visibility.",
         link: "/consulting/data-and-ai",
         hasImage: false,
     },
@@ -540,15 +531,15 @@ export const services = [
     },
     {
         id: "infrastructure-services",
-        title: "Infrastructure Services",
-        description: "Achieve uninterrupted AI workloads with Enseigner's sovereign GPU infrastructure. Our solutions are designed to provide always-on AI capacity with predictable costs, powered by cutting-edge GPU technologies. We help regulated GCC enterprises implement scalable infrastructures that support production AI workloads while ensuring data residency and compliance. With a focus on security, compliance, and performance, our infrastructure services are tailored to meet the needs of regulated enterprises. Keep your AI operations running smoothly with our expert support.",
+        title: "Enterprise Data Centre and Infrastructure",
+        description: "Design and build enterprise data centres across compute, storage, networking, backup, disaster recovery, and structured cabling. Enseigner works with HPE, Dell, NetApp, Cisco, Fortinet, NVIDIA, and 200+ OEM brands to deliver mission-critical infrastructure from design through commissioning and AMC.",
         link: "/consulting/infrastructure-services",
         hasImage: false,
     },
     {
         id: "cloud-services",
-        title: "Cloud Services",
-        description: "Enseigner provides scalable, secure sovereign GPU infrastructure tailored to regulated GCC enterprise needs. We help businesses streamline their AI operations by offering reliable and predictable GPU capacity. Our sovereign infrastructure enables seamless integration with existing compliance frameworks. Whether you're moving AI from pilot to production or optimizing GPU costs, we have the expertise to support your journey. Benefit from always-on AI workloads and ensure your infrastructure stays compliant and available.",
+        title: "Networking and Command Centre Operations",
+        description: "Build high-performance network fabrics for data centre, AI, and enterprise environments. Our command centre and AIOps solutions provide unified operational visibility, predictive analytics, anomaly detection, SLA tracking, and role-based dashboards across distributed locations.",
         link: "/consulting/cloud-consulting",
         hasImage: false,
     },
@@ -568,15 +559,15 @@ export const services = [
     },
     {
         id: "devops-automation",
-        title: "DevOps and Automation",
-        description: "Maximize AI operational efficiency with our compliance-first AI execution solutions. We help regulated enterprises automate their AI pipeline processes, improving productivity and reducing compliance friction. Our services include auditable AI pipeline setup, governance-first execution, and compliance monitoring. With auditability and logging solutions, you gain full visibility into your AI operations. Empower your team to deliver faster and more reliable production AI with Enseigner's expertise.",
+        title: "End-to-End Delivery and Managed Operations",
+        description: "One accountable partner from consultancy, CAD design, supply, implementation, installation, commissioning, AMC, and managed operations. Enseigner's pan-India delivery maturity keeps enterprise projects aligned from first design through long-term operational support.",
         link: "/consulting/cloud-consulting",
         hasImage: false,
     },
     {
         id: "security",
-        title: "Security",
-        description: "In an ever-evolving regulatory landscape, compliance is paramount. We provide comprehensive solutions to protect your AI operations from compliance risks. Our services include robust auditability, real-time compliance monitoring, and regulatory alignment support. With Enseigner, you can navigate the complexities of GCC data residency requirements with confidence, knowing that your critical AI workloads are protected. Stay resilient and safeguard your operations with our expert compliance solutions.",
+        title: "Security Systems and Integration",
+        description: "Deliver CCTV surveillance, access control, intrusion alarm, fire alarm, public address, voice evacuation, and intercom systems across banking, retail, government, ports, campuses, and enterprise environments. Our solutions are security-first, audit-ready, and built for multi-site operations.",
         link: "/consulting/security-governance",
         hasImage: false,
     },
@@ -597,7 +588,7 @@ export const services = [
     // {
     //     id: "training-services",
     //     title: "Training Services",
-    //     description: "Stay ahead in the fast-paced tech world with our tailored training services. DC Tech provides corporate technical training programs designed to upskill your team. Our courses, led by expert instructors, offer hands-on learning and focus on the latest industry trends. With custom programs, your team gains the knowledge needed to excel. Our training paths also offer certification opportunities, ensuring your workforce remains competitive and well-equipped for the future.",
+    //     description: "Stay ahead with tailored enterprise technology training grounded in real deployment experience.",
     //     link: "/services/#training",
     //     hasImage: false,
     // }
@@ -607,66 +598,66 @@ export const services = [
 export const partners = [
     { name: "Google Cloud", logo: "/google.webp" },
     { name: "AWS", logo: "/aws.png" },
-    { name: "Ovh Cloud", logo: "/ovh-logo.png" },
-    { name: "Azure", logo: "/azure.png" },
+    { name: "Microsoft Azure", logo: "/azure.png" },
+    { name: "Nutanix", logo: "/partners/nutanix.png" },
+    { name: "NetApp", logo: "/partners/netapp.png" },
+    { name: "OVHcloud", logo: "/ovh-logo.png" },
     { name: "DigitalOcean", logo: "/digitalocean.svg" },
-    { name: "Xcp ng ", logo: "/mainlogo.png" },
-    { name: "DigitalOcean", logo: "/partners/nutanix.png" },
-    { name: "Xcp ng ", logo: "/partners/netapp.png" },
+    { name: "XCP-ng", logo: "/mainlogo.png" },
 ]
 
 export const stats = [
     {
-        number: "20+",
-        label: "Years of Experience",
+        number: "12+",
+        label: "Years Enterprise Execution",
     },
     {
-        number: "30",
-        label: "Clients World wide",
+        number: "100+",
+        label: "Enterprise Clients Across India",
     },
     {
-        number: "80",
-        label: "Successful Projects Completed",
+        number: "10,000+",
+        label: "Branch and Site Installations",
     },
     {
-        number: "99%",
-        label: "Client Satisfaction Rate",
+        number: "200+",
+        label: "OEM Partner Brands",
     },
 ]
 
 export const values = [
     {
-        title: "Customer-Centricity",
+        title: "Integration Over Complexity",
         description:
-            "We prioritize our clients' needs, ensuring our solutions align with their goals and drive success.",
+            "We design integrated solutions across security, networking, data centre, and intelligent operations, reducing fragmented vendor exposure and operational risk.",
     },
     {
-        title: "Excellence",
-        description: "We deliver the highest standards in both technical expertise and customer service.",
+        title: "Execution Over Theory",
+        description: "Enterprise execution succeeds when it is grounded in infrastructure discipline and field-proven delivery, not slideware.",
     },
     {
-        title: "Innovation",
-        description: "We embrace new technologies and methodologies to create better outcomes for our clients.",
+        title: "Pan-India Reach",
+        description: "We deliver and maintain systems for enterprises, banks, government institutions, ports, logistics operators, campuses, and retail networks across India.",
     },
     {
-        title: "Integrity",
-        description: "Honesty, transparency, and trust are at the core of everything we do.",
+        title: "Operational Permanence",
+        description: "We build systems that remain secure, maintainable, auditable, and useful long after installation day.",
     },
 ]
 
 export const securityFeatures = [
     {
-        title: "Scalable and Customizable Solutions",
+        title: "On-Premise Data by Design",
         description:
-            "We deliver tailored, flexible technology solutions that grow with your business needs, ensuring long-term success.",
+            "AI inference and operational data can remain inside the client's own environment, with no biometric or operational data transmitted externally.",
     },
     {
-        title: "Innovation-Driven Efficiency",
-        description: "By leveraging the latest technologies, we drive automation and streamline processes for faster, more efficient operations.",
+        title: "Audit-Ready Operations",
+        description: "Timestamped logs, evidence management, role-based dashboards, and reporting support enterprise security and compliance teams.",
     },
     {
-        title: "Enhanced Security and Reliability",
-        description: "Our solutions integrate robust security measures and ensure high availability, minimizing downtime and protecting critical business data.",
+        title: "Scalable Multi-Site Architecture",
+        description: "Deploy from a single-site pilot to enterprise-wide rollouts without redesign, bringing every location into unified command visibility.",
     },
 ]
 
@@ -681,9 +672,9 @@ interface Testimonial {
 }
 export const testimonials: Testimonial[] = [
     {
-        quote: "Seamless DevOps & Heroku Integration Boosts Software Efficiency",
+        quote: "Enterprise execution with infrastructure discipline",
         content:
-            "Enseigner transformed our AI infrastructure with their seamless sovereign GPU implementation. Their expertise in providing compliance-first GPU infrastructure enhanced our data residency and auditability, while improving AI workload predictability and cost management. Their timely execution and clear communication ensured we met regulatory requirements without compromising performance.",
+            "Enseigner brings the rare combination of infrastructure understanding, security system execution, and practical delivery discipline. Their ability to coordinate design, supply, installation, and long-term support makes them a dependable enterprise technology partner.",
         author: {
             name: "J Sudharsan",
             role: "Project Manager",
@@ -691,9 +682,9 @@ export const testimonials: Testimonial[] = [
         },
     },
     {
-        quote: "Flawless Sovereign AI Infrastructure with Enseigner's Expertise",
+        quote: "Reliable partner for complex enterprise systems",
         content:
-            "Enseigner has been a key partner in delivering and integrating sovereign GPU infrastructure and compliance-first AI execution. Their expertise, reliability, and proactive approach have consistently exceeded expectations, ensuring seamless execution and smooth integration. They're also a trusted partner in advancing our production AI workloads and regulatory compliance.",
+            "Their team understands operational environments, not just technology components. From data centre and networking to security systems and managed support, Enseigner consistently focuses on continuity, accountability, and field outcomes.",
         author: {
             name: "Madhun Hegde",
             role: "Director, E Plus",
@@ -701,9 +692,9 @@ export const testimonials: Testimonial[] = [
         },
     },
     {
-        quote: "Enseigner: Empowering Teams with Sovereign AI Infrastructure",
+        quote: "Practical enablement for modern operations",
         content:
-            "Enseigner has been our go-to partner for sovereign AI infrastructure and compliance-first execution. Their deep expertise and efficient execution have consistently delivered outstanding results, ensuring smooth AI production rollouts and empowering regulated enterprises with the right infrastructure. They have been instrumental in delivering compliance-ready AI infrastructure to GCC enterprises.",
+            "Enseigner's strength is connecting infrastructure, intelligent operations, and team enablement. Their real deployment experience helps enterprise teams move from fragmented systems to integrated, maintainable operations.",
         author: {
             name: "Tejinder Singh",
             role: "Education Lead,  APJ, NetApp",
@@ -714,18 +705,25 @@ export const testimonials: Testimonial[] = [
 
 export const specializations = [
     {
-        title: "Google Cloud Premier Partner",
-        logo: "/partners/google.png",
-        description: "We are a Premier Level partner for Google Cloud with additional competencies in Infrastructure and Machine Learning",
-        alt: "Google Cloud Premier Partner badge",
-        gradient: "from-blue-500/40 to-pink-500/20"
+        title: "Video Surveillance",
+        logo: "/partners/aws.png",
+        description: "Hikvision, Axis, CP Plus, Bosch, Honeywell, Pelco, Mobotix, Prama and enterprise video surveillance ecosystems.",
+        alt: "Video surveillance partner ecosystem",
+        gradient: "from-blue-500/40 to-cyan-500/20"
     },
     {
-        title: "AWS Advanced Partner",
-        logo: "/partners/aws.png",
-        description: "As an Advanced Tier AWS Service Partner, we hold more than 50+ AWS certifications, 6 AWS Competencies, 5 partner programs",
-        alt: "AWS Partner badge",
-        gradient: "from-blue-500/50 to-orange-500/20"
+        title: "Servers, Storage & Networking",
+        logo: "/partners/netapp.png",
+        description: "HPE, Dell, Microsoft, NetApp, Veritas, Veeam, VMware, Cisco, Aruba, Extreme Networks, Legrand, and CommScope.",
+        alt: "Servers storage and networking partner ecosystem",
+        gradient: "from-blue-500/50 to-emerald-500/20"
+    },
+    {
+        title: "Security, Fire & Safety",
+        logo: "/partners/nutanix.png",
+        description: "Fortinet, Cisco, Sophos, Meraki, Palo Alto, Forescout, HID, Suprema, Texecom, Optex, Morley IAS, Apollo, Ravel, TOA, and Ahuja.",
+        alt: "Security fire and safety partner ecosystem",
+        gradient: "from-red-500/40 to-amber-500/20"
     }
 ]
 
@@ -735,9 +733,9 @@ const homeservices = [
 ];
 export const homepartners = [
     {
-        name: 'AWS Partner Network',
+        name: 'AWS',
         logo: '/partners/aws.png',
-        alt: 'AWS Partner Network logo'
+        alt: 'AWS logo'
     },
     {
         name: 'Google Cloud',
@@ -762,20 +760,20 @@ export const customers = [
 ]
 export const faqs = [
     {
-        question: "What services do you offer?",
-        answer: "We offer a comprehensive range of services including cloud solutions, AI implementation, and digital transformation consulting."
+        question: "What does Enseigner do?",
+        answer: "Enseigner delivers end-to-end systems integration across security systems, enterprise data centre, networking, command centre operations, computer vision, intelligent analytics, structured cabling, and managed services."
     },
     {
-        question: "How do you ensure project success?",
-        answer: "We follow a rigorous project management methodology, maintain constant communication, and implement regular quality checks."
+        question: "Which industries do you serve?",
+        answer: "We work across BFSI, government, public sector, defence, ports, logistics, healthcare, education, retail, IT, manufacturing, industrial, and critical infrastructure environments."
     },
     {
-        question: "What industries do you work with?",
-        answer: "We work across various industries including technology, healthcare, finance, and manufacturing."
+        question: "Can you work with existing camera and security infrastructure?",
+        answer: "Yes. Enseigner can transform existing camera infrastructure into AI-powered operational visibility using on-premise computer vision, video analytics, anomaly detection, and command dashboards."
     },
     {
-        question: "How long does a typical project take?",
-        answer: "Project timelines vary based on scope and complexity, typically ranging from 2-6 months."
+        question: "Do you provide long-term support?",
+        answer: "Yes. Delivery covers consultancy, design, supply, implementation, commissioning, AMC, post-installation maintenance, and managed operations."
     }
 ]
 
@@ -813,29 +811,29 @@ export const resources = [
 
 export const components: { title: string; href: string; description: string }[] = [
     {
-        "title": "Cloud Services",
+        "title": "Networking and Command Centre",
         "href": "/services#cloud-services",
-        "description": "Seamlessly migrate your infrastructure to the cloud."
+        "description": "High-performance network fabric, AIOps, dashboards, and multi-site operational visibility."
     },
     {
-        "title": "Data and AI",
+        "title": "AI and Computer Vision",
         "href": "/services#data-ai",
-        "description": "Harness AI and data to optimize your operations."
+        "description": "Video analytics, workforce intelligence, anomaly detection, retail analytics, and monitoring."
     },
     {
-        "title": "Infrastructure Services",
+        "title": "Data Centre and Infrastructure",
         "href": "/services#infrastructure-services",
-        "description": "Streamline and manage your IT infrastructure efficiently."
+        "description": "Compute, storage, networking, backup, DR, and structured cabling for mission-critical operations."
     },
     {
-        "title": "DevOps and Automation",
+        "title": "Managed Operations",
         "href": "/services#devops-automation",
-        "description": "Automate workflows and improve development processes."
+        "description": "Consultancy, design, supply, implementation, commissioning, AMC, and lifecycle support."
     },
     {
-        "title": "Managed Services",
-        "href": "/services#managed-services",
-        "description": "Comprehensive IT management to ensure business continuity."
+        "title": "Security Systems",
+        "href": "/services#security",
+        "description": "CCTV, access control, intrusion alarm, fire alarm, PA, voice evacuation, and intercom."
     },
     {
         "title": "Training Services",
@@ -847,19 +845,19 @@ export const components: { title: string; href: string; description: string }[] 
 
 export const training: { title: string; href: string; description: string }[] = [
     {
-        "title": "NetApp Training",
+        "title": "Infrastructure and Data Centre",
         "href": "/services#traing-programs",
-        "description": "Master NetApp storage solutions with ONTAP, E-Series, and more."
+        "description": "Build skills across compute, storage, networking, backup, DR, and structured cabling."
     },
     {
-        "title": "VMware Training",
+        "title": "Security and Command Operations",
         "href": "/services#traing-programs",
-        "description": "Enhance virtualization skills with VMware vSphere, Tanzu, and more."
+        "description": "Operate CCTV, access control, intrusion, fire alarm, SOC, and command centre environments."
     },
     {
-        "title": "Cloud Computing",
+        "title": "Cloud and Hybrid Integration",
         "href": "/services#traing-programs",
-        "description": "Learn to integrate and optimize AWS, Azure, and Google Cloud."
+        "description": "Integrate on-premise infrastructure with AWS, Azure, Google Cloud, and hybrid operations."
     },
     {
         "title": "Kubernetes & OpenShift",
@@ -867,14 +865,14 @@ export const training: { title: string; href: string; description: string }[] = 
         "description": "Develop expertise in container orchestration with Kubernetes and OpenShift."
     },
     {
-        "title": "DevOps & Automation",
+        "title": "AIOps and Automation",
         "href": "/services#traing-programs",
-        "description": "Streamline workflows with DevOps, CI/CD, and automation tools."
+        "description": "Use automation, observability, predictive analytics, and SLA management for enterprise operations."
     },
     {
-        "title": "Generative AI & Machine Learning",
+        "title": "AI and Computer Vision",
         "href": "/services#traing-programs",
-        "description": "Stay ahead with AI and ML skills, including Generative AI models."
+        "description": "Learn video analytics, anomaly detection, workforce intelligence, and on-premise AI operations."
     }
 ]
 

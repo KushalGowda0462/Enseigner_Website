@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.enseigner.in"),
   title: enseignerContent.seo.title,
   description: enseignerContent.seo.description,
   openGraph: {

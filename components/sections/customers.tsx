@@ -1,6 +1,25 @@
 import { customers } from "@/data/data"
 import Image from "next/image"
 
+const clientGroups = [
+  {
+    title: "Banking, Finance & Insurance",
+    names: "Canara Bank, HDB Financial Services, Manappuram Finance, Muthoot Finance, South Indian Bank, IIFL, HDFC ERGO, Cholamandalam Finance, Reserve Bank of India",
+  },
+  {
+    title: "Government, Public Sector & Defence",
+    names: "BSNL, NLC India, EPFO, MEPZ, Officers Training Academy Chennai, Indian Coast Guard, Office of the Development Commissioner",
+  },
+  {
+    title: "Ports, Logistics & Infrastructure",
+    names: "Chennai Port Trust, Container Corporation of India, Dakshin Bharat Gateway Terminal, SANS CFS, Distribution Logistics Infrastructure",
+  },
+  {
+    title: "Healthcare, Education, Retail & Industrial",
+    names: "Apollo Hospitals, Annamalai University, Decathlon, Flipkart, Lenskart, Royal Enfield, TCS, Tata Communications, Vinfast, Godrej and Boyce",
+  },
+]
+
 export default function CustomerLogos() {
   return (
     <section className="py-24 bg-background">
@@ -27,8 +46,15 @@ export default function CustomerLogos() {
             </div>
           ))}
         </div>
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
+          {clientGroups.map((group) => (
+            <div key={group.title} className="rounded-lg border border-border/40 bg-card/40 p-6">
+              <h3 className="text-lg font-semibold text-foreground mb-3">{group.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{group.names}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
 }
-
