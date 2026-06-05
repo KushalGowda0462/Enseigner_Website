@@ -15,7 +15,7 @@ export default function CustomerStories() {
         </div>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">See how we&apos;ve helped organizations achieve their goals</p>
       </div>
-      <div className="container mx-auto px-4">
+      <div className="site-container">
         <CardsSection cardsData={SuccessStories} linkprev='/succes-story' />
       </div>
     </section>

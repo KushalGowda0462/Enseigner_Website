@@ -10,12 +10,12 @@ export default function BlogPage() {
 
   return (
     <div className=" w-full bg-background mt-16 min-h-screen">
-    <div className="container mx-auto px-4 py-12">
+    <div className="site-container py-12">
       {/* Recent Blog Posts */}
       <section className="mb-16" id="blogs">
         <h2 className="text-2xl font-bold mb-8 text-foreground">Recent blog posts</h2>
-        <div className="grid lg:grid-cols-2 gap-8">
-          <Link href="/resources/0" className="group">
+        <div className="grid-12">
+          <Link href="/resources/0" className="span-half group">
             <Card className="border border-border/40 bg-card card-hover">
               <CardContent className="p-0">
                 <div className="relative h-[300px] mb-6">
@@ -47,12 +47,12 @@ export default function BlogPage() {
               </CardContent>
             </Card>
           </Link>
-          <div className="space-y-8 flex flex-col ">
+          <div className="span-half space-y-8 flex flex-col ">
             {recentPosts.slice(1).map((post,idx) => (
               <Link key={post.title} href={`/resources/${idx+1}`} className="group">
                 <Card className="border border-border/40 bg-card card-hover">
-                  <CardContent className="p-0 grid md:grid-cols-2 gap-6">
-                    <div className="relative h-[200px]">
+                  <CardContent className="grid-12 p-0">
+                    <div className="col-span-12 relative h-[200px] md:col-span-5">
                       <Image
                         src={post.image || "/placeholder.svg"}
                         alt={post.title}
@@ -60,7 +60,7 @@ export default function BlogPage() {
                         className="object-cover rounded-lg"
                       />
                     </div>
-                    <div className="space-y-4">
+                    <div className="col-span-12 space-y-4 md:col-span-7">
                       <div className="flex items-center gap-2 text-sm">
                         <span>{post.author}</span>
                         <span>•</span>
@@ -96,4 +96,3 @@ export default function BlogPage() {
     </div>
   )
 }
-

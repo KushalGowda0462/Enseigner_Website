@@ -63,9 +63,9 @@ export default async function ConsultingDetailPage({ params }: PageProps) {
     return (
         <main className="min-h-screen bg-background pt-24 pb-12">
             {/* 1. Hero Section */}
-            <section className="container mx-auto px-4 mb-24">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="space-y-6 text-center lg:text-left order-2 lg:order-1">
+            <section className="site-container mb-24">
+                <div className="grid-12 items-center">
+                    <div className="span-half space-y-6 text-center lg:text-left order-2 lg:order-1">
                         <div className="flex justify-center lg:justify-start">
                             <span className="label-pill">{content.heroPill}</span>
                         </div>
@@ -89,7 +89,7 @@ export default async function ConsultingDetailPage({ params }: PageProps) {
                             </Link>
                         </div>
                     </div>
-                    <div className="relative order-1 lg:order-2 flex justify-center">
+                    <div className="span-half relative order-1 lg:order-2 flex justify-center">
                         <div className="relative w-full max-w-lg aspect-auto md:aspect-square rounded-2xl overflow-hidden card-glow border border-border/50 bg-muted/20">
                             <Image
                                 src={content.heroImage.src}
@@ -106,11 +106,11 @@ export default async function ConsultingDetailPage({ params }: PageProps) {
             </section>
 
             {/* 2. What We Deliver (Sections) */}
-            <section className="container mx-auto px-4 mb-24">
+            <section className="site-container mb-24">
                 <div className="space-y-16">
                     {content.sections.map((section, idx) => (
-                        <div key={idx} className={`flex flex-col md:flex-row gap-8 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                            <div className="flex-1 space-y-4">
+                        <div key={idx} className="grid-12 items-center">
+                            <div className={`span-half space-y-4 ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
                                 <h2 className="text-3xl font-bold text-foreground">{section.heading}</h2>
                                 <p className="text-lg text-muted-foreground">{section.body}</p>
                                 {section.bullets && (
@@ -124,7 +124,7 @@ export default async function ConsultingDetailPage({ params }: PageProps) {
                                     </ul>
                                 )}
                             </div>
-                            <div className="flex-1 w-full">
+                            <div className={`span-half w-full ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
                                 <div className="h-64 md:h-80 w-full rounded-xl bg-muted/40 border border-border/50 flex items-center justify-center p-8">
                                     {/* Placeholder for section specific graphics/icons if image not provided */}
                                     <div className="text-center space-y-4 opacity-50">
@@ -140,14 +140,14 @@ export default async function ConsultingDetailPage({ params }: PageProps) {
 
             {/* 3. Steps / How it Works */}
             <section className="bg-muted/30 py-24 mb-24" id="process">
-                <div className="container mx-auto px-4">
+                <div className="site-container">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold mb-4">How It Works</h2>
                         <p className="text-muted-foreground">Our proven methodology for scalable success</p>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid-12">
                         {content.steps.map((step, idx) => (
-                            <Card key={idx} className="relative overflow-hidden border-border/40 hover:border-primary/50 transition-colors">
+                            <Card key={idx} className="span-quarter relative overflow-hidden border-border/40 hover:border-primary/50 transition-colors">
                                 <CardContent className="pt-8 p-6 space-y-4">
                                     <div className="text-5xl font-bold text-primary/10 absolute top-4 right-4">
                                         {idx + 1}
@@ -162,15 +162,15 @@ export default async function ConsultingDetailPage({ params }: PageProps) {
             </section>
 
             {/* 4. Case Example */}
-            <section className="container mx-auto px-4 mb-24" id="case-example">
+            <section className="site-container mb-24" id="case-example">
                 <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-card to-primary/5">
-                    <div className="grid md:grid-cols-12 gap-0">
-                        <div className="md:col-span-5 bg-muted/50 p-8 md:p-12 flex flex-col justify-center">
+                    <div className="grid-12 gap-0">
+                        <div className="col-span-12 bg-muted/50 p-8 md:p-12 flex flex-col justify-center md:col-span-5">
                             <span className="label-pill w-fit mb-6">CASE EXAMPLE</span>
                             <h3 className="text-2xl font-bold mb-4">Real World Impact</h3>
                             <p className="text-muted-foreground">See how we solve complex enterprise execution challenges.</p>
                         </div>
-                        <div className="md:col-span-7 p-8 md:p-12 space-y-8">
+                        <div className="col-span-12 p-8 md:p-12 space-y-8 md:col-span-7">
                             <div className="space-y-2">
                                 <h4 className="font-semibold text-primary flex items-center gap-2">
                                     <FileText className="h-4 w-4" /> Problem
@@ -195,18 +195,22 @@ export default async function ConsultingDetailPage({ params }: PageProps) {
             </section>
 
             {/* 5. FAQ */}
-            <section className="container mx-auto px-4 max-w-3xl mb-24">
-                <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-                <Accordion type="single" collapsible className="w-full">
-                    {content.faq.map((item, idx) => (
-                        <AccordionItem key={idx} value={`item-${idx}`}>
-                            <AccordionTrigger className="text-left text-lg font-medium">{item.q}</AccordionTrigger>
-                            <AccordionContent className="text-muted-foreground text-base leading-relaxed">
-                                {item.a}
-                            </AccordionContent>
-                        </AccordionItem>
-                    ))}
-                </Accordion>
+            <section className="site-container mb-24">
+                <div className="grid-12">
+                    <div className="span-centered-8">
+                        <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+                        <Accordion type="single" collapsible className="w-full">
+                            {content.faq.map((item, idx) => (
+                                <AccordionItem key={idx} value={`item-${idx}`}>
+                                    <AccordionTrigger className="text-left text-lg font-medium">{item.q}</AccordionTrigger>
+                                    <AccordionContent className="text-muted-foreground text-base leading-relaxed">
+                                        {item.a}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
+                    </div>
+                </div>
             </section>
 
             {/* 6. Final CTA */}

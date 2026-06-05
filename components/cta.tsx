@@ -9,7 +9,7 @@ export function CTASection() {
 
   return (
     <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="site-container">
         <div className="relative overflow-hidden rounded-3xl gradient-card p-12 md:p-16 text-center shadow-2xl shadow-primary/20">
           {/* Subtle overlay pattern */}
           <div className="absolute inset-0 bg-grid opacity-20" />

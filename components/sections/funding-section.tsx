@@ -8,7 +8,7 @@ export default function FundingSection() {
 
   return (
     <section id={funding.id} className="relative overflow-hidden py-20 flex justify-center bg-muted/30">
-      <div className="container relative mx-auto px-4">
+      <div className="site-container relative">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl font-bold text-foreground">
             {funding.title}
@@ -18,11 +18,11 @@ export default function FundingSection() {
           </h3>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid-12">
           {funding.details.map((detail, index) => (
             <Card
               key={index}
-              className="border border-border/40 bg-card/50 backdrop-blur-sm card-hover text-center"
+              className="span-third border border-border/40 bg-card/50 backdrop-blur-sm card-hover text-center"
             >
               <CardContent className="p-6">
                 <div className="flex flex-col items-center gap-4">

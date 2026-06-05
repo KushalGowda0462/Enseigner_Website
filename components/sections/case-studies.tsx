@@ -4,7 +4,7 @@ import { recentPosts } from "@/data/data";
 export default function CaseStudies() {
   return (
     <section className="py-20 flex justify-center bg-background">
-        <div className="container mx-auto px-4">
+        <div className="site-container">
 
           <div className="text-center space-y-4 mb-12">
             <div className="space-y-4 text-center">

@@ -10,7 +10,7 @@ export default function SolutionSection() {
 
   return (
     <section id="solution" className="relative overflow-hidden py-20 flex justify-center bg-background">
-      <div className="container relative mx-auto px-4">
+      <div className="site-container relative">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl font-bold text-foreground">
             {problem.title}
@@ -20,11 +20,11 @@ export default function SolutionSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+        <div className="grid-12 mb-12">
           {problem.points.map((point, index) => (
             <Card
               key={index}
-              className="border border-border/40 bg-card/50 backdrop-blur-sm card-hover"
+              className="span-half border border-border/40 bg-card/50 backdrop-blur-sm card-hover"
             >
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
@@ -41,11 +41,11 @@ export default function SolutionSection() {
         {gap && (
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-foreground mb-6 text-center">{gap.title}</h3>
-            <div className="max-w-3xl mx-auto">
+            <div className="grid-12">
               {gap.points.map((point, index) => (
                 <Card
                   key={index}
-                  className="border border-border/40 bg-card/50 backdrop-blur-sm card-hover mb-4"
+                  className="span-centered-8 border border-border/40 bg-card/50 backdrop-blur-sm card-hover"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
@@ -62,12 +62,12 @@ export default function SolutionSection() {
         )}
 
         {whyNow && (
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">{whyNow.title}</h3>
+          <div className="grid-12">
+            <h3 className="span-full text-2xl font-bold text-foreground mb-6 text-center">{whyNow.title}</h3>
             {whyNow.points.map((point, index) => (
               <Card
                 key={index}
-                className="border border-primary/30 bg-primary/5 backdrop-blur-sm card-hover"
+                className="span-centered-8 border border-primary/30 bg-primary/5 backdrop-blur-sm card-hover"
               >
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">

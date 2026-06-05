@@ -4,13 +4,13 @@ import Image from "next/image"
 import Link from "next/link"
 export default function ServicesGrid() {
   return (
-    <main className="container mx-auto px-4 py-12">
-      <div className="grid gap-6 md:grid-cols-2">
+    <main className="site-container py-12">
+      <div className="grid-12">
         {services.map((service, index) => (
           <div
             key={index}
             id={service.id}
-            className="scroll-m-40 group relative min-h-[400px] overflow-hidden rounded-lg bg-card border border-border/40 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 card-hover"
+            className="span-half scroll-m-40 group relative min-h-[400px] overflow-hidden rounded-lg bg-card border border-border/40 shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 card-hover"
           >
             {service.hasImage ? (
               <div className="relative h-full" >
@@ -43,4 +43,3 @@ export default function ServicesGrid() {
     </main>
   )
 }
-

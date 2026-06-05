@@ -8,7 +8,7 @@ export default function PartnersSection() {
   return (
     <section className="relative overflow-hidden bg-muted/30 py-24 flex justify-center">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-      <div className="container relative space-y-16 mx-auto px-4">
+      <div className="site-container relative space-y-16">
         {/* Partners Section */}
         <div className="space-y-8">
           <div className="space-y-6 text-center">
@@ -24,11 +24,11 @@ export default function PartnersSection() {
           </div>
 
           {/* Partner Logos */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid-12">
             {homepartners.map((partner) => (
               <div
                 key={partner.name}
-                className="flex items-center justify-center p-8"
+                className="span-third flex items-center justify-center p-8"
               >
                 <Image
                   src={partner.logo || "/placeholder.svg"}

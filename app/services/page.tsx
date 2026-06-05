@@ -46,16 +46,16 @@ export default function Services() {
 
       {/* Data and AI Section */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="site-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 text-foreground">Our Solution Offerings</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {content.offerings.subtitle}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid-12">
             {content.offerings.cards.map((offering, index) => (
-              <Card key={index} className="p-6 text-center bg-card border-border/40 card-hover">
+              <Card key={index} className="span-quarter p-6 text-center bg-card border-border/40 card-hover">
                 <div className="w-12 h-12 mx-auto text-primary mb-4 flex items-center justify-center">
                   <Settings className="w-12 h-12" />
                 </div>
@@ -71,7 +71,7 @@ export default function Services() {
 
       {/* Training Courses Section */}
       <section className="py-20 bg-background" id="traing-programs">
-        <div className="container mx-auto px-4">
+        <div className="site-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 text-foreground">Expert-Led Training Programs</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -80,9 +80,9 @@ export default function Services() {
           </div>
           
           {content.about?.training?.categories && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="grid-12 mb-12">
               {content.about.training.categories.map((category, index) => (
-                <Card key={index} className="p-6 bg-card border-border/40 card-hover">
+                <Card key={index} className="span-third p-6 bg-card border-border/40 card-hover">
                   <h3 className="text-xl font-semibold mb-3 text-foreground">{category.title}</h3>
                   <p className="text-muted-foreground">{category.description}</p>
                 </Card>
@@ -91,9 +91,9 @@ export default function Services() {
           )}
 
           {content.about?.training?.benefits && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid-12">
               {content.about.training.benefits.map((benefit, index) => (
-                <Card key={index} className="p-6 bg-muted/20 border-border/40">
+                <Card key={index} className="span-third p-6 bg-muted/20 border-border/40">
                   <div className="flex items-start gap-4">
                     <div className="rounded-full p-2 text-primary bg-primary/10 flex-shrink-0">
                       <span className="text-lg font-bold">{index + 1}</span>
@@ -105,9 +105,11 @@ export default function Services() {
             </div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+          <div className="grid-12 mt-12">
             {trainingCategories.map((category, index) => (
-              <TrainingCategoryCard key={index} {...category} />
+              <div className="span-quarter" key={index}>
+                <TrainingCategoryCard {...category} />
+              </div>
             ))}
           </div>
         </div>

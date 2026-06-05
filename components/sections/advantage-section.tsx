@@ -8,7 +8,7 @@ export default function AdvantageSection() {
 
   return (
     <section id={advantage.id} className="relative overflow-hidden py-20 flex justify-center bg-muted/30">
-      <div className="container relative mx-auto px-4">
+      <div className="site-container relative">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl font-bold text-foreground">
             {advantage.title}
@@ -18,11 +18,11 @@ export default function AdvantageSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid-12">
           {advantage.wins.map((win, index) => (
             <Card
               key={index}
-              className="border border-border/40 bg-card/50 backdrop-blur-sm card-hover"
+              className="span-half border border-border/40 bg-card/50 backdrop-blur-sm card-hover"
             >
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">

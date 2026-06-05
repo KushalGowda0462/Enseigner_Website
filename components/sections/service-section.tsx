@@ -20,7 +20,7 @@ export default function ServicesSection() {
 
   return (
     <section id={offerings.id} className="relative overflow-hidden py-24 flex justify-center bg-background">
-      <div className="container relative mx-auto px-4">
+      <div className="site-container relative">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
           <div className="flex justify-center mb-4">
@@ -35,13 +35,13 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid-12">
           {offerings.cards.map((card, index) => {
             const Icon = iconMap[card.title as keyof typeof iconMap] || Cloud;
             return (
               <Card
                 key={index}
-                className="card-glow group"
+                className="card-glow group span-quarter"
               >
                 <CardContent className="relative space-y-4 p-6 h-full flex flex-col">
                   {/* Icon Badge */}

@@ -11,7 +11,7 @@ export default function BlogsSection() {
 
   return (
     <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="site-container">
         <div className="text-center space-y-4 mb-16">
           <div className="space-y-4 text-center">
             <div className="flex justify-center mb-4">
@@ -26,9 +26,11 @@ export default function BlogsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid-12 mb-12">
           {postsToShow.map((post, idx) => (
-            <BlogCardsBeautiful key={post.title} card={post} href={`/resources/${idx}`} />
+            <div className="span-third" key={post.title}>
+              <BlogCardsBeautiful card={post} href={`/resources/${idx}`} />
+            </div>
           ))}
         </div>
 
@@ -45,4 +47,3 @@ export default function BlogsSection() {
     </section>
   )
 }
-

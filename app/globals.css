@@ -111,6 +111,43 @@ body {
 
 @layer components {
 
+  /* 12-column layout system */
+  .site-container {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .grid-12 {
+    @apply grid grid-cols-12 gap-6 lg:gap-8;
+  }
+
+  .span-full {
+    @apply col-span-12;
+  }
+
+  .span-half {
+    @apply col-span-12 md:col-span-6;
+  }
+
+  .span-third {
+    @apply col-span-12 md:col-span-6 lg:col-span-4;
+  }
+
+  .span-quarter {
+    @apply col-span-12 sm:col-span-6 lg:col-span-3;
+  }
+
+  .span-two-thirds {
+    @apply col-span-12 lg:col-span-8;
+  }
+
+  .span-centered-8 {
+    @apply col-span-12 lg:col-span-8 lg:col-start-3;
+  }
+
+  .span-centered-10 {
+    @apply col-span-12 lg:col-span-10 lg:col-start-2;
+  }
+
   /* Background Patterns */
   .bg-stars {
     background-image: radial-gradient(circle at 2px 2px, hsl(var(--foreground) / 0.13) 1px, transparent 0);

@@ -38,9 +38,9 @@ export default function Contact() {
       </section>
 
       <section className="pt-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr] max-w-5xl mx-auto">
-            <Card className="p-8 bg-card border-border/40 h-fit">
+        <div className="site-container">
+          <div className="grid-12">
+            <Card className="col-span-12 p-8 bg-card border-border/40 h-fit lg:col-span-5">
               <h2 className="text-2xl font-bold mb-6 text-foreground">Company Contact</h2>
               <div className="space-y-5 text-muted-foreground">
                 <div>
@@ -65,7 +65,7 @@ export default function Contact() {
                 </div>
               </div>
             </Card>
-            <Card className="p-8 bg-card border-border/40">
+            <Card className="col-span-12 p-8 bg-card border-border/40 lg:col-span-7">
               <h2 className="text-2xl font-bold mb-6 text-foreground">Get in Touch</h2>
               <form className="space-y-6">
                 <div>

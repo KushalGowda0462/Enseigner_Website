@@ -23,16 +23,16 @@ const clientGroups = [
 export default function CustomerLogos() {
   return (
     <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="site-container">
         <div className="text-center space-y-4 mb-16">
           <div className="flex justify-center mb-4">
             <span className="label-pill">TRUSTED BY</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">Industry Leaders</h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 items-center">
+        <div className="grid-12 items-center">
           {customers.map((customer) => (
-            <div key={customer.name} className="flex justify-center">
+            <div key={customer.name} className="col-span-6 flex justify-center md:col-span-3">
               <div className="w-32 h-20 relative hover:grayscale-0 transition-all duration-300">
                 <Image
                   src={customer.logo || "/placeholder.svg"}
@@ -46,9 +46,9 @@ export default function CustomerLogos() {
             </div>
           ))}
         </div>
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="grid-12 mt-16">
           {clientGroups.map((group) => (
-            <div key={group.title} className="rounded-lg border border-border/40 bg-card/40 p-6">
+            <div key={group.title} className="span-half rounded-lg border border-border/40 bg-card/40 p-6">
               <h3 className="text-lg font-semibold text-foreground mb-3">{group.title}</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">{group.names}</p>
             </div>

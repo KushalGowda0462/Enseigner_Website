@@ -13,8 +13,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-stars dark:opacity-100 opacity-0" />
       
       <div className="relative min-h-[85vh] py-24 md:py-32 w-full">
-        <div className="relative z-10 min-h-[80vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-5xl mx-auto">
+        <div className="site-container relative z-10 min-h-[80vh] flex flex-col items-center justify-center">
+          <div className="grid-12 text-center">
+            <div className="span-centered-10">
             {/* Top Label Pill */}
             {hero.topLabel && (
               <div className="mb-6 flex justify-center">
@@ -60,7 +61,7 @@ export default function Hero() {
             </div>
             
             {/* Micro Highlights - Icon Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+            <div className="grid-12 mb-16">
               {hero.microHighlights && hero.microHighlights.map((micro, idx) => {
                 const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
                   "Server": Server,
@@ -71,7 +72,7 @@ export default function Hero() {
                 };
                 const Icon = iconMap[micro.icon] || Server;
                 return (
-                  <div key={idx} className="text-center group">
+                  <div key={idx} className="span-third text-center group">
                     <div className="flex justify-center mb-4">
                       <div className="icon-badge">
                         <Icon className="h-8 w-8" />
@@ -85,13 +86,14 @@ export default function Hero() {
             </div>
             
             {/* Highlights List */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid-12">
               {hero.highlights.map((highlight, idx) => (
-                <div key={idx} className="flex items-start gap-3 text-left bg-card/30 backdrop-blur-sm border border-border/40 rounded-lg p-4 hover:border-primary/30 transition-all duration-300">
+                <div key={idx} className="span-third flex items-start gap-3 text-left bg-card/30 backdrop-blur-sm border border-border/40 rounded-lg p-4 hover:border-primary/30 transition-all duration-300">
                   <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <p className="text-muted-foreground text-sm leading-relaxed">{highlight}</p>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>

@@ -37,8 +37,9 @@ export default async function BlogPost({params}:{
       </div>
 
       {/* Content Section */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-7x mx-auto space-y-8">
+      <div className="site-container py-12">
+        <div className="grid-12">
+        <div className="span-centered-10 space-y-8">
           {currBlog.content.slice(0, 3).map((content, idx) => (<p key={idx} className="text-lg leading-relaxed">
             {content.para}
           </p>))}
@@ -62,12 +63,13 @@ export default async function BlogPost({params}:{
             {currBlog.content[currBlog.content.length - 1].para}
           </p>
         </div>
+        </div>
       </div>
 
       {/* Related Posts Section */}
-      <section className="container mx-auto px-4 py-12">
+      <section className="site-container py-12">
         <h2 className="text-2xl font-bold mb-8 text-foreground">Other Interesting Success Stories</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid-12">
           {relatedPosts.map((post, idx) => (
             // <Link key={post.title} href="#" className="group">
             //   <Card className="border-0 shadow-none h-full">
@@ -100,11 +102,12 @@ export default async function BlogPost({params}:{
             //     </CardContent>
             //   </Card>
             // </Link>
-            <BlogCardsBeautiful key={post.title} card={post} href={idx.toString()} />
+            <div key={post.title} className="span-third">
+              <BlogCardsBeautiful card={post} href={idx.toString()} />
+            </div>
           ))}
         </div>
       </section>
     </article>
   )
 }
-

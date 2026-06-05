@@ -6,10 +6,10 @@ const content = getContent();
 
 function Footer() {
   return (
-    <footer className="border-t border-border/40 py-12 bg-muted/40 flex justify-center mx-auto px-4">
-      <div className="container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
+    <footer className="border-t border-border/40 py-12 bg-muted/40">
+      <div className="site-container">
+        <div className="grid-12">
+          <div className="col-span-12 space-y-4 md:col-span-3">
             <Image 
               src={content.brand.logoPath} 
               alt={content.brand.name} 
@@ -22,7 +22,7 @@ function Footer() {
             </p>
           </div>
           {content.footer.links.map((linkGroup, idx) => (
-            <div key={idx} className="space-y-4">
+            <div key={idx} className="col-span-6 space-y-4 md:col-span-3">
               <h4 className="font-bold text-foreground">{linkGroup.label}</h4>
               <ul className="space-y-2">
                 {linkGroup.items.map((item, itemIdx) => (

@@ -27,8 +27,8 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="bg-background px-4 py-14">
-        <div className="container mx-auto max-w-6xl">
+      <section className="bg-background py-14">
+        <div className="site-container">
           <div className="border-y-4 border-primary/70 bg-primary/10 px-6 py-12 md:px-14 md:py-16">
             <blockquote className="mx-auto max-w-5xl text-center text-2xl font-medium italic leading-relaxed text-foreground md:text-4xl md:leading-relaxed">
               &quot;{content.about.vision}&quot;
@@ -38,42 +38,42 @@ export default function AboutUs() {
       </section>
 
 
-      <section className="relative py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative py-20">
+        <div className="site-container">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Our Mission
             </h1>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid-12 items-center">
             <Image
               src="/about/1.jpeg"
               alt="Team meeting"
               width={600}
               height={400}
-              className="rounded-lg w-full"
+              className="span-half rounded-lg w-full"
             />
-            <div>
+            <div className="span-half">
               <p className="text-lg text-muted-foreground mb-4">
                 {content.about.description}
               </p>
               <p className="text-lg text-muted-foreground mb-4">
                 {content.about.vision}
               </p>
-              <div className="grid grid-cols-2 gap-4 mt-6">
-                <div>
+              <div className="grid-12 mt-6">
+                <div className="col-span-6">
                   <p className="font-semibold text-foreground">Founded</p>
                   <p className="text-muted-foreground">{content.about.companyOverview.founded}</p>
                 </div>
-                <div>
+                <div className="col-span-6">
                   <p className="font-semibold text-foreground">Headquarters</p>
                   <p className="text-muted-foreground">{content.about.companyOverview.headquarters}</p>
                 </div>
-                <div>
+                <div className="col-span-6">
                   <p className="font-semibold text-foreground">Region</p>
                   <p className="text-muted-foreground">{content.about.companyOverview.region}</p>
                 </div>
-                <div>
+                <div className="col-span-6">
                   <p className="font-semibold text-foreground">Team</p>
                   <p className="text-muted-foreground">{content.about.companyOverview.professionals}</p>
                 </div>
@@ -85,10 +85,10 @@ export default function AboutUs() {
 
       {/* Stats Section */}
       <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="site-container">
+          <div className="grid-12">
             {stats.map((stat, index) => (
-              <Card key={index} className="p-6 text-center">
+              <Card key={index} className="span-quarter p-6 text-center">
                 <h3 className="text-4xl font-bold mb-2 text-primary">{stat.number}</h3>
                 <p className="text-muted-foreground">{stat.label}</p>
               </Card>
@@ -99,16 +99,16 @@ export default function AboutUs() {
 
       {/* Values Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="site-container">
+          <div className="grid-12 items-center">
             <Image
               src="/stories/1.avif"
               alt="Working professional"
               width={500}
               height={500}
-              className="rounded-lg"
+              className="span-half rounded-lg"
             />
-            <div>
+            <div className="span-half">
               <h2 className="text-3xl font-bold mb-8">Vision and Strategic Direction</h2>
               <p className="text-lg mb-6">
                 Enterprise deployments succeed when they are grounded in infrastructure discipline. Enseigner designs integrated systems that reduce operational risk and support long-term execution.
@@ -128,9 +128,9 @@ export default function AboutUs() {
 
       {/* Approach Section */}
       <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+        <div className="site-container">
+          <div className="grid-12 items-center">
+            <div className="span-half">
               <h2 className="text-3xl font-bold mb-6">Our Approach</h2>
               <p className="text-lg mb-6">
                 We deliver end-to-end systems integration from consultancy and design through supply, implementation, commissioning, AMC, and managed operations.
@@ -157,7 +157,7 @@ export default function AboutUs() {
                 </li>
               </ul>
             </div>
-            <div className="flex justify-center">
+            <div className="span-half flex justify-center">
               <Image
                 src="/about/3.avif"
                 alt="Security approach illustration"
@@ -172,17 +172,17 @@ export default function AboutUs() {
 
       {/* Stay Stress Free Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="site-container">
           <h2 className="text-3xl font-bold mb-12 text-center">Intelligent Operations Visibility</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid-12 items-center">
             <Image
               src="/about/4.avif"
               alt="Happy client"
               width={500}
               height={500}
-              className="rounded-lg"
+              className="span-half rounded-lg"
             />
-            <div className="space-y-6">
+            <div className="span-half space-y-6">
               <p className="text-lg mb-6">
               Enseigner turns distributed enterprise environments into centrally visible, role-controlled operations. Existing camera, access, HR, ERP, payroll, and business intelligence systems can become part of a unified operational command layer.
 
@@ -204,7 +204,7 @@ export default function AboutUs() {
       <div className="absolute inset-0 bg-muted/20" />
 
       {/* Main Container */}
-      <div className="container mx-auto px-4 py-16 relative">
+      <div className="site-container py-16 relative">
         <div className="relative bg-primary rounded-xl p-8 md:p-16 overflow-hidden">
           {/* Right Content */}
           <div className="relative z-10 flex flex-col items-center justify-center gap-8 max-w-2xl mx-auto text-center">
