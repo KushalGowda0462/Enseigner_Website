@@ -22,7 +22,7 @@ export default function AboutUs() {
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">About Enseigner</h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto">
-            Infrastructure-led. AI-enabled. Security-first. India-proven.
+            Dubai-led. GCC-focused. India-scale execution.
           </p>
         </div>
       </section>
@@ -153,7 +153,7 @@ export default function AboutUs() {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="text-primary" />
-                  Pan-India rollout and long-term AMC support for multi-site operations.
+                  GCC-focused rollout planning with India-scale delivery discipline for multi-site operations.
                 </li>
               </ul>
             </div>

@@ -2,7 +2,7 @@ import { partners } from "@/data/data"
 import Image from "next/image"
 
 export function InfiniteCarousel() {
-  const duplicatedPartners = [...partners, ...partners, ...partners, ...partners]
+  const duplicatedPartners = [...partners, ...partners]
 
 
   return (
@@ -27,4 +27,3 @@ export function InfiniteCarousel() {
     </div>
   )
 }
-

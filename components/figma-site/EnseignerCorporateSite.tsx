@@ -69,14 +69,14 @@ const themeVars: Record<ThemeMode, CSSProperties> = {
 };
 
 const metrics = [
-  { icon: Shield, value: "12+", label: "Years Enterprise Execution", sub: "Enterprise execution across India" },
-  { icon: Building2, value: "100+", label: "Enterprise Clients Across India", sub: "Banking, government, healthcare, logistics, and critical infrastructure" },
+  { icon: Shield, value: "12+", label: "Years Enterprise Execution", sub: "India-scale delivery foundation for GCC enterprise work" },
+  { icon: Building2, value: "100+", label: "Enterprise Clients Served", sub: "Banking, government, healthcare, logistics, and critical infrastructure" },
   { icon: MapPin, value: "10,000+", label: "Branch & Site Security Installations", sub: "Operational deployments across enterprise locations" },
   { icon: Network, value: "200+", label: "OEM Partner Ecosystem", sub: "Security, networking, compute, and storage relationships" },
 ];
 
 const visionQuote =
-  "To be India's most trusted infrastructure and enterprise technology company — enabling enterprises to modernise their infrastructure, secure their operations, and adopt intelligent technology with confidence and operational permanence.";
+  "To be a trusted GCC partner for sovereign AI, enterprise infrastructure, and intelligent operations — enabling regulated enterprises to modernise securely, operate with confidence, and keep control of critical data.";
 
 const strategicPillars = [
   {
@@ -85,11 +85,11 @@ const strategicPillars = [
   },
   {
     title: "Execution Over Theory",
-    body: "Enterprise execution succeeds when it is grounded in infrastructure discipline. 12+ years of enterprise execution across India differentiates Enseigner from consulting-led or software-first players.",
+    body: "Enterprise execution succeeds when it is grounded in infrastructure discipline. Enseigner brings 12+ years of India-scale delivery into GCC markets where reliability, accountability, and compliance matter.",
   },
   {
-    title: "Pan-India Reach",
-    body: "Enseigner operates across India — delivering and maintaining systems for enterprises, banks, government institutions, and logistics operators.",
+    title: "GCC-Focused Ambition",
+    body: "Enseigner is positioned for regulated enterprises across the UAE, Saudi Arabia, Qatar, Kuwait, Oman, Bahrain, and the wider Middle East.",
   },
 ];
 
@@ -143,7 +143,7 @@ const aiModules = [
   { icon: KeyRound, code: "SAI", label: "Security & Access Intelligence", value: "Audit-Ready", unit: "biometric access, anomaly detection, timestamped audit trails, and regulatory-grade evidence", status: "COMPLIANT" },
   { icon: BarChart3, code: "RCI", label: "Retail & Commercial Intelligence", value: "Operational", unit: "visitor flow analysis, zone engagement, dwell time analytics, POS reconciliation, and behaviour analytics", status: "INSIGHT" },
   { icon: MonitorDot, code: "ECD", label: "Enterprise Command Dashboard", value: "Unified", unit: "real-time visibility across workforce status, security posture, alerts, and compliance readiness", status: "COMMAND" },
-  { icon: FileCheck, code: "ODA", label: "On-Premise Data Architecture", value: "DPDP Aligned", unit: "AI inference processed in the client environment with no biometric or operational data transmitted externally", status: "PRIVATE" },
+  { icon: FileCheck, code: "ODA", label: "On-Premise Data Architecture", value: "GCC Ready", unit: "AI inference processed in the client environment with no biometric or operational data transmitted externally", status: "PRIVATE" },
   { icon: AlertTriangle, code: "AIO", label: "AIOps & Anomaly Detection", value: "Predictive", unit: "automation, predictive analytics, performance intelligence, SLA tracking, and proactive issue resolution", status: "AIOPS" },
 ];
 
@@ -153,7 +153,7 @@ const dataCentreCapabilities = [
   "Computer vision and AI enablement — intelligent video analytics, anomaly detection, and operational monitoring on existing camera infrastructure.",
   "Disaster recovery and backup architecture — resilient, tested, and designed for business continuity.",
   "Structured cabling and passive infrastructure — from CAD design through commissioning for data centres and enterprise campuses.",
-  "Designed for enterprise sectors: banking, government, healthcare, ports, logistics, and critical infrastructure.",
+  "Designed for GCC enterprise sectors: banking, government, healthcare, ports, logistics, free zones, and critical infrastructure.",
 ];
 
 const deliveryModel = [
@@ -165,14 +165,14 @@ const deliveryModel = [
 ];
 
 const industries = [
-  { icon: Landmark, code: "IND-01", label: "Banking & Finance", desc: "Branch security, surveillance, compliance infrastructure, and data centre modernization for banks and NBFCs." },
-  { icon: Shield, code: "IND-02", label: "Government & Defence", desc: "Secure command centres, surveillance networks, and mission-critical infrastructure for public sector operations." },
-  { icon: Anchor, code: "IND-03", label: "Ports & Logistics", desc: "Container terminal security, perimeter surveillance, cargo visibility, and port command centre integration." },
-  { icon: HeartPulse, code: "IND-04", label: "Healthcare", desc: "Hospital security, campus networking, data protection, and managed services for healthcare environments." },
-  { icon: ShoppingBag, code: "IND-05", label: "Retail", desc: "Multi-store security rollouts, loss prevention, footfall analytics, and centralized surveillance management." },
-  { icon: GraduationCap, code: "IND-06", label: "Education", desc: "Campus security, smart classroom infrastructure, network backbone, and access intelligence." },
-  { icon: Factory, code: "IND-07", label: "Manufacturing", desc: "Industrial CCTV, production floor monitoring, OT network security, and plant command operations." },
-  { icon: Zap, code: "IND-08", label: "Critical Infrastructure", desc: "Utilities, power, oil and gas, and high-availability security and communications infrastructure." },
+  { icon: Landmark, code: "GCC-01", label: "Banking & Finance", desc: "Branch security, surveillance, compliance infrastructure, and data centre modernisation for GCC financial institutions." },
+  { icon: Shield, code: "GCC-02", label: "Government & Smart Cities", desc: "Secure command centres, surveillance networks, and mission-critical infrastructure for public sector and smart city operations." },
+  { icon: Anchor, code: "GCC-03", label: "Ports, Logistics & Free Zones", desc: "Container terminal security, perimeter surveillance, cargo visibility, and command centre integration for regional trade corridors." },
+  { icon: HeartPulse, code: "GCC-04", label: "Healthcare", desc: "Hospital security, campus networking, data protection, and managed services for regulated healthcare environments." },
+  { icon: ShoppingBag, code: "GCC-05", label: "Retail & Commercial", desc: "Multi-site security rollouts, loss prevention, footfall analytics, and centralised surveillance management." },
+  { icon: GraduationCap, code: "GCC-06", label: "Education & Campuses", desc: "Campus security, smart classroom infrastructure, network backbone, and access intelligence." },
+  { icon: Factory, code: "GCC-07", label: "Manufacturing & Industrial", desc: "Industrial CCTV, production floor monitoring, OT network security, and plant command operations." },
+  { icon: Zap, code: "GCC-08", label: "Energy & Critical Infrastructure", desc: "Utilities, power, oil and gas, and high-availability security and communications infrastructure." },
 ];
 
 const deployments = [
@@ -392,17 +392,16 @@ function HeroSection() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-12 gap-8 px-5 pb-20 pt-32 sm:px-8 lg:pt-40">
         <div className="col-span-12 max-w-3xl lg:col-span-8">
-          <SectionLabel>Enterprise Infrastructure · Since 2012</SectionLabel>
+          <SectionLabel>Enterprise Infrastructure · Built on 12 Years of Enterprise Execution</SectionLabel>
           <h1 className="text-[clamp(3.1rem,7vw,5.9rem)] font-black uppercase leading-[0.95] tracking-tight text-[var(--site-text)]">
             Engineering <br />
             <span className="text-[var(--site-gold)]">Intelligent</span> <br />
-            Enterprise <br />
             Infrastructure <br />
-            <span className="text-[var(--site-muted)]">Across India</span>
+            <span className="text-[var(--site-muted)]">for the GCC</span>
           </h1>
           <div className="my-7 h-0.5 w-20 bg-[linear-gradient(to_right,var(--site-gold),transparent)]" />
           <p className="max-w-xl text-lg leading-8 text-[var(--site-muted)]">
-            AI & Computer Vision · Enterprise Data Centre & Infrastructure · Integrated Security Systems · Network Solutions · Audio Video Solutions.
+            Sovereign AI · GPU-ready infrastructure · Enterprise data centre · Integrated security systems · Network and command centre solutions for regulated GCC enterprises.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a href="#capabilities" className="inline-flex items-center gap-2 bg-[var(--site-gold)] px-8 py-4 text-sm font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]">
@@ -417,7 +416,7 @@ function HeroSection() {
         <div className="hidden lg:col-span-4 lg:flex lg:flex-col lg:items-end lg:justify-center lg:gap-3">
           {[
             ["12+", "Years of Enterprise Execution"],
-            ["100+", "Enterprise Clients Across India"],
+            ["100+", "Enterprise Clients Served"],
             ["10,000+", "Branch & Site Security Installations"],
           ].map(([value, label]) => (
             <div key={value} className="w-44 border border-[var(--site-gold)]/25 bg-[var(--site-card)]/85 p-5 backdrop-blur-md">
@@ -445,18 +444,18 @@ function AboutSection() {
               Who We Are
             </h2>
             <p className="mt-6 text-lg leading-8 text-[var(--site-text)]">
-              A systems integration company built on 12 years of enterprise execution across India.
+              A Dubai-led enterprise technology company for sovereign AI, infrastructure, security, and intelligent operations across the GCC.
             </p>
           </div>
           <div className="space-y-6 lg:col-span-7">
             <p className="text-base leading-8 text-[var(--site-muted)]">
-              Enseigner is an infrastructure-first enterprise technology company that has evolved into AI-enabled intelligent operations. Built on 12+ years of enterprise execution across banking, government, healthcare, logistics, and critical infrastructure.
+              Enseigner is an infrastructure-first enterprise technology company focused on sovereign AI, data centre, security, networking, and intelligent operations for regulated enterprises across the UAE, Saudi Arabia, Qatar, Kuwait, Oman, Bahrain, and the wider Middle East.
             </p>
             <p className="text-base leading-8 text-[var(--site-muted)]">
-              Enterprise deployments succeed when they are grounded in infrastructure discipline. Organisations that attempt technology adoption without operationally sound, well-integrated infrastructure consistently face execution failures.
+              Built on 12+ years of execution across banking, government, healthcare, logistics, ports, retail, and critical infrastructure in India, Enseigner brings field-tested delivery discipline to GCC organisations that need operationally sound, well-integrated infrastructure.
             </p>
             <p className="text-base leading-8 text-[var(--site-gold)]">
-              Enseigner exists to close that gap — across India&apos;s enterprise landscape.
+              Enseigner exists to close that gap for GCC enterprises where data sovereignty, compliance, resilience, and multi-site command visibility are board-level priorities.
             </p>
           </div>
         </div>
@@ -558,7 +557,7 @@ function DataCentreAISection() {
               Enterprise Data Centre & AI Solutions
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
-              Built for Indian enterprise — reliable, scalable, and operationally sound.
+              Built for regulated GCC enterprise — sovereign, scalable, and operationally sound.
             </p>
           </div>
           <div className="lg:col-span-5">
@@ -585,7 +584,7 @@ function DataCentreAISection() {
           {[
             ["End-to-End Delivery", "Consultancy, design, supply, implementation, and AMC — one partner for the full lifecycle"],
             ["200+ OEM Partners", "HPE · Dell · Cisco · Fortinet · Hikvision · Axis · NetApp and 200+ brands"],
-            ["Operational Continuity", "10,000+ installations delivered across pan-India enterprise clients"],
+            ["Operational Continuity", "10,000+ installations delivered across complex enterprise environments"],
             ["Scalable Architecture", "From single site to enterprise-wide multi-location deployments"],
           ].map(([title, body]) => (
             <div key={title} className="bg-[var(--site-card)] p-6">
@@ -596,7 +595,7 @@ function DataCentreAISection() {
         </div>
 
         <p className="mt-8 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-[var(--site-muted)]">
-          ISO 14001 Certified · ASCB(E) Accredited · Electronic Security Association of India Member
+          ISO 14001 Certified · ASCB(E) Accredited · Electronic Security Association of India Member · GCC compliance-ready delivery model
         </p>
       </div>
     </section>
@@ -634,7 +633,7 @@ function AISection() {
             <div className="mt-5 flex flex-wrap gap-5 font-mono text-xs uppercase tracking-[0.08em]">
               <span className="text-[#1a9e6d]">On-Premise AI Processing</span>
               <span className="text-[var(--site-muted)]">On-Premise Data by Design</span>
-              <span className="text-[var(--site-muted)]">DPDP Act Aligned</span>
+              <span className="text-[var(--site-muted)]">UAE PDPL · Saudi NDMO · GCC Privacy Ready</span>
             </div>
           </div>
         </div>
@@ -693,7 +692,7 @@ function Industries() {
           <div>
             <SectionLabel>Industries Served</SectionLabel>
             <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">
-              Built for India&apos;s Most <br /> Demanding Sectors
+              Built for the GCC&apos;s Most <br /> Demanding Sectors
             </h2>
           </div>
           <p className="max-w-md text-base leading-8 text-[var(--site-muted)]">
@@ -731,7 +730,7 @@ function DeploymentRecord() {
           <SectionLabel>Deployment Track Record</SectionLabel>
           <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">Enterprise Credibility Built Over 12 Years</h2>
           <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
-            A cross-sector portfolio of enterprise deployments demonstrating deep technical capability and project execution across India.
+            A cross-sector portfolio of enterprise deployments demonstrating deep technical capability and India-scale execution that can support GCC transformation programs.
           </p>
         </div>
 
@@ -794,7 +793,7 @@ function OEMPartners() {
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-[linear-gradient(to_left,var(--site-bg),transparent)]" />
         <div className="overflow-hidden">
           <div ref={rowRef} className="flex will-change-transform">
-            {[...partners, ...partners, ...partners].map((partner, index) => (
+            {[...partners, ...partners].map((partner, index) => (
               <div key={`${partner}-${index}`} className="mx-2 flex h-24 min-w-[190px] shrink-0 flex-col items-center justify-center border border-[var(--site-gold)]/15 bg-[var(--site-card)] px-6 text-center transition hover:border-[var(--site-gold)]/45 hover:bg-[var(--site-card-hover)]">
                 <div className="text-lg font-black text-[var(--site-text)]">{partner}</div>
                 <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-[var(--site-gold)]/55">Technology OEM</div>
@@ -819,11 +818,11 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
             <span className="h-px w-10 bg-[var(--site-gold)]" />
           </div>
           <h2 className="text-[clamp(2.7rem,6vw,5.3rem)] font-black uppercase leading-none text-[var(--site-text)]">
-            Enterprise Success in India <br />
+            Enterprise Success in the GCC <br />
             <span className="text-[var(--site-gold)]">Depends on Infrastructure Integration</span>
           </h2>
           <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
-            Enterprise success in India will depend on infrastructure integration, operational execution, and compliance alignment. Enseigner is built to deliver that.
+            Enterprise success in the GCC will depend on sovereign AI, infrastructure integration, operational execution, and compliance alignment. Enseigner is built to deliver that.
           </p>
           <a href="mailto:abu@enseigner.in" className="mt-10 inline-flex items-center gap-3 bg-[var(--site-gold)] px-10 py-5 text-base font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]">
             Contact Enseigner <ArrowRight size={18} />
@@ -832,7 +831,7 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
 
         <div className="grid gap-px bg-[var(--site-gold)]/15 lg:grid-cols-3">
           {[
-            { icon: Users, label: "Founder & MD", value: "Abubucker Mansoor Mohamed", sub: "Infrastructure-led. AI-enabled. Security-first. India-proven." },
+            { icon: Users, label: "Founder & MD", value: "Abubucker Mansoor Mohamed", sub: "Dubai-led. GCC-focused. India-scale execution." },
             { icon: Mail, label: "Email", value: "abu@enseigner.in", sub: "Founder contact from company profile" },
             { icon: MapPin, label: "Website", value: "www.enseigner.in", sub: "Engineers the Systems of the World" },
           ].map((contact) => {

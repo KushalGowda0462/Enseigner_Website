@@ -63,7 +63,7 @@ export const consultingDetails: Record<ConsultingSlug, ConsultingDetail> = {
         heroPill: "DATA CENTRE & AI",
         title: "Enterprise Data Centre & Infrastructure",
         highlightWord: "Data Centre",
-        subtitle: "Reliable, scalable, and operationally sound infrastructure for Indian enterprise workloads.",
+        subtitle: "Reliable, scalable, and operationally sound infrastructure for regulated GCC enterprise workloads.",
         primaryCta: { label: "Plan Infrastructure", href: "/contact" },
         secondaryCta: { label: "Explore Delivery", href: "#process" },
         heroImage: { src: "/services/infrastructure.avif", alt: "Enterprise data centre infrastructure" },
@@ -150,7 +150,7 @@ export const consultingDetails: Record<ConsultingSlug, ConsultingDetail> = {
             {
                 heading: "Compliance and Evidence Management",
                 body: "Zero-trust security architecture, threat detection, incident response, encryption, audit trails, and standards alignment across enterprise and cloud environments.",
-                bullets: ["DPDP Act aligned operations", "ISO 27001 and SOC2 readiness", "24/7 security operations and evidence trails"]
+                bullets: ["UAE PDPL, Saudi NDMO, and GCC privacy-ready operations", "ISO 27001 and SOC2 readiness", "24/7 security operations and evidence trails"]
             }
         ],
         steps: [
