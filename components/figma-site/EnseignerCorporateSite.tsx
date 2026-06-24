@@ -35,6 +35,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { type CSSProperties, useEffect, useState } from "react";
+import ContactForm from "./ContactForm";
 
 const logoPath = "/enseigner-logo-transparent.png";
 const heroImage =
@@ -435,6 +436,19 @@ function HeroSection() {
             <a href="#contact" className="inline-flex items-center gap-2 border border-[var(--site-text)]/25 px-8 py-4 text-[15px] font-black uppercase tracking-[0.1em] text-[var(--site-text)] transition hover:border-[var(--site-gold)] hover:text-[var(--site-gold)]">
               <Phone size={16} /> Talk to an Expert
             </a>
+          </div>
+
+          <div className="mt-12 border-t border-[var(--site-text)]/10 pt-6">
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--site-muted)]">
+              Trusted by enterprises across BFSI, government &amp; retail
+            </p>
+            <div className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-3">
+              {["Canara Bank", "Muthoot Finance", "Flipkart", "Apollo Hospitals"].map((client) => (
+                <span key={client} className="text-base font-black uppercase tracking-[0.04em] text-[var(--site-text)]/65 transition hover:text-[var(--site-gold)]">
+                  {client}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -890,15 +904,13 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
           <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
             Enterprise success in the GCC will depend on infrastructure integration, operational execution, and compliance alignment. Enseigner is built to deliver that.
           </p>
-          <a href="mailto:abu@enseigner.in" className="mt-10 inline-flex items-center gap-3 bg-[var(--site-gold)] px-10 py-5 text-base font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]">
-            Contact Enseigner <ArrowRight size={18} />
-          </a>
+          <ContactForm />
         </div>
 
         <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-6">
           {[
             { icon: MapPin, label: "Head Office", value: "Dubai International Financial Centre, Dubai, UAE", sub: "Unit IH-00-01-02-OF-01, Level 2, H-00-01-CP-05" },
-            { icon: Phone, label: "Phone", value: "+971-5055951062", sub: "Direct line for enterprise enquiries" },
+            { icon: Phone, label: "Phone", value: "+971 505951062", sub: "Direct line for enterprise enquiries" },
             { icon: Mail, label: "Email", value: "abu@enseigner.in", sub: "Founder contact from company profile" },
             { icon: Users, label: "Founder & MD", value: "Abubucker Mansoor Mohamed", sub: "Infrastructure-led. AI-enabled. Security-first. GCC-focused, India-proven." },
             { icon: MonitorDot, label: "Website", value: "www.enseigner.in", sub: "Engineers the Systems of the World" },
