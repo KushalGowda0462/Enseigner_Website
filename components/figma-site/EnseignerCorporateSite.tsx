@@ -51,8 +51,8 @@ const themeVars: Record<ThemeMode, CSSProperties> = {
     "--site-muted": "#7a90a8",
     "--site-gold": "#c9a84c",
     "--site-gold-hover": "#dbb85a",
-    "--site-divider": "#f3d271",
-    "--site-divider-glow": "rgba(243,210,113,0.55)",
+    "--site-divider": "rgba(243,210,113,0.5)",
+    "--site-divider-glow": "rgba(243,210,113,0.65)",
     "--site-hero-overlay":
       "linear-gradient(105deg, #080d16 52%, rgba(8,13,22,0.86) 80%, rgba(8,13,22,0.45) 100%)",
   } as CSSProperties,
@@ -65,8 +65,8 @@ const themeVars: Record<ThemeMode, CSSProperties> = {
     "--site-muted": "#53677d",
     "--site-gold": "#b99032",
     "--site-gold-hover": "#d0a84a",
-    "--site-divider": "#c79214",
-    "--site-divider-glow": "rgba(199,146,20,0.4)",
+    "--site-divider": "rgba(199,146,20,0.55)",
+    "--site-divider-glow": "rgba(199,146,20,0.5)",
     "--site-hero-overlay":
       "linear-gradient(105deg, rgba(244,247,251,0.98) 50%, rgba(244,247,251,0.9) 80%, rgba(244,247,251,0.6) 100%)",
   } as CSSProperties,
@@ -279,7 +279,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-4 flex items-center gap-3">
       <span className="h-px w-8 bg-[var(--site-gold)]" />
-      <span className="font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-[var(--site-gold)]">
+      <span className="font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-[var(--site-gold)]">
         {children}
       </span>
     </div>
@@ -328,14 +328,14 @@ function NavBar({
 
         <div className="hidden items-center gap-8 lg:flex">
           {links.map(([label, href]) => (
-            <a key={label} href={href} className="text-sm font-semibold uppercase tracking-[0.08em] text-[var(--site-muted)] transition hover:text-[var(--site-gold)]">
+            <a key={label} href={href} className="text-[15px] font-semibold uppercase tracking-[0.08em] text-[var(--site-muted)] transition hover:text-[var(--site-gold)]">
               {label}
             </a>
           ))}
         </div>
 
         <div className="flex items-center gap-3">
-          <a href="#contact" className="hidden border border-[var(--site-gold)] px-5 py-2 text-sm font-bold uppercase tracking-[0.08em] text-[var(--site-gold)] transition hover:bg-[var(--site-gold)] hover:text-[var(--site-bg)] sm:inline-flex">
+          <a href="#contact" className="hidden border border-[var(--site-gold)] px-5 py-2 text-[15px] font-bold uppercase tracking-[0.08em] text-[var(--site-gold)] transition hover:bg-[var(--site-gold)] hover:text-[var(--site-bg)] sm:inline-flex">
             Contact
           </a>
           <button
@@ -375,7 +375,7 @@ function NavBar({
               {label}
             </a>
           ))}
-          <a href="#contact" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex border border-[var(--site-gold)] px-5 py-2 text-sm font-bold uppercase tracking-[0.08em] text-[var(--site-gold)]">
+          <a href="#contact" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex border border-[var(--site-gold)] px-5 py-2 text-[15px] font-bold uppercase tracking-[0.08em] text-[var(--site-gold)]">
             Contact
           </a>
         </div>
@@ -409,10 +409,10 @@ function HeroSection() {
             AI & Computer Vision · Enterprise Data Centre & Infrastructure · Integrated Security Systems · Network Solutions · Audio Video Solutions.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="#capabilities" className="inline-flex items-center gap-2 bg-[var(--site-gold)] px-8 py-4 text-sm font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]">
+            <a href="#capabilities" className="inline-flex items-center gap-2 bg-[var(--site-gold)] px-8 py-4 text-[15px] font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]">
               Explore Capabilities <ArrowRight size={16} />
             </a>
-            <a href="#contact" className="inline-flex items-center gap-2 border border-[var(--site-text)]/25 px-8 py-4 text-sm font-black uppercase tracking-[0.1em] text-[var(--site-text)] transition hover:border-[var(--site-gold)] hover:text-[var(--site-gold)]">
+            <a href="#contact" className="inline-flex items-center gap-2 border border-[var(--site-text)]/25 px-8 py-4 text-[15px] font-black uppercase tracking-[0.1em] text-[var(--site-text)] transition hover:border-[var(--site-gold)] hover:text-[var(--site-gold)]">
               <Phone size={16} /> Talk to an Expert
             </a>
           </div>
@@ -426,7 +426,7 @@ function HeroSection() {
           ].map(([value, label]) => (
             <div key={value} className="w-44 border border-[var(--site-gold)]/25 bg-[var(--site-card)]/85 p-5 backdrop-blur-md">
               <div className="text-4xl font-black leading-none text-[var(--site-gold)]">{value}</div>
-              <div className="mt-2 text-sm leading-5 text-[var(--site-muted)]">{label}</div>
+              <div className="mt-2 text-[15px] leading-5 text-[var(--site-muted)]">{label}</div>
             </div>
           ))}
         </div>
@@ -471,11 +471,11 @@ function AboutSection() {
           </blockquote>
         </div>
 
-        <div className="mt-12 grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] lg:grid-cols-3">
+        <div className="mt-12 grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] lg:grid-cols-3">
           {strategicPillars.map((pillar) => (
             <article key={pillar.title} className="bg-[var(--site-card)] p-8">
               <h3 className="text-2xl font-black uppercase leading-tight text-[var(--site-gold)]">{pillar.title}</h3>
-              <p className="mt-4 text-sm leading-7 text-[var(--site-muted)]">{pillar.body}</p>
+              <p className="mt-4 text-[15px] leading-7 text-[var(--site-muted)]">{pillar.body}</p>
             </article>
           ))}
         </div>
@@ -489,16 +489,16 @@ function TrustMetrics() {
     <section className="bg-[var(--site-bg)] pb-24">
       <div className="h-px bg-[linear-gradient(to_right,transparent,var(--site-gold)_20%,var(--site-gold)_80%,transparent)]" />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid border border-[var(--site-divider)] bg-[var(--site-gold)]/12 [box-shadow:0_0_24px_-6px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid border border-[var(--site-divider)] bg-[var(--site-gold)]/12 [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric) => {
             const Icon = metric.icon;
             return (
-              <div key={metric.value} className="relative border-b border-[var(--site-divider)]/60 bg-[var(--site-card)]/80 p-8 transition hover:bg-[var(--site-card-hover)] sm:border-r lg:border-b-0">
+              <div key={metric.value} className="relative border-b border-[var(--site-divider)] bg-[var(--site-card)]/80 p-8 transition hover:bg-[var(--site-card-hover)] sm:border-r lg:border-b-0">
                 <span className="absolute left-0 top-0 h-10 w-10 border-l-2 border-t-2 border-[var(--site-gold)]" />
                 <Icon className="mb-5 text-[var(--site-gold)]" size={24} strokeWidth={1.5} />
                 <div className="text-5xl font-black leading-none text-[var(--site-text)]">{metric.value}</div>
                 <h3 className="mt-3 text-base font-black uppercase tracking-[0.07em] text-[var(--site-gold)]">{metric.label}</h3>
-                <p className="mt-2 text-sm leading-6 text-[var(--site-muted)]">{metric.sub}</p>
+                <p className="mt-2 text-[15px] leading-6 text-[var(--site-muted)]">{metric.sub}</p>
               </div>
             );
           })}
@@ -521,22 +521,22 @@ function Capabilities() {
           </p>
         </div>
 
-        <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <article key={service.code} className="group relative flex min-h-[320px] flex-col gap-4 bg-[var(--site-card)] p-8 transition hover:bg-[var(--site-card-hover)]">
-                <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-[var(--site-gold)]/55">{service.code}</span>
+                <span className="font-mono text-[12px] uppercase tracking-[0.12em] text-[var(--site-gold)]/55">{service.code}</span>
                 <div className="flex items-center gap-4">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-[var(--site-gold)]/35 text-[var(--site-gold)]">
                     <Icon size={22} strokeWidth={1.5} />
                   </span>
                   <h3 className="text-2xl font-black uppercase leading-tight text-[var(--site-text)]">{service.title}</h3>
                 </div>
-                <p className="grow text-sm leading-7 text-[var(--site-muted)]">{service.desc}</p>
+                <p className="grow text-[15px] leading-7 text-[var(--site-muted)]">{service.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {service.tags.map((tag) => (
-                    <span key={tag} className="border border-[var(--site-gold)]/25 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-[var(--site-gold)]">
+                    <span key={tag} className="border border-[var(--site-gold)]/25 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--site-gold)]">
                       {tag}
                     </span>
                   ))}
@@ -566,9 +566,9 @@ function DataCentreAISection() {
             </p>
           </div>
           <div className="lg:col-span-5">
-            <div className="grid grid-cols-5 gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)]">
+            <div className="flex gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)]">
               {deliveryModel.map((step) => (
-                <div key={step} className="bg-[var(--site-card)] px-3 py-5 text-center font-mono text-[10px] font-black uppercase tracking-[0.08em] text-[var(--site-gold)]">
+                <div key={step} className="flex-auto whitespace-nowrap bg-[var(--site-card)] px-5 py-5 text-center font-mono text-[11px] font-black uppercase tracking-[0.08em] text-[var(--site-gold)]">
                   {step}
                 </div>
               ))}
@@ -576,16 +576,16 @@ function DataCentreAISection() {
           </div>
         </div>
 
-        <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] lg:grid-cols-2">
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] lg:grid-cols-2">
           {dataCentreCapabilities.map((capability, index) => (
             <article key={capability} className="flex gap-5 bg-[var(--site-card)] p-7">
-              <span className="font-mono text-sm font-black text-[var(--site-gold)]">0{index + 1}</span>
-              <p className="text-sm leading-7 text-[var(--site-text)]">{capability}</p>
+              <span className="font-mono text-[15px] font-black text-[var(--site-gold)]">0{index + 1}</span>
+              <p className="text-[15px] leading-7 text-[var(--site-text)]">{capability}</p>
             </article>
           ))}
         </div>
 
-        <div className="mt-10 grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] md:grid-cols-4">
+        <div className="mt-10 grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] md:grid-cols-4">
           {[
             ["End-to-End Delivery", "Consultancy, design, supply, implementation, and AMC — one partner for the full lifecycle"],
             ["200+ OEM Partners", "HPE · Dell · Cisco · Fortinet · Hikvision · Axis · NetApp and 200+ brands"],
@@ -594,12 +594,12 @@ function DataCentreAISection() {
           ].map(([title, body]) => (
             <div key={title} className="bg-[var(--site-card)] p-6">
               <h3 className="text-xl font-black uppercase text-[var(--site-gold)]">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-[var(--site-muted)]">{body}</p>
+              <p className="mt-3 text-[15px] leading-6 text-[var(--site-muted)]">{body}</p>
             </div>
           ))}
         </div>
 
-        <p className="mt-8 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-[var(--site-muted)]">
+        <p className="mt-8 text-center font-mono text-[12px] uppercase tracking-[0.12em] text-[var(--site-muted)]">
           ISO 14001 Certified · ASCB(E) Accredited · Electronic Security Association of India Member
         </p>
       </div>
@@ -635,7 +635,7 @@ function AISection() {
             <p className="text-base leading-8 text-[var(--site-muted)]">
               Enseigner&apos;s AI layer sits on top of proven physical infrastructure. Computer vision, edge analytics, and command intelligence turn site activity into operational visibility.
             </p>
-            <div className="mt-5 flex flex-wrap gap-5 font-mono text-xs uppercase tracking-[0.08em]">
+            <div className="mt-5 flex flex-wrap gap-5 font-mono text-[13px] uppercase tracking-[0.08em]">
               <span className="text-[#1a9e6d]">On-Premise AI Processing</span>
               <span className="text-[var(--site-muted)]">On-Premise Data by Design</span>
               <span className="text-[var(--site-muted)]">GCC Data Sovereignty Aligned</span>
@@ -643,20 +643,20 @@ function AISection() {
           </div>
         </div>
 
-        <div className="border border-[var(--site-divider)] bg-[var(--site-card)]/80 [box-shadow:0_0_24px_-6px_var(--site-divider-glow)]">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--site-divider)]/60 px-5 py-4">
+        <div className="border border-[var(--site-divider)] bg-[var(--site-card)]/80 [box-shadow:0_0_18px_-4px_var(--site-divider-glow)]">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--site-divider)] px-5 py-4">
             <div className="flex items-center gap-5">
               <span className="flex gap-1.5">
                 {["#c0392b", "#d4a017", "#1a9e6d"].map((color) => (
                   <span key={color} className="h-2.5 w-2.5 rounded-full" style={{ background: color }} />
                 ))}
               </span>
-              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--site-muted)]">Centralised Command · Distributed Intelligence</span>
+              <span className="font-mono text-[12px] uppercase tracking-[0.08em] text-[var(--site-muted)]">Centralised Command · Distributed Intelligence</span>
             </div>
-            <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--site-gold)]">On-Premise by Design</span>
+            <span className="font-mono text-[12px] uppercase tracking-[0.08em] text-[var(--site-gold)]">On-Premise by Design</span>
           </div>
 
-          <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] p-px sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] p-px sm:grid-cols-2 xl:grid-cols-3">
             {aiModules.map((module, index) => {
               const Icon = module.icon;
               const isActive = active === index;
@@ -667,18 +667,18 @@ function AISection() {
                   className={`relative border-l-2 p-6 text-left transition ${isActive ? "border-[var(--site-gold)] bg-[var(--site-card-hover)]" : "border-transparent bg-[var(--site-card)] hover:bg-[var(--site-card-hover)]"}`}
                 >
                   <div className="mb-4 flex items-center justify-between gap-3">
-                    <span className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.08em] text-[var(--site-gold)]/70">
+                    <span className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--site-gold)]/70">
                       <Icon size={16} strokeWidth={1.5} />
                       {module.code}
                     </span>
-                    <span className="border px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.1em]" style={{ color: statusColor[module.status], borderColor: statusColor[module.status] }}>
+                    <span className="border px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.1em]" style={{ color: statusColor[module.status], borderColor: statusColor[module.status] }}>
                       {module.status}
                     </span>
                   </div>
-                  <div className="text-xs font-bold uppercase tracking-[0.08em] text-[var(--site-muted)]">{module.label}</div>
+                  <div className="text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--site-muted)]">{module.label}</div>
                   <div className={`mt-2 text-4xl font-black leading-none ${isActive ? "text-[var(--site-gold)]" : "text-[var(--site-text)]"}`}>{module.value}</div>
-                  <div className="mt-1 text-xs text-[var(--site-muted)]">{module.unit}</div>
-                  <div className="mt-3 font-mono text-[10px] uppercase text-[#1a9e6d]">{module.status}</div>
+                  <div className="mt-1 text-[13px] text-[var(--site-muted)]">{module.unit}</div>
+                  <div className="mt-3 font-mono text-[11px] uppercase text-[#1a9e6d]">{module.status}</div>
                 </button>
               );
             })}
@@ -705,17 +705,17 @@ function Industries() {
           </p>
         </div>
 
-        <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {industries.map((industry) => {
             const Icon = industry.icon;
             return (
               <article key={industry.code} className="group relative min-h-[260px] bg-[var(--site-card)] p-7 transition hover:bg-[var(--site-card-hover)]">
-                <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-[var(--site-gold)]/45">{industry.code}</span>
+                <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--site-gold)]/45">{industry.code}</span>
                 <div className="my-5 flex h-12 w-12 items-center justify-center border border-[var(--site-gold)]/25 text-[var(--site-muted)] transition group-hover:border-[var(--site-gold)] group-hover:text-[var(--site-gold)]">
                   <Icon size={22} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-black uppercase leading-tight text-[var(--site-text)]">{industry.label}</h3>
-                <p className="mt-3 text-sm leading-6 text-[var(--site-muted)]">{industry.desc}</p>
+                <p className="mt-3 text-[15px] leading-6 text-[var(--site-muted)]">{industry.desc}</p>
                 <span className="absolute bottom-0 right-0 h-7 w-7 border-b-2 border-r-2 border-transparent transition group-hover:border-[var(--site-gold)]" />
               </article>
             );
@@ -739,18 +739,18 @@ function DeploymentRecord() {
           </p>
         </div>
 
-        <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] lg:grid-cols-2">
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] lg:grid-cols-2">
           {deployments.map((deployment) => (
             <article key={deployment.sector} className="bg-[var(--site-card)] p-8">
               <div className="mb-7 flex flex-wrap items-center gap-4">
-                <span className="bg-[var(--site-gold)] px-3 py-1 font-mono text-[11px] font-black uppercase tracking-[0.12em] text-[var(--site-bg)]">{deployment.sector}</span>
+                <span className="bg-[var(--site-gold)] px-3 py-1 font-mono text-[12px] font-black uppercase tracking-[0.12em] text-[var(--site-bg)]">{deployment.sector}</span>
                 <span className="text-base font-black uppercase tracking-[0.06em] text-[var(--site-muted)]">{deployment.label}</span>
               </div>
               <div className="space-y-5">
                 {deployment.projects.map((project) => (
                   <div key={project} className="flex gap-4 border-b border-[var(--site-gold)]/22 pb-5 last:border-b-0 last:pb-0">
                     <span className="mt-1 w-0.5 shrink-0 bg-[var(--site-gold)]/35" />
-                    <p className="text-sm leading-7 text-[var(--site-text)]">{project}</p>
+                    <p className="text-[15px] leading-7 text-[var(--site-text)]">{project}</p>
                   </div>
                 ))}
               </div>
@@ -799,9 +799,9 @@ function OEMPartners() {
         <div className="overflow-hidden">
           <div ref={rowRef} className="flex will-change-transform">
             {[...partners, ...partners].map((partner, index) => (
-              <div key={`${partner}-${index}`} className="mx-2 flex h-24 min-w-[190px] shrink-0 flex-col items-center justify-center border border-[var(--site-divider)]/70 bg-[var(--site-card)] px-6 [box-shadow:0_0_16px_-6px_var(--site-divider-glow)] text-center transition hover:border-[var(--site-gold)]/45 hover:bg-[var(--site-card-hover)]">
+              <div key={`${partner}-${index}`} className="mx-2 flex h-24 min-w-[190px] shrink-0 flex-col items-center justify-center border border-[var(--site-divider)] bg-[var(--site-card)] px-6 [box-shadow:0_0_14px_-4px_var(--site-divider-glow)] text-center transition hover:border-[var(--site-gold)]/45 hover:bg-[var(--site-card-hover)]">
                 <div className="text-lg font-black text-[var(--site-text)]">{partner}</div>
-                <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-[var(--site-gold)]/55">Technology OEM</div>
+                <div className="mt-1 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--site-gold)]/55">Technology OEM</div>
               </div>
             ))}
           </div>
@@ -819,7 +819,7 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
         <div className="mx-auto mb-20 max-w-4xl text-center">
           <div className="mb-6 flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-[var(--site-gold)]" />
-            <span className="font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-[var(--site-gold)]">Start a Conversation</span>
+            <span className="font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-[var(--site-gold)]">Start a Conversation</span>
             <span className="h-px w-10 bg-[var(--site-gold)]" />
           </div>
           <h2 className="text-[clamp(2.7rem,6vw,5.3rem)] font-black uppercase leading-none text-[var(--site-text)]">
@@ -834,7 +834,7 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
           </a>
         </div>
 
-        <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-6">
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-6">
           {[
             { icon: MapPin, label: "Head Office", value: "Dubai International Financial Centre, Dubai, UAE", sub: "Unit IH-00-01-02-OF-01, Level 2, H-00-01-CP-05" },
             { icon: Phone, label: "Phone", value: "+971-5055951062", sub: "Direct line for enterprise enquiries" },
@@ -851,9 +851,9 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
                   <Icon size={18} strokeWidth={1.5} />
                 </span>
                 <div>
-                  <div className="font-mono text-[11px] font-black uppercase tracking-[0.12em] text-[var(--site-gold)]">{contact.label}</div>
+                  <div className="font-mono text-[12px] font-black uppercase tracking-[0.12em] text-[var(--site-gold)]">{contact.label}</div>
                   <div className="mt-1 text-xl font-black text-[var(--site-text)]">{contact.value}</div>
-                  <div className="mt-1 text-sm text-[var(--site-muted)]">{contact.sub}</div>
+                  <div className="mt-1 text-[15px] text-[var(--site-muted)]">{contact.sub}</div>
                 </div>
               </div>
             );
@@ -870,8 +870,8 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
             height={223}
             className={`h-7 w-auto object-contain opacity-85 ${themeMode === "dark" ? "brightness-0 invert" : ""}`}
           />
-          <p className="text-sm text-[var(--site-muted)]">© 2026 Enseigner · Engineers the Systems of the World</p>
-          <div className="flex gap-5 text-sm text-[var(--site-muted)]">
+          <p className="text-[15px] text-[var(--site-muted)]">© 2026 Enseigner · Engineers the Systems of the World</p>
+          <div className="flex gap-5 text-[15px] text-[var(--site-muted)]">
             <span>Privacy</span>
             <span>Terms</span>
             <span>Certifications</span>
