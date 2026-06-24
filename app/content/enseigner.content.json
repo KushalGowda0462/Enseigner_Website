@@ -3,14 +3,14 @@
     "name": "Enseigner",
     "product": "Enterprise Systems Integration",
     "tagline": "Engineering the Intelligent Enterprise",
-    "oneLiner": "Infrastructure-led. AI-enabled. Security-first. India-proven.",
-    "region": "India | Pan-India enterprise delivery",
+    "oneLiner": "Infrastructure-led. AI-enabled. Security-first. GCC-focused, India-proven.",
+    "region": "GCC | UAE-headquartered, India delivery backbone",
     "stage": "Company Profile 2026",
     "logoPath": "/enseigner-logo-transparent.png"
   },
   "seo": {
     "title": "Enseigner — Engineers the Systems of the World",
-    "description": "Enseigner is an infrastructure-first enterprise technology company delivering AI, computer vision, data centre, security, networking, and command centre systems across India.",
+    "description": "Enseigner is an infrastructure-first enterprise technology company delivering AI, computer vision, data centre, security, networking, and command centre systems across the GCC, built on a proven India delivery backbone.",
     "ogImage": "/enseigner-logo-transparent.png"
   },
   "nav": {
@@ -25,11 +25,11 @@
   "hero": {
     "topLabel": "ENGINEERS THE SYSTEMS OF THE WORLD",
     "headline": "Engineering the Intelligent Enterprise",
-    "subheadline": "Enseigner delivers end-to-end systems integration, infrastructure, security, networking, data centre, and AI-powered intelligent operations for Indian enterprises.",
+    "subheadline": "Enseigner delivers end-to-end systems integration, infrastructure, security, networking, data centre, and AI-powered intelligent operations for GCC enterprises.",
     "primaryCta": { "label": "Contact Enseigner", "href": "/contact" },
     "secondaryCta": { "label": "View Capabilities", "href": "#offerings" },
     "highlights": [
-      "12+ years of enterprise execution across India",
+      "12+ years of enterprise execution, now engineering for the GCC",
       "10,000+ branch and site security installations delivered",
       "AI, computer vision, data centre, networking, and command centre expertise"
     ],
@@ -52,9 +52,9 @@
     ]
   },
   "market": {
-    "title": "Enterprise Technology Built for India",
+    "title": "Enterprise Technology Built for the GCC",
     "items": [
-      { "label": "Execution History", "value": "12+ years", "note": "Enterprise delivery across India" },
+      { "label": "Execution History", "value": "12+ years", "note": "Enterprise delivery backbone, now serving the GCC" },
       { "label": "Enterprise Clients", "value": "100+", "note": "Banking, government, healthcare, logistics, retail, and infrastructure" },
       { "label": "Installations", "value": "10,000+", "note": "Branch and site security deployments" },
       { "label": "OEM Ecosystem", "value": "200+ brands", "note": "Security, compute, storage, networking, and safety partners" }
@@ -63,7 +63,7 @@
   "whyNow": {
     "title": "Why Enseigner",
     "points": [
-      "Indian enterprises need operationally sound infrastructure before AI, security, and intelligent automation can succeed.",
+      "GCC enterprises need operationally sound infrastructure before AI, security, and intelligent automation can succeed.",
       "Fragmented vendors increase operational risk; Enseigner integrates infrastructure, security, networking, data centre, and intelligent operations under one accountable delivery model."
     ]
   },
@@ -79,7 +79,7 @@
   "gap": {
     "title": "What We Close",
     "points": [
-      "The gap between technology ambition and field execution across Indian enterprise environments.",
+      "The gap between technology ambition and field execution across GCC enterprise environments.",
       "The gap between standalone surveillance or IT systems and unified, AI-enabled intelligent operations."
     ]
   },
@@ -118,7 +118,7 @@
     "title": "Operational Strengths",
     "subtitle": "AI, data centre, computer vision, security systems, server and compute, and end-to-end delivery.",
     "wins": [
-      "Pan-India execution team with enterprise deployment experience",
+      "Proven enterprise execution team with multi-site deployment experience",
       "10,000+ operational security deployments across banking, retail, government, and enterprise sites",
       "200+ OEM relationships across compute, networking, storage, security, fire, and safety",
       "On-premise AI processing designed for enterprise privacy and operational compliance"
@@ -152,7 +152,7 @@
     "details": [
       "Single-site pilots without redesign",
       "Multi-location rollout visibility",
-      "Pan-India managed operations and AMC"
+      "Multi-site managed operations and AMC across the region"
     ]
   },
   "footer": {
@@ -180,7 +180,8 @@
     "subtitle": "Talk to Enseigner about enterprise infrastructure, security systems, data centre, networking, computer vision, and intelligent operations.",
     "fields": ["Name", "Work Email", "Company", "Message"],
     "email": "abu@enseigner.in",
-    "whatsapp": "+91 enterprise enquiries",
+    "phone": "+971-5055951062",
+    "address": "Dubai International Financial Centre, Dubai, UAE",
     "website": "www.enseigner.in",
     "founder": "Abubucker Mansoor Mohamed",
     "role": "Founder & MD"
@@ -194,14 +195,14 @@
   "about": {
     "companyOverview": {
       "founded": "12+ years enterprise execution",
-      "headquarters": "India",
-      "region": "Pan-India",
+      "headquarters": "Dubai, UAE",
+      "region": "GCC · India delivery backbone",
       "certifications": "ISO 14001 Certified · ASCB(E) Accredited · Electronic Security Association of India Member",
       "professionals": "Direct-payroll delivery and managed operations teams"
     },
-    "mission": "To be India's most trusted infrastructure and enterprise technology company.",
-    "description": "Enseigner is an infrastructure-first enterprise technology company that has evolved into AI-enabled intelligent operations. Built on 12+ years of enterprise execution across banking, government, healthcare, logistics, and critical infrastructure, Enseigner closes the gap between technology ambition and operationally sound execution.",
-    "vision": "To be India's most trusted infrastructure and enterprise technology company — enabling enterprises to modernise their infrastructure, secure their operations, and adopt intelligent technology with confidence and operational permanence.",
+    "mission": "To be the GCC's most trusted infrastructure and enterprise technology partner, built on 12 years of enterprise execution.",
+    "description": "Enseigner is an infrastructure-first enterprise technology company that has evolved into AI-enabled intelligent operations. Built on 12+ years of enterprise execution across banking, government, healthcare, logistics, and critical infrastructure — and now engineered to serve GCC enterprises, Enseigner closes the gap between technology ambition and operationally sound execution.",
+    "vision": "To be the GCC's most trusted infrastructure and enterprise technology partner — built on 12 years of enterprise execution — enabling enterprises to modernise their infrastructure, secure their operations, and adopt intelligent technology with confidence and operational permanence.",
     "capabilities": [
       {
         "title": "Security Systems & Integration",
@@ -277,7 +278,7 @@
       "globalPrivacy": "On-premise data by design, with no biometric or operational data transmitted externally.",
       "aiGovernance": "Audit-ready operational visibility with timestamped trails, role-based access, and evidence management.",
       "securePipelines": "Security and compliance controls across enterprise, data centre, cloud, and distributed site environments.",
-      "riskReduction": "Aligned to DPDP Act expectations and enterprise standards including ISO 27001 and SOC2 where relevant."
+      "riskReduction": "Aligned to GCC data residency and sovereignty expectations and enterprise standards including ISO 27001 and SOC2 where relevant."
     }
   }
 }

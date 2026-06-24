@@ -48,7 +48,7 @@ export const caseStudies: Post[] = [
         "tags": ["Data Centre", "Compute", "DR"]
     },
     {
-        "title": "Pan-India Security Systems Rollout",
+        "title": "Large-Scale Multi-Site Security Systems Rollout",
         "description": "CCTV, access control, intrusion alarm, fire alarm, monitoring, and maintenance across branch and site networks.",
         "author": "Enseigner",
         "date": "2 Feb 2025",
@@ -370,7 +370,7 @@ export const FullCaseStudies = [
     },
     {
         badge: "Security Systems",
-        title: "Pan-India Security Systems Rollout",
+        title: "Large-Scale Multi-Site Security Systems Rollout",
         description: "CCTV, access control, intrusion alarm, fire alarm, monitoring, and maintenance across branch and site networks.",
         Author: {
             name: "Enseigner",
@@ -413,7 +413,7 @@ export const FullCaseStudies = [
         },
         content: [
             {
-                para: "Indian enterprises increasingly need operational visibility platforms that are on-premise, reliable, and architecturally independent of external cloud dependency."
+                para: "GCC enterprises increasingly need operational visibility platforms that are on-premise, reliable, and architecturally independent of external cloud dependency."
             },
             {
                 para: "Enseigner's command centre model unifies workforce status, security posture, operational alerts, compliance readiness, and multi-site command visibility in role-controlled dashboards."
@@ -560,7 +560,7 @@ export const services = [
     {
         id: "devops-automation",
         title: "End-to-End Delivery and Managed Operations",
-        description: "One accountable partner from consultancy, CAD design, supply, implementation, installation, commissioning, AMC, and managed operations. Enseigner's pan-India delivery maturity keeps enterprise projects aligned from first design through long-term operational support.",
+        description: "One accountable partner from consultancy, CAD design, supply, implementation, installation, commissioning, AMC, and managed operations. Enseigner's enterprise delivery maturity keeps projects aligned from first design through long-term operational support.",
         link: "/consulting/cloud-consulting",
         hasImage: false,
     },
@@ -613,7 +613,7 @@ export const stats = [
     },
     {
         number: "100+",
-        label: "Enterprise Clients Across India",
+        label: "Enterprise Clients Delivered",
     },
     {
         number: "10,000+",
@@ -636,8 +636,8 @@ export const values = [
         description: "Enterprise execution succeeds when it is grounded in infrastructure discipline and field-proven delivery, not slideware.",
     },
     {
-        title: "Pan-India Reach",
-        description: "We deliver and maintain systems for enterprises, banks, government institutions, ports, logistics operators, campuses, and retail networks across India.",
+        title: "GCC Focus, India-Proven Delivery",
+        description: "GCC-focused and Dubai-registered, we bring a proven India delivery backbone — deploying and maintaining systems for enterprises, banks, government institutions, ports, logistics operators, campuses, and retail networks — to enterprises across the Gulf.",
     },
     {
         title: "Operational Permanence",

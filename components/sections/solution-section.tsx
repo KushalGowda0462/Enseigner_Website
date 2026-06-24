@@ -16,7 +16,7 @@ export default function SolutionSection() {
             {problem.title}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Understanding the execution gap facing Indian enterprises
+            Understanding the execution gap facing GCC enterprises
           </p>
         </div>
 

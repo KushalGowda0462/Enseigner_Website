@@ -51,8 +51,10 @@ const themeVars: Record<ThemeMode, CSSProperties> = {
     "--site-muted": "#7a90a8",
     "--site-gold": "#c9a84c",
     "--site-gold-hover": "#dbb85a",
+    "--site-divider": "#f3d271",
+    "--site-divider-glow": "rgba(243,210,113,0.55)",
     "--site-hero-overlay":
-      "linear-gradient(105deg, #080d16 42%, rgba(8,13,22,0.72) 74%, rgba(8,13,22,0.35) 100%)",
+      "linear-gradient(105deg, #080d16 52%, rgba(8,13,22,0.86) 80%, rgba(8,13,22,0.45) 100%)",
   } as CSSProperties,
   light: {
     "--site-bg": "#f4f7fb",
@@ -63,20 +65,22 @@ const themeVars: Record<ThemeMode, CSSProperties> = {
     "--site-muted": "#53677d",
     "--site-gold": "#b99032",
     "--site-gold-hover": "#d0a84a",
+    "--site-divider": "#c79214",
+    "--site-divider-glow": "rgba(199,146,20,0.4)",
     "--site-hero-overlay":
-      "linear-gradient(105deg, rgba(244,247,251,0.97) 38%, rgba(244,247,251,0.86) 70%, rgba(244,247,251,0.58) 100%)",
+      "linear-gradient(105deg, rgba(244,247,251,0.98) 50%, rgba(244,247,251,0.9) 80%, rgba(244,247,251,0.6) 100%)",
   } as CSSProperties,
 };
 
 const metrics = [
-  { icon: Shield, value: "12+", label: "Years Enterprise Execution", sub: "Enterprise execution across India" },
-  { icon: Building2, value: "100+", label: "Enterprise Clients Across India", sub: "Banking, government, healthcare, logistics, and critical infrastructure" },
+  { icon: Shield, value: "12+", label: "Years Enterprise Execution", sub: "Enterprise execution backbone, now engineering for the GCC" },
+  { icon: Building2, value: "100+", label: "Enterprise Clients Delivered", sub: "Banking, government, healthcare, logistics, and critical infrastructure" },
   { icon: MapPin, value: "10,000+", label: "Branch & Site Security Installations", sub: "Operational deployments across enterprise locations" },
   { icon: Network, value: "200+", label: "OEM Partner Ecosystem", sub: "Security, networking, compute, and storage relationships" },
 ];
 
 const visionQuote =
-  "To be India's most trusted infrastructure and enterprise technology company — enabling enterprises to modernise their infrastructure, secure their operations, and adopt intelligent technology with confidence and operational permanence.";
+  "To be the GCC's most trusted infrastructure and enterprise technology partner — built on 12 years of enterprise execution — enabling enterprises to modernise their infrastructure, secure their operations, and adopt intelligent technology with confidence and operational permanence.";
 
 const strategicPillars = [
   {
@@ -85,11 +89,11 @@ const strategicPillars = [
   },
   {
     title: "Execution Over Theory",
-    body: "Enterprise execution succeeds when it is grounded in infrastructure discipline. 12+ years of enterprise execution across India differentiates Enseigner from consulting-led or software-first players.",
+    body: "Enterprise execution succeeds when it is grounded in infrastructure discipline. 12+ years of hands-on enterprise execution differentiates Enseigner from consulting-led or software-first players.",
   },
   {
-    title: "Pan-India Reach",
-    body: "Enseigner operates across India — delivering and maintaining systems for enterprises, banks, government institutions, and logistics operators.",
+    title: "GCC Focus, India-Proven Delivery",
+    body: "GCC-focused and Dubai-registered, Enseigner brings a proven India delivery backbone — over a decade of deploying and maintaining systems for banks, government institutions, and logistics operators — to enterprises across the Gulf.",
   },
 ];
 
@@ -143,7 +147,7 @@ const aiModules = [
   { icon: KeyRound, code: "SAI", label: "Security & Access Intelligence", value: "Audit-Ready", unit: "biometric access, anomaly detection, timestamped audit trails, and regulatory-grade evidence", status: "COMPLIANT" },
   { icon: BarChart3, code: "RCI", label: "Retail & Commercial Intelligence", value: "Operational", unit: "visitor flow analysis, zone engagement, dwell time analytics, POS reconciliation, and behaviour analytics", status: "INSIGHT" },
   { icon: MonitorDot, code: "ECD", label: "Enterprise Command Dashboard", value: "Unified", unit: "real-time visibility across workforce status, security posture, alerts, and compliance readiness", status: "COMMAND" },
-  { icon: FileCheck, code: "ODA", label: "On-Premise Data Architecture", value: "DPDP Aligned", unit: "AI inference processed in the client environment with no biometric or operational data transmitted externally", status: "PRIVATE" },
+  { icon: FileCheck, code: "ODA", label: "On-Premise Data Architecture", value: "Data Residency", unit: "AI inference processed in the client environment with no biometric or operational data transmitted externally — keeping data within the client's jurisdiction", status: "PRIVATE" },
   { icon: AlertTriangle, code: "AIO", label: "AIOps & Anomaly Detection", value: "Predictive", unit: "automation, predictive analytics, performance intelligence, SLA tracking, and proactive issue resolution", status: "AIOPS" },
 ];
 
@@ -166,13 +170,13 @@ const deliveryModel = [
 
 const industries = [
   { icon: Landmark, code: "IND-01", label: "Banking & Finance", desc: "Branch security, surveillance, compliance infrastructure, and data centre modernization for banks and NBFCs." },
-  { icon: Shield, code: "IND-02", label: "Government & Defence", desc: "Secure command centres, surveillance networks, and mission-critical infrastructure for public sector operations." },
-  { icon: Anchor, code: "IND-03", label: "Ports & Logistics", desc: "Container terminal security, perimeter surveillance, cargo visibility, and port command centre integration." },
+  { icon: Shield, code: "IND-02", label: "Government & Smart City", desc: "Secure command centres, smart-city surveillance networks, and mission-critical infrastructure for government and public-sector operations." },
+  { icon: Anchor, code: "IND-03", label: "Ports & Logistics", desc: "Container terminal security, perimeter surveillance, cargo visibility, and free-zone & port command centre integration." },
   { icon: HeartPulse, code: "IND-04", label: "Healthcare", desc: "Hospital security, campus networking, data protection, and managed services for healthcare environments." },
-  { icon: ShoppingBag, code: "IND-05", label: "Retail", desc: "Multi-store security rollouts, loss prevention, footfall analytics, and centralized surveillance management." },
+  { icon: ShoppingBag, code: "IND-05", label: "Retail & Hospitality", desc: "Mall and multi-store security rollouts, loss prevention, footfall analytics, and centralized surveillance management." },
   { icon: GraduationCap, code: "IND-06", label: "Education", desc: "Campus security, smart classroom infrastructure, network backbone, and access intelligence." },
   { icon: Factory, code: "IND-07", label: "Manufacturing", desc: "Industrial CCTV, production floor monitoring, OT network security, and plant command operations." },
-  { icon: Zap, code: "IND-08", label: "Critical Infrastructure", desc: "Utilities, power, oil and gas, and high-availability security and communications infrastructure." },
+  { icon: Zap, code: "IND-08", label: "Energy & Critical Infrastructure", desc: "Oil and gas, power, utilities, and energy — high-availability security and communications infrastructure." },
 ];
 
 const deployments = [
@@ -382,7 +386,7 @@ function NavBar({
 
 function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-[var(--site-bg)]">
+    <section style={themeVars.dark} className="relative flex min-h-screen items-center overflow-hidden bg-[var(--site-bg)] text-[var(--site-text)]">
       <div className="absolute inset-0">
         <Image src={heroImage} alt="Enterprise data centre infrastructure" fill className="object-cover opacity-[0.22]" priority sizes="100vw" />
         <div className="absolute inset-0 bg-[var(--site-hero-overlay)]" />
@@ -392,13 +396,13 @@ function HeroSection() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-12 gap-8 px-5 pb-20 pt-32 sm:px-8 lg:pt-40">
         <div className="col-span-12 max-w-3xl lg:col-span-8">
-          <SectionLabel>Enterprise Infrastructure · Since 2012</SectionLabel>
-          <h1 className="text-[clamp(3.1rem,7vw,5.9rem)] font-black uppercase leading-[0.95] tracking-tight text-[var(--site-text)]">
+          <SectionLabel>Enterprise Infrastructure · Built on 12 Years of Enterprise Execution</SectionLabel>
+          <h1 className="text-[clamp(2.6rem,5.4vw,4.7rem)] font-black uppercase leading-[0.96] tracking-tight text-[var(--site-text)] [text-shadow:0_2px_24px_rgba(8,13,22,0.85)]">
             Engineering <br />
             <span className="text-[var(--site-gold)]">Intelligent</span> <br />
             Enterprise <br />
             Infrastructure <br />
-            <span className="text-[var(--site-muted)]">Across India</span>
+            <span className="text-[var(--site-muted)]">For the GCC</span>
           </h1>
           <div className="my-7 h-0.5 w-20 bg-[linear-gradient(to_right,var(--site-gold),transparent)]" />
           <p className="max-w-xl text-lg leading-8 text-[var(--site-muted)]">
@@ -417,7 +421,7 @@ function HeroSection() {
         <div className="hidden lg:col-span-4 lg:flex lg:flex-col lg:items-end lg:justify-center lg:gap-3">
           {[
             ["12+", "Years of Enterprise Execution"],
-            ["100+", "Enterprise Clients Across India"],
+            ["100+", "Enterprise Clients Delivered"],
             ["10,000+", "Branch & Site Security Installations"],
           ].map(([value, label]) => (
             <div key={value} className="w-44 border border-[var(--site-gold)]/25 bg-[var(--site-card)]/85 p-5 backdrop-blur-md">
@@ -445,18 +449,18 @@ function AboutSection() {
               Who We Are
             </h2>
             <p className="mt-6 text-lg leading-8 text-[var(--site-text)]">
-              A systems integration company built on 12 years of enterprise execution across India.
+              A systems integration company built for GCC enterprises on a foundation of 12 years of enterprise execution.
             </p>
           </div>
           <div className="space-y-6 lg:col-span-7">
             <p className="text-base leading-8 text-[var(--site-muted)]">
-              Enseigner is an infrastructure-first enterprise technology company that has evolved into AI-enabled intelligent operations. Built on 12+ years of enterprise execution across banking, government, healthcare, logistics, and critical infrastructure.
+              Enseigner is an infrastructure-first enterprise technology company that has evolved into AI-enabled intelligent operations. Built on 12+ years of enterprise execution across banking, government, healthcare, logistics, and critical infrastructure — and now engineered to serve the GCC.
             </p>
             <p className="text-base leading-8 text-[var(--site-muted)]">
               Enterprise deployments succeed when they are grounded in infrastructure discipline. Organisations that attempt technology adoption without operationally sound, well-integrated infrastructure consistently face execution failures.
             </p>
             <p className="text-base leading-8 text-[var(--site-gold)]">
-              Enseigner exists to close that gap — across India&apos;s enterprise landscape.
+              Enseigner exists to close that gap — for enterprises across the GCC.
             </p>
           </div>
         </div>
@@ -467,7 +471,7 @@ function AboutSection() {
           </blockquote>
         </div>
 
-        <div className="mt-12 grid gap-px bg-[var(--site-gold)]/15 lg:grid-cols-3">
+        <div className="mt-12 grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] lg:grid-cols-3">
           {strategicPillars.map((pillar) => (
             <article key={pillar.title} className="bg-[var(--site-card)] p-8">
               <h3 className="text-2xl font-black uppercase leading-tight text-[var(--site-gold)]">{pillar.title}</h3>
@@ -485,11 +489,11 @@ function TrustMetrics() {
     <section className="bg-[var(--site-bg)] pb-24">
       <div className="h-px bg-[linear-gradient(to_right,transparent,var(--site-gold)_20%,var(--site-gold)_80%,transparent)]" />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid border border-[var(--site-gold)]/15 bg-[var(--site-gold)]/10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid border border-[var(--site-divider)] bg-[var(--site-gold)]/12 [box-shadow:0_0_24px_-6px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric) => {
             const Icon = metric.icon;
             return (
-              <div key={metric.value} className="relative border-b border-[var(--site-gold)]/15 bg-[var(--site-card)]/80 p-8 transition hover:bg-[var(--site-card-hover)] sm:border-r lg:border-b-0">
+              <div key={metric.value} className="relative border-b border-[var(--site-divider)]/60 bg-[var(--site-card)]/80 p-8 transition hover:bg-[var(--site-card-hover)] sm:border-r lg:border-b-0">
                 <span className="absolute left-0 top-0 h-10 w-10 border-l-2 border-t-2 border-[var(--site-gold)]" />
                 <Icon className="mb-5 text-[var(--site-gold)]" size={24} strokeWidth={1.5} />
                 <div className="text-5xl font-black leading-none text-[var(--site-text)]">{metric.value}</div>
@@ -517,7 +521,7 @@ function Capabilities() {
           </p>
         </div>
 
-        <div className="grid gap-px bg-[var(--site-gold)]/15 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => {
             const Icon = service.icon;
             return (
@@ -558,11 +562,11 @@ function DataCentreAISection() {
               Enterprise Data Centre & AI Solutions
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
-              Built for Indian enterprise — reliable, scalable, and operationally sound.
+              Built for GCC enterprise — reliable, scalable, and operationally sound.
             </p>
           </div>
           <div className="lg:col-span-5">
-            <div className="grid grid-cols-5 gap-px bg-[var(--site-gold)]/20">
+            <div className="grid grid-cols-5 gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)]">
               {deliveryModel.map((step) => (
                 <div key={step} className="bg-[var(--site-card)] px-3 py-5 text-center font-mono text-[10px] font-black uppercase tracking-[0.08em] text-[var(--site-gold)]">
                   {step}
@@ -572,7 +576,7 @@ function DataCentreAISection() {
           </div>
         </div>
 
-        <div className="grid gap-px bg-[var(--site-gold)]/15 lg:grid-cols-2">
+        <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] lg:grid-cols-2">
           {dataCentreCapabilities.map((capability, index) => (
             <article key={capability} className="flex gap-5 bg-[var(--site-card)] p-7">
               <span className="font-mono text-sm font-black text-[var(--site-gold)]">0{index + 1}</span>
@@ -581,11 +585,11 @@ function DataCentreAISection() {
           ))}
         </div>
 
-        <div className="mt-10 grid gap-px bg-[var(--site-gold)]/15 md:grid-cols-4">
+        <div className="mt-10 grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] md:grid-cols-4">
           {[
             ["End-to-End Delivery", "Consultancy, design, supply, implementation, and AMC — one partner for the full lifecycle"],
             ["200+ OEM Partners", "HPE · Dell · Cisco · Fortinet · Hikvision · Axis · NetApp and 200+ brands"],
-            ["Operational Continuity", "10,000+ installations delivered across pan-India enterprise clients"],
+            ["Operational Continuity", "10,000+ installations delivered across enterprise client sites"],
             ["Scalable Architecture", "From single site to enterprise-wide multi-location deployments"],
           ].map(([title, body]) => (
             <div key={title} className="bg-[var(--site-card)] p-6">
@@ -634,13 +638,13 @@ function AISection() {
             <div className="mt-5 flex flex-wrap gap-5 font-mono text-xs uppercase tracking-[0.08em]">
               <span className="text-[#1a9e6d]">On-Premise AI Processing</span>
               <span className="text-[var(--site-muted)]">On-Premise Data by Design</span>
-              <span className="text-[var(--site-muted)]">DPDP Act Aligned</span>
+              <span className="text-[var(--site-muted)]">GCC Data Sovereignty Aligned</span>
             </div>
           </div>
         </div>
 
-        <div className="border border-[var(--site-gold)]/20 bg-[var(--site-card)]/80">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--site-gold)]/15 px-5 py-4">
+        <div className="border border-[var(--site-divider)] bg-[var(--site-card)]/80 [box-shadow:0_0_24px_-6px_var(--site-divider-glow)]">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--site-divider)]/60 px-5 py-4">
             <div className="flex items-center gap-5">
               <span className="flex gap-1.5">
                 {["#c0392b", "#d4a017", "#1a9e6d"].map((color) => (
@@ -652,7 +656,7 @@ function AISection() {
             <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--site-gold)]">On-Premise by Design</span>
           </div>
 
-          <div className="grid gap-px bg-[var(--site-gold)]/10 p-px sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] p-px sm:grid-cols-2 xl:grid-cols-3">
             {aiModules.map((module, index) => {
               const Icon = module.icon;
               const isActive = active === index;
@@ -693,7 +697,7 @@ function Industries() {
           <div>
             <SectionLabel>Industries Served</SectionLabel>
             <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">
-              Built for India&apos;s Most <br /> Demanding Sectors
+              Built for the GCC&apos;s Most <br /> Demanding Sectors
             </h2>
           </div>
           <p className="max-w-md text-base leading-8 text-[var(--site-muted)]">
@@ -701,7 +705,7 @@ function Industries() {
           </p>
         </div>
 
-        <div className="grid gap-px bg-[var(--site-gold)]/15 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {industries.map((industry) => {
             const Icon = industry.icon;
             return (
@@ -731,11 +735,11 @@ function DeploymentRecord() {
           <SectionLabel>Deployment Track Record</SectionLabel>
           <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">Enterprise Credibility Built Over 12 Years</h2>
           <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
-            A cross-sector portfolio of enterprise deployments demonstrating deep technical capability and project execution across India.
+            A proven India delivery backbone — a cross-sector portfolio of enterprise deployments demonstrating the technical capability and project execution that now underwrites our work for GCC enterprises.
           </p>
         </div>
 
-        <div className="grid gap-px bg-[var(--site-gold)]/15 lg:grid-cols-2">
+        <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] lg:grid-cols-2">
           {deployments.map((deployment) => (
             <article key={deployment.sector} className="bg-[var(--site-card)] p-8">
               <div className="mb-7 flex flex-wrap items-center gap-4">
@@ -744,7 +748,7 @@ function DeploymentRecord() {
               </div>
               <div className="space-y-5">
                 {deployment.projects.map((project) => (
-                  <div key={project} className="flex gap-4 border-b border-[var(--site-gold)]/10 pb-5 last:border-b-0 last:pb-0">
+                  <div key={project} className="flex gap-4 border-b border-[var(--site-gold)]/22 pb-5 last:border-b-0 last:pb-0">
                     <span className="mt-1 w-0.5 shrink-0 bg-[var(--site-gold)]/35" />
                     <p className="text-sm leading-7 text-[var(--site-text)]">{project}</p>
                   </div>
@@ -794,8 +798,8 @@ function OEMPartners() {
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-[linear-gradient(to_left,var(--site-bg),transparent)]" />
         <div className="overflow-hidden">
           <div ref={rowRef} className="flex will-change-transform">
-            {[...partners, ...partners, ...partners].map((partner, index) => (
-              <div key={`${partner}-${index}`} className="mx-2 flex h-24 min-w-[190px] shrink-0 flex-col items-center justify-center border border-[var(--site-gold)]/15 bg-[var(--site-card)] px-6 text-center transition hover:border-[var(--site-gold)]/45 hover:bg-[var(--site-card-hover)]">
+            {[...partners, ...partners].map((partner, index) => (
+              <div key={`${partner}-${index}`} className="mx-2 flex h-24 min-w-[190px] shrink-0 flex-col items-center justify-center border border-[var(--site-divider)]/70 bg-[var(--site-card)] px-6 [box-shadow:0_0_16px_-6px_var(--site-divider-glow)] text-center transition hover:border-[var(--site-gold)]/45 hover:bg-[var(--site-card-hover)]">
                 <div className="text-lg font-black text-[var(--site-text)]">{partner}</div>
                 <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-[var(--site-gold)]/55">Technology OEM</div>
               </div>
@@ -819,26 +823,30 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
             <span className="h-px w-10 bg-[var(--site-gold)]" />
           </div>
           <h2 className="text-[clamp(2.7rem,6vw,5.3rem)] font-black uppercase leading-none text-[var(--site-text)]">
-            Enterprise Success in India <br />
+            Enterprise Success in the GCC <br />
             <span className="text-[var(--site-gold)]">Depends on Infrastructure Integration</span>
           </h2>
           <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
-            Enterprise success in India will depend on infrastructure integration, operational execution, and compliance alignment. Enseigner is built to deliver that.
+            Enterprise success in the GCC will depend on infrastructure integration, operational execution, and compliance alignment. Enseigner is built to deliver that.
           </p>
           <a href="mailto:abu@enseigner.in" className="mt-10 inline-flex items-center gap-3 bg-[var(--site-gold)] px-10 py-5 text-base font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]">
             Contact Enseigner <ArrowRight size={18} />
           </a>
         </div>
 
-        <div className="grid gap-px bg-[var(--site-gold)]/15 lg:grid-cols-3">
+        <div className="grid gap-[1.5px] bg-[var(--site-divider)] [box-shadow:0_0_20px_-4px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-6">
           {[
-            { icon: Users, label: "Founder & MD", value: "Abubucker Mansoor Mohamed", sub: "Infrastructure-led. AI-enabled. Security-first. India-proven." },
+            { icon: MapPin, label: "Head Office", value: "Dubai International Financial Centre, Dubai, UAE", sub: "Unit IH-00-01-02-OF-01, Level 2, H-00-01-CP-05" },
+            { icon: Phone, label: "Phone", value: "+971-5055951062", sub: "Direct line for enterprise enquiries" },
             { icon: Mail, label: "Email", value: "abu@enseigner.in", sub: "Founder contact from company profile" },
-            { icon: MapPin, label: "Website", value: "www.enseigner.in", sub: "Engineers the Systems of the World" },
-          ].map((contact) => {
+            { icon: Users, label: "Founder & MD", value: "Abubucker Mansoor Mohamed", sub: "Infrastructure-led. AI-enabled. Security-first. GCC-focused, India-proven." },
+            { icon: MonitorDot, label: "Website", value: "www.enseigner.in", sub: "Engineers the Systems of the World" },
+          ].map((contact, i) => {
             const Icon = contact.icon;
+            const lgSpan = i < 3 ? "lg:col-span-2" : "lg:col-span-3";
+            const smSpan = i === 4 ? "sm:col-span-2" : "";
             return (
-              <div key={contact.label} className="flex gap-4 bg-[var(--site-card)] p-8">
+              <div key={contact.label} className={`flex gap-4 bg-[var(--site-card)] p-8 ${smSpan} ${lgSpan}`}>
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-[var(--site-gold)]/25 text-[var(--site-gold)]">
                   <Icon size={18} strokeWidth={1.5} />
                 </span>
