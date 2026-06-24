@@ -8,6 +8,7 @@ import {
   Building2,
   Cable,
   Camera,
+  Cpu,
   Factory,
   FileCheck,
   GraduationCap,
@@ -33,7 +34,7 @@ import {
   Eye,
 } from "lucide-react";
 import Image from "next/image";
-import { type CSSProperties, useEffect, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useState } from "react";
 
 const logoPath = "/enseigner-logo-transparent.png";
 const heroImage =
@@ -168,6 +169,36 @@ const deliveryModel = [
   "AMC",
 ];
 
+const gpuInfraPoints = [
+  "Dedicated GPU clusters for training, fine-tuning, and inference",
+  "Scalable from initial deployment to 100+ GPUs",
+  "Enterprise-grade colocation with redundant power and cooling",
+  "Built for regional compliance and data residency requirements",
+];
+
+const aiSolutions = [
+  {
+    icon: Users,
+    title: "AI Resident & Customer Assistants",
+    desc: "24/7 multilingual support that deflects 70–80% of routine queries, cutting response times from hours to seconds.",
+  },
+  {
+    icon: FileCheck,
+    title: "AI Ticket Intelligence",
+    desc: "Automatically classifies, routes, and summarizes service requests with 70–85% accuracy, reducing SLA breaches by 40–60%.",
+  },
+  {
+    icon: Eye,
+    title: "VisionOps",
+    desc: "Computer vision for real-time security, access control, and operational monitoring.",
+  },
+  {
+    icon: BarChart3,
+    title: "Management Dashboards & AI Value Reports",
+    desc: "Cross-site visibility and automated reporting that cuts reporting time from days to minutes.",
+  },
+];
+
 const industries = [
   { icon: Landmark, code: "IND-01", label: "Banking & Finance", desc: "Branch security, surveillance, compliance infrastructure, and data centre modernization for banks and NBFCs." },
   { icon: Shield, code: "IND-02", label: "Government & Smart City", desc: "Secure command centres, smart-city surveillance networks, and mission-critical infrastructure for government and public-sector operations." },
@@ -236,43 +267,31 @@ const deployments = [
   },
 ];
 
-const partners = [
-  "Cisco",
-  "Aruba",
-  "Extreme Networks",
-  "Fortinet",
-  "Sophos",
-  "Meraki",
-  "Palo Alto",
-  "Dell Technologies",
-  "HPE",
-  "Microsoft",
-  "NetApp",
-  "Veritas",
-  "Veeam",
-  "VMware",
-  "Hikvision",
-  "Axis Communications",
-  "CP Plus",
-  "Bosch Security",
-  "Honeywell",
-  "Pelco",
-  "Mobotix",
-  "Prama",
-  "HID",
-  "Suprema",
-  "IDCube",
-  "eSSL",
-  "Spectra",
-  "Matrix",
-  "Texecom",
-  "Optex",
-  "CommScope",
-  "Legrand",
-  "Morley IAS",
-  "Apollo",
-  "TOA",
-  "Ahuja",
+const oemCategories = [
+  {
+    category: "Video Surveillance",
+    brands: ["Hikvision", "Axis", "CP Plus", "Bosch", "Honeywell", "Pelco", "Mobotix", "Prama"],
+  },
+  {
+    category: "Access Control & Intrusion",
+    brands: ["HID", "Suprema", "IDCube", "eSSL", "Spectra", "Matrix", "Edwards", "Bosch", "Texecom", "Optex"],
+  },
+  {
+    category: "Networking & Switches",
+    brands: ["Cisco", "Aruba", "Extreme Networks", "D-Link", "Legrand", "CommScope"],
+  },
+  {
+    category: "Servers & Storage",
+    brands: ["HPE", "Dell", "Microsoft", "NetApp", "Veritas", "Veeam", "VMware"],
+  },
+  {
+    category: "Fire & Safety",
+    brands: ["Morley IAS", "GST", "Apollo", "Advanced", "Ravel", "Honeywell", "Bosch", "TOA", "Ahuja"],
+  },
+  {
+    category: "Firewall & Security",
+    brands: ["Fortinet", "Cisco", "Sophos", "Meraki", "Palo Alto", "Forescout"],
+  },
 ];
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -307,6 +326,7 @@ function NavBar({
     ["About", "#about"],
     ["Capabilities", "#capabilities"],
     ["AI & Operations", "#ai-ops"],
+    ["AI & GPU", "#ai-gpu"],
     ["Industries", "#industries"],
     ["Portfolio", "#deployments"],
     ["Partners", "#partners"],
@@ -326,9 +346,9 @@ function NavBar({
           />
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-5 lg:flex xl:gap-7">
           {links.map(([label, href]) => (
-            <a key={label} href={href} className="text-[15px] font-semibold uppercase tracking-[0.08em] text-[var(--site-muted)] transition hover:text-[var(--site-gold)]">
+            <a key={label} href={href} className="whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--site-muted)] transition hover:text-[var(--site-gold)]">
               {label}
             </a>
           ))}
@@ -689,6 +709,69 @@ function AISection() {
   );
 }
 
+function GpuInfrastructure() {
+  return (
+    <section id="ai-gpu" className="relative bg-[var(--site-bg)] py-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="mb-14 max-w-3xl">
+          <SectionLabel>AI & GPU Infrastructure</SectionLabel>
+          <div className="mt-3 flex items-start gap-4">
+            <span className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center border border-[var(--site-divider)] text-[var(--site-gold)] [box-shadow:0_0_14px_-4px_var(--site-divider-glow)]">
+              <Cpu size={24} strokeWidth={1.5} />
+            </span>
+            <h2 className="text-[clamp(2.1rem,4.5vw,3.4rem)] font-black uppercase leading-none text-[var(--site-text)]">
+              Sovereign AI Infrastructure for the Region
+            </h2>
+          </div>
+          <p className="mt-6 text-base leading-8 text-[var(--site-muted)]">
+            Enseigner delivers GPU-as-a-Service infrastructure built for enterprises and governments that need high-performance compute without the capital burden of building it themselves. Our infrastructure footprint is designed to scale from pilot deployments to large-scale AI workloads, fully hosted within the region for data sovereignty and compliance.
+          </p>
+        </div>
+
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] lg:grid-cols-2">
+          {gpuInfraPoints.map((point, index) => (
+            <article key={point} className="flex gap-5 bg-[var(--site-card)] p-7">
+              <span className="font-mono text-[15px] font-black text-[var(--site-gold)]">0{index + 1}</span>
+              <p className="text-[15px] leading-7 text-[var(--site-text)]">{point}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mb-10 mt-20 max-w-3xl">
+          <h3 className="text-[clamp(1.8rem,3.6vw,2.7rem)] font-black uppercase leading-tight text-[var(--site-text)]">
+            AI Solutions That Solve <span className="text-[var(--site-gold)]">Real Operational Problems</span>
+          </h3>
+          <p className="mt-4 text-base leading-8 text-[var(--site-muted)]">
+            Beyond infrastructure, Enseigner builds applied AI solutions that turn raw compute into measurable business outcomes:
+          </p>
+        </div>
+
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] md:grid-cols-2">
+          {aiSolutions.map((solution) => {
+            const Icon = solution.icon;
+            return (
+              <article key={solution.title} className="flex flex-col gap-4 bg-[var(--site-card)] p-7 transition hover:bg-[var(--site-card-hover)]">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-[var(--site-gold)]/35 text-[var(--site-gold)]">
+                  <Icon size={22} strokeWidth={1.5} />
+                </span>
+                <h4 className="text-xl font-black uppercase leading-tight text-[var(--site-text)]">{solution.title}</h4>
+                <p className="text-[15px] leading-7 text-[var(--site-muted)]">{solution.desc}</p>
+              </article>
+            );
+          })}
+        </div>
+
+        <div className="mt-16 border border-[var(--site-divider)] bg-[var(--site-card)]/80 p-8 [box-shadow:0_0_18px_-4px_var(--site-divider-glow)] md:p-12">
+          <SectionLabel>Why It Matters</SectionLabel>
+          <p className="mt-5 max-w-4xl text-lg leading-8 text-[var(--site-text)]">
+            Most providers offer either infrastructure or applications — rarely both, integrated. Enseigner combines GPU infrastructure with applied AI agents and workflow automation, giving clients a full-stack path from raw compute to real operational results.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Industries() {
   return (
     <section id="industries" className="bg-[var(--site-bg)] py-24">
@@ -763,48 +846,26 @@ function DeploymentRecord() {
 }
 
 function OEMPartners() {
-  const rowRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    let frame = 0;
-    let pos = 0;
-    const animate = () => {
-      if (rowRef.current) {
-        pos -= 0.45;
-        const half = rowRef.current.scrollWidth / 2;
-        if (Math.abs(pos) >= half) pos = 0;
-        rowRef.current.style.transform = `translateX(${pos}px)`;
-      }
-      frame = requestAnimationFrame(animate);
-    };
-    frame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(frame);
-  }, []);
-
   return (
-    <section id="partners" className="overflow-hidden bg-[var(--site-bg)] py-24">
-      <div className="mx-auto mb-12 max-w-7xl px-5 sm:px-8">
-        <SectionLabel>OEM Partner Ecosystem</SectionLabel>
-        <div className="flex flex-wrap items-end justify-between gap-8">
-          <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">200+ Global OEM Technology Partners</h2>
-          <p className="max-w-md text-base leading-8 text-[var(--site-muted)]">
-            Direct relationships with global technology OEMs for security, compute, storage, networking, cabling, and data centre systems.
-          </p>
-        </div>
-      </div>
-
-      <div className="relative">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-[linear-gradient(to_right,var(--site-bg),transparent)]" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-[linear-gradient(to_left,var(--site-bg),transparent)]" />
-        <div className="overflow-hidden">
-          <div ref={rowRef} className="flex will-change-transform">
-            {[...partners, ...partners].map((partner, index) => (
-              <div key={`${partner}-${index}`} className="mx-2 flex h-24 min-w-[190px] shrink-0 flex-col items-center justify-center border border-[var(--site-divider)] bg-[var(--site-card)] px-6 [box-shadow:0_0_14px_-4px_var(--site-divider-glow)] text-center transition hover:border-[var(--site-gold)]/45 hover:bg-[var(--site-card-hover)]">
-                <div className="text-lg font-black text-[var(--site-text)]">{partner}</div>
-                <div className="mt-1 font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--site-gold)]/55">Technology OEM</div>
-              </div>
-            ))}
+    <section id="partners" className="bg-[var(--site-bg)] py-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="mb-12">
+          <SectionLabel>OEM Partners</SectionLabel>
+          <div className="flex flex-wrap items-end justify-between gap-8">
+            <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">Technology Partners &amp; OEM Ecosystem</h2>
+            <p className="max-w-md text-base leading-8 text-[var(--site-muted)]">
+              200+ OEM relationships across security, networking, compute, and storage.
+            </p>
           </div>
+        </div>
+
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-3">
+          {oemCategories.map((group) => (
+            <div key={group.category} className="bg-[var(--site-card)] p-7 transition hover:bg-[var(--site-card-hover)]">
+              <h3 className="text-lg font-black uppercase tracking-[0.04em] text-[var(--site-gold)]">{group.category}</h3>
+              <p className="mt-4 text-[15px] leading-7 text-[var(--site-muted)]">{group.brands.join(" · ")}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -900,6 +961,7 @@ export default function EnseignerCorporateSite() {
       <Capabilities />
       <DataCentreAISection />
       <AISection />
+      <GpuInfrastructure />
       <Industries />
       <DeploymentRecord />
       <OEMPartners />
