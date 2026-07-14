@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 // Where enquiries are delivered.
-const TO_EMAIL = "abu@enseigner.in";
+const TO_EMAIL = "Info.ai@enseigner.in";
 // From address. Resend's onboarding domain works immediately for testing; once
 // enseigner.in is verified in Resend, set CONTACT_FROM="Enseigner <website@enseigner.in>".
 const FROM_EMAIL = process.env.CONTACT_FROM || "Enseigner Website <onboarding@resend.dev>";

@@ -911,7 +911,7 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
           {[
             { icon: MapPin, label: "Head Office", value: "Dubai International Financial Centre, Dubai, UAE", sub: "Unit IH-00-01-02-OF-01, Level 2, H-00-01-CP-05" },
             { icon: Phone, label: "Phone", value: "+971 505951062", sub: "Direct line for enterprise enquiries" },
-            { icon: Mail, label: "Email", value: "abu@enseigner.in", sub: "Founder contact from company profile" },
+            { icon: Mail, label: "Email", value: "Info.ai@enseigner.in", sub: "Enterprise enquiries" },
             { icon: Users, label: "Founder & MD", value: "Abubucker Mansoor Mohamed", sub: "Infrastructure-led. AI-enabled. Security-first. GCC-focused, India-proven." },
             { icon: MonitorDot, label: "Website", value: "www.enseigner.in", sub: "Engineers the Systems of the World" },
           ].map((contact, i) => {
