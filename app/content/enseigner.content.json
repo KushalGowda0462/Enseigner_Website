@@ -1,111 +1,157 @@
 {
   "brand": {
     "name": "Enseigner",
-    "product": "Enterprise Systems Integration",
+    "product": "AI Services & Enterprise Infrastructure",
     "tagline": "Engineering the Intelligent Enterprise",
-    "oneLiner": "Infrastructure-led. AI-enabled. Security-first. GCC-focused, India-proven.",
+    "oneLiner": "AI-enabled. Infrastructure-led. GCC-focused, India-proven.",
     "region": "GCC | UAE-headquartered, India delivery backbone",
     "stage": "Company Profile 2026",
     "logoPath": "/enseigner-logo-transparent.png"
   },
   "seo": {
     "title": "Enseigner — Engineers the Systems of the World",
-    "description": "Enseigner is an infrastructure-first enterprise technology company delivering AI, computer vision, data centre, security, networking, and command centre systems across the GCC, built on a proven India delivery backbone.",
+    "description": "Enseigner is an AI-enabled enterprise technology company delivering agentic AI, computer vision, Track 3D, hospital management, training services, and enterprise data centre and networking infrastructure across the GCC, built on a proven India delivery backbone.",
     "ogImage": "/enseigner-logo-transparent.png"
   },
   "nav": {
     "links": [
-      { "label": "About Us", "href": "/about", "type": "route" },
-      { "label": "Consulting", "href": "/services", "type": "dropdown", "items": "services" },
-      { "label": "Training", "href": "/services#traing-programs", "type": "dropdown", "items": "training" },
-      { "label": "Resources", "href": "/resources", "type": "dropdown", "items": "resources" }
+      {
+        "label": "About Us",
+        "href": "/#about",
+        "type": "route"
+      },
+      {
+        "label": "Offerings",
+        "href": "/#capabilities",
+        "type": "route"
+      },
+      {
+        "label": "Agentic AI",
+        "href": "/#agentic-ai",
+        "type": "route"
+      },
+      {
+        "label": "Reference Projects",
+        "href": "/reference-projects",
+        "type": "route"
+      }
     ],
-    "cta": { "label": "Contact Us", "href": "/contact", "type": "route" }
+    "cta": {
+      "label": "Contact Us",
+      "href": "/#contact",
+      "type": "route"
+    }
   },
   "hero": {
     "topLabel": "ENGINEERS THE SYSTEMS OF THE WORLD",
     "headline": "Engineering the Intelligent Enterprise",
-    "subheadline": "Enseigner delivers end-to-end systems integration, infrastructure, security, networking, data centre, and AI-powered intelligent operations for GCC enterprises.",
-    "primaryCta": { "label": "Contact Enseigner", "href": "/contact" },
-    "secondaryCta": { "label": "View Capabilities", "href": "#offerings" },
+    "subheadline": "Enseigner delivers AI services and agentic systems, computer vision, Track 3D, hospital management, training services, and the enterprise data centre and networking infrastructure underneath them for GCC enterprises.",
+    "primaryCta": {
+      "label": "Contact Enseigner",
+      "href": "/contact"
+    },
+    "secondaryCta": {
+      "label": "View Capabilities",
+      "href": "#offerings"
+    },
     "highlights": [
       "12+ years of enterprise execution, now engineering for the GCC",
-      "10,000+ branch and site security installations delivered",
-      "AI, computer vision, data centre, networking, and command centre expertise"
+      "AI services, agentic AI, and computer vision as the core practice",
+      "Enterprise data centre, networking, and managed services foundation"
     ],
     "microHighlights": [
       {
-        "title": "Infrastructure-Led",
+        "title": "AI-Enabled",
+        "subtitle": "Agentic AI, chatbot, and applied AI services across enterprise workflows",
+        "icon": "Bot"
+      },
+      {
+        "title": "Vision-Led",
+        "subtitle": "Computer vision for workforce, site, and retail intelligence, processed on-premise",
+        "icon": "Eye"
+      },
+      {
+        "title": "Infrastructure-Backed",
         "subtitle": "Data centre, compute, storage, networking, and structured cabling",
         "icon": "Server"
-      },
-      {
-        "title": "AI-Enabled",
-        "subtitle": "Computer vision, video analytics, anomaly detection, and intelligent operations",
-        "icon": "Brain"
-      },
-      {
-        "title": "Security-First",
-        "subtitle": "CCTV, access control, intrusion alarm, fire alarm, and command visibility",
-        "icon": "Shield"
       }
     ]
   },
   "market": {
     "title": "Enterprise Technology Built for the GCC",
     "items": [
-      { "label": "Execution History", "value": "12+ years", "note": "Enterprise delivery backbone, now serving the GCC" },
-      { "label": "Enterprise Clients", "value": "100+", "note": "Banking, government, healthcare, logistics, retail, and infrastructure" },
-      { "label": "Installations", "value": "10,000+", "note": "Branch and site security deployments" },
-      { "label": "OEM Ecosystem", "value": "200+ brands", "note": "Security, compute, storage, networking, and safety partners" }
+      {
+        "label": "Execution History",
+        "value": "12+ years",
+        "note": "Enterprise delivery backbone, now serving the GCC"
+      },
+      {
+        "label": "Enterprise Clients",
+        "value": "100+",
+        "note": "Banking, government, healthcare, logistics, retail, and infrastructure"
+      },
+      {
+        "label": "Deployments",
+        "value": "10,000+",
+        "note": "Branch and site deployments delivered"
+      },
+      {
+        "label": "OEM Ecosystem",
+        "value": "200+ brands",
+        "note": "Servers, storage, networking, and cloud partners"
+      }
     ]
   },
   "whyNow": {
     "title": "Why Enseigner",
     "points": [
-      "GCC enterprises need operationally sound infrastructure before AI, security, and intelligent automation can succeed.",
-      "Fragmented vendors increase operational risk; Enseigner integrates infrastructure, security, networking, data centre, and intelligent operations under one accountable delivery model."
+      "GCC enterprises need operationally sound infrastructure before AI and intelligent automation can succeed.",
+      "Fragmented vendors increase operational risk; Enseigner integrates AI services, computer vision, networking, data centre, and intelligent operations under one accountable delivery model."
     ]
   },
   "problem": {
     "title": "Enterprise Execution Gap",
     "points": [
-      "Technology adoption fails when infrastructure, security, networking, and operations are designed in silos.",
-      "Distributed enterprises need centralised command visibility across branches, campuses, ports, warehouses, and critical infrastructure.",
-      "Security and compliance requirements demand on-premise data processing, audit trails, and controlled operational access.",
-      "Enterprise teams need one partner from consultancy and design through supply, implementation, AMC, and managed operations."
+      "Technology adoption fails when infrastructure, networking, and operations are designed in silos.",
+      "Distributed enterprises need centralised operational visibility across branches, campuses, ports, warehouses, and critical infrastructure.",
+      "Compliance requirements demand on-premise data processing, audit trails, and controlled operational access.",
+      "Enterprise teams need one partner from consultancy and design through supply, implementation, training, and managed operations."
     ]
   },
   "gap": {
     "title": "What We Close",
     "points": [
       "The gap between technology ambition and field execution across GCC enterprise environments.",
-      "The gap between standalone surveillance or IT systems and unified, AI-enabled intelligent operations."
+      "The gap between standalone IT systems and unified, AI-enabled intelligent operations."
     ]
   },
   "offerings": {
     "id": "offerings",
-    "title": "Core Competencies",
-    "subtitle": "Security-first. Infrastructure-led. AI-enabled. Enterprise-grade.",
+    "title": "Core Offerings",
+    "subtitle": "AI-enabled. Vision-led. Infrastructure-backed. Enterprise-grade.",
     "cards": [
       {
-        "title": "Security Systems",
-        "desc": "CCTV video surveillance, access control, intrusion alarm, and fire alarm systems with end-to-end design, supply, installation, and maintenance."
-      },
-      {
-        "title": "Data Centre",
-        "desc": "Enterprise compute, storage, backup, network fabric, structured cabling, and disaster recovery architectures for mission-critical operations."
+        "title": "AI Services & Agentic AI",
+        "desc": "Agentic AI systems and applied AI services - including the Enseigner chatbot - that answer routine enquiries, classify and route requests, and run multi-step workflows across enterprise systems."
       },
       {
         "title": "Computer Vision",
-        "desc": "AI-powered video analytics for workforce attendance, access intelligence, retail analytics, anomaly detection, and enterprise monitoring."
+        "desc": "AI-powered operational visibility for workforce management, site monitoring, retail intelligence, and anomaly detection, processed on-premise within the client environment."
       },
       {
-        "title": "Command Centre",
-        "desc": "Centralised operational visibility, AIOps-driven automation, SLA tracking, multi-site command, and role-based enterprise dashboards."
+        "title": "Track 3D",
+        "desc": "Real-time 3D tracking and spatial visualisation for enterprise sites - asset, vehicle, and personnel movement rendered against a live model of the facility."
+      },
+      {
+        "title": "Hospital Management",
+        "desc": "Integrated hospital management covering patient administration, departmental workflow, records, and operational reporting for healthcare providers."
+      },
+      {
+        "title": "Training Services",
+        "desc": "Expert-led enablement across infrastructure, networking, cloud, data centre, and AI operations, grounded in real enterprise deployment experience."
       }
     ],
-    "note": "Consultancy -> design -> supply -> implementation -> AMC: one accountable partner across the full lifecycle."
+    "note": "Consultancy -> design -> supply -> implementation -> training and managed operations: one accountable partner across the full lifecycle."
   },
   "blogs": {
     "title": "OUR BLOGS",
@@ -116,11 +162,11 @@
   "advantage": {
     "id": "advantage",
     "title": "Operational Strengths",
-    "subtitle": "AI, data centre, computer vision, security systems, server and compute, and end-to-end delivery.",
+    "subtitle": "AI services, computer vision, data centre, server and compute, and end-to-end delivery.",
     "wins": [
       "Proven enterprise execution team with multi-site deployment experience",
-      "10,000+ operational security deployments across banking, retail, government, and enterprise sites",
-      "200+ OEM relationships across compute, networking, storage, security, fire, and safety",
+      "10,000+ operational deployments across banking, retail, government, and enterprise sites",
+      "200+ OEM relationships across compute, networking, storage, and cloud",
       "On-premise AI processing designed for enterprise privacy and operational compliance"
     ]
   },
@@ -128,7 +174,7 @@
     "title": "Operational Track Record",
     "points": [
       "Enterprise deployments across BFSI, government, defence, ports, logistics, healthcare, education, retail, IT, manufacturing, and industrial sectors.",
-      "Security systems, data centre buildout, surveillance, access control, structured cabling, command/control, and operational support."
+      "Data centre buildout, enterprise networking, structured cabling, operational dashboards, and long-term operational support."
     ]
   },
   "investorTakeaways": {
@@ -136,14 +182,14 @@
     "points": [
       "Infrastructure discipline is the foundation for successful enterprise technology adoption.",
       "Integrated systems reduce fragmented vendor exposure and operational risk.",
-      "On-premise intelligent operations preserve control over biometric, security, and operational data.",
-      "Lifecycle delivery creates accountability from design to long-term maintenance."
+      "On-premise intelligent operations preserve control over operational data.",
+      "Lifecycle delivery creates accountability from design to long-term operations."
     ]
   },
   "roadmap": {
     "id": "roadmap",
     "title": "Delivery Lifecycle",
-    "endState": "Consultancy, design, supply, implementation, and AMC delivered by one accountable partner."
+    "endState": "Consultancy, design, supply, implementation, and training delivered by one accountable partner."
   },
   "funding": {
     "id": "funding",
@@ -152,37 +198,68 @@
     "details": [
       "Single-site pilots without redesign",
       "Multi-location rollout visibility",
-      "Multi-site managed operations and AMC across the region"
+      "Multi-site managed operations across the region"
     ]
   },
   "footer": {
     "closing": "Engineers the Systems of the World",
     "copyright": "© 2026 Enseigner. All rights reserved.",
     "links": [
-      { "label": "Company", "items": [
-        { "label": "About", "href": "/about" },
-        { "label": "Contact", "href": "/contact" }
-      ]},
-      { "label": "Services", "items": [
-        { "label": "Core Competencies", "href": "/services" },
-        { "label": "Training", "href": "/services#traing-programs" }
-      ]},
-      { "label": "Resources", "items": [
-        { "label": "Blog", "href": "/resources#blogs" },
-        { "label": "Case Studies", "href": "/resources#case-studies" },
-        { "label": "Success Stories", "href": "/resources#success-stories" }
-      ]}
+      {
+        "label": "Company",
+        "items": [
+          {
+            "label": "About",
+            "href": "/#about"
+          },
+          {
+            "label": "Contact",
+            "href": "/#contact"
+          }
+        ]
+      },
+      {
+        "label": "Offerings",
+        "items": [
+          {
+            "label": "Core Offerings",
+            "href": "/#capabilities"
+          },
+          {
+            "label": "Agentic AI",
+            "href": "/#agentic-ai"
+          },
+          {
+            "label": "Training Services",
+            "href": "/#capabilities"
+          }
+        ]
+      },
+      {
+        "label": "Resources",
+        "items": [
+          {
+            "label": "Reference Projects",
+            "href": "/reference-projects"
+          }
+        ]
+      }
     ]
   },
   "contact": {
     "id": "contact",
     "title": "Get in Touch",
-    "subtitle": "Talk to Enseigner about enterprise infrastructure, security systems, data centre, networking, computer vision, and intelligent operations.",
-    "fields": ["Name", "Work Email", "Company", "Message"],
+    "subtitle": "Talk to Enseigner about AI services, agentic AI, computer vision, Track 3D, hospital management, training, and enterprise data centre and networking infrastructure.",
+    "fields": [
+      "Name",
+      "Work Email",
+      "Company",
+      "Message"
+    ],
     "email": "Info.ai@enseigner.in",
     "phone": "+971 505951062",
     "address": "Dubai International Financial Centre, Dubai, UAE",
-    "website": "www.enseigner.in",
+    "website": "www.enseigner.ai",
     "founder": "Abubucker Mansoor Mohamed",
     "role": "Founder & MD"
   },
@@ -200,33 +277,41 @@
       "certifications": "ISO 14001 Certified · ASCB(E) Accredited · Electronic Security Association of India Member",
       "professionals": "Direct-payroll delivery and managed operations teams"
     },
-    "mission": "To be the GCC's most trusted infrastructure and enterprise technology partner, built on 12 years of enterprise execution.",
-    "description": "Enseigner is an infrastructure-first enterprise technology company that has evolved into AI-enabled intelligent operations. Built on 12+ years of enterprise execution across banking, government, healthcare, logistics, and critical infrastructure — and now engineered to serve GCC enterprises, Enseigner closes the gap between technology ambition and operationally sound execution.",
-    "vision": "To be the GCC's most trusted infrastructure and enterprise technology partner — built on 12 years of enterprise execution — enabling enterprises to modernise their infrastructure, secure their operations, and adopt intelligent technology with confidence and operational permanence.",
+    "mission": "To be the GCC's most trusted AI and enterprise infrastructure partner, built on 12 years of enterprise execution.",
+    "description": "Enseigner is an AI-enabled enterprise technology company built on an infrastructure-first foundation. Built on 12+ years of enterprise execution across banking, government, healthcare, logistics, and critical infrastructure - and now engineered to serve GCC enterprises, Enseigner closes the gap between technology ambition and operationally sound execution.",
+    "vision": "To be the GCC's most trusted AI and enterprise infrastructure partner - built on 12 years of enterprise execution - enabling enterprises to modernise their infrastructure and adopt intelligent technology with confidence and operational permanence.",
     "capabilities": [
       {
-        "title": "Security Systems & Integration",
-        "description": "CCTV surveillance, access control, intrusion alarm, and fire alarm systems across enterprise, banking, retail, and government sites."
+        "title": "AI Services & Agentic AI",
+        "description": "Agentic AI, the Enseigner chatbot, ticket intelligence, and multi-step agents that act across enterprise systems."
+      },
+      {
+        "title": "Computer Vision & Intelligent Operations",
+        "description": "AI-powered operational visibility across workforce management, site monitoring, retail intelligence, and anomaly detection."
+      },
+      {
+        "title": "Track 3D",
+        "description": "Real-time 3D tracking and spatial visualisation of assets, vehicles, and personnel across enterprise sites."
+      },
+      {
+        "title": "Hospital Management",
+        "description": "Patient administration, departmental workflow, records, and operational reporting for healthcare providers."
       },
       {
         "title": "Infrastructure Engineering",
         "description": "Enterprise-grade compute, storage, and network architecture for data centre workloads, mission-critical operations, and structured cabling."
       },
       {
-        "title": "Computer Vision & Intelligent Operations",
-        "description": "AI-powered operational visibility across access control, workforce management, security, retail intelligence, and enterprise monitoring."
-      },
-      {
-        "title": "PA, Voice & Command Centre",
-        "description": "Public address, voice evacuation, intercom, centralised command centre, and unified communication for institutional environments."
+        "title": "Training Services",
+        "description": "Expert-led enablement across infrastructure, networking, cloud, data centre, and AI operations."
       },
       {
         "title": "OEM Partner Ecosystem",
-        "description": "Authorised relationships with leading infrastructure OEMs across compute, networking, storage, safety, and security."
+        "description": "Authorised relationships with leading infrastructure OEMs across compute, networking, storage, and cloud."
       },
       {
-        "title": "Managed Services & AMC",
-        "description": "Structured cabling, project delivery, post-installation maintenance, and long-term operational support."
+        "title": "Managed Services",
+        "description": "Cloud storage, data centre management, project delivery, and long-term operational support."
       }
     ],
     "dataCenterSolutions": {
@@ -239,18 +324,18 @@
     "aiInfrastructure": {
       "endToEnd": "Architect AI-enabled enterprise operations from existing camera and operational infrastructure through on-premise inference and command dashboards.",
       "oemHardware": "Leverage HPE, Dell, Cisco, Fortinet, NetApp, NVIDIA, and other OEM ecosystems for enterprise-ready infrastructure.",
-      "cloudNative": "Integrate enterprise systems such as HR, ERP, payroll, access control, and business intelligence to reduce implementation friction.",
+      "cloudNative": "Integrate enterprise systems such as HR, ERP, payroll, and business intelligence to reduce implementation friction.",
       "applications": [
         "Workforce and attendance intelligence with contactless identification and exception alerting",
-        "Security and access intelligence with anomaly detection, intrusion prevention, and audit trails",
+        "Site and anomaly intelligence with audit trails and operational evidence",
         "Retail and commercial intelligence with visitor flow, dwell time, POS reconciliation, and behaviour analytics"
       ]
     },
     "dataEngineering": {
       "warehousing": "Design enterprise data centre and storage environments that consolidate operational data for reliable analytics.",
-      "pipelines": "Integrate surveillance, access control, HR, ERP, payroll, and BI systems into unified enterprise workflows.",
+      "pipelines": "Integrate HR, ERP, payroll, ticketing, and BI systems into unified enterprise workflows.",
       "migration": "Modernise legacy infrastructure through structured, low-risk migration and hybrid integration.",
-      "dashboards": "Deliver real-time command dashboards for workforce status, security posture, operational alerts, and compliance readiness."
+      "dashboards": "Deliver real-time command dashboards for workforce status, operational alerts, and compliance readiness."
     },
     "training": {
       "description": "Expert-led enablement across infrastructure, networking, cloud, automation, data centre, and AI operations, grounded in real enterprise deployment experience.",
@@ -260,24 +345,24 @@
           "description": "Compute, storage, networking, virtualization, backup, DR, and structured cabling operations."
         },
         {
-          "title": "Security & Command Operations",
-          "description": "CCTV, access control, intrusion systems, fire alarm, command centre, SOC, and compliance workflows."
-        },
-        {
           "title": "AI & Computer Vision",
           "description": "Video analytics, anomaly detection, attendance intelligence, on-premise AI processing, and intelligent operations."
+        },
+        {
+          "title": "Agentic AI & Automation",
+          "description": "Chatbot deployment, ticket intelligence, multi-step agents, and workflow automation across enterprise systems."
         }
       ],
       "benefits": [
         "Real-world deployment experience from enterprise, BFSI, government, healthcare, logistics, and critical infrastructure environments",
-        "Hands-on operating models for security, data centre, networking, and intelligent operations teams",
-        "Lifecycle knowledge from CAD design and implementation through commissioning, AMC, and managed operations"
+        "Hands-on operating models for data centre, networking, and intelligent operations teams",
+        "Lifecycle knowledge from CAD design and implementation through commissioning and managed operations"
       ]
     },
     "compliance": {
-      "globalPrivacy": "On-premise data by design, with no biometric or operational data transmitted externally.",
+      "globalPrivacy": "On-premise data by design, with no operational data transmitted externally.",
       "aiGovernance": "Audit-ready operational visibility with timestamped trails, role-based access, and evidence management.",
-      "securePipelines": "Security and compliance controls across enterprise, data centre, cloud, and distributed site environments.",
+      "securePipelines": "Compliance controls across enterprise, data centre, cloud, and distributed site environments.",
       "riskReduction": "Aligned to GCC data residency and sovereignty expectations and enterprise standards including ISO 27001 and SOC2 where relevant."
     }
   }
