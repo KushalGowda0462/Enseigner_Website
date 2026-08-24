@@ -1,0 +1,133 @@
+{
+  "brand": "Enseigner",
+  "primitive": {
+    "color": {
+      "primary": {
+        "50": {
+          "$value": "#DBB85A",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#DBB85A",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#FFFFE5",
+          "$type": "color"
+        },
+        "300": {
+          "$value": "#FFFFB2",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#FCDB7F",
+          "$type": "color"
+        },
+        "500": {
+          "$value": "#C9A84C",
+          "$type": "color"
+        },
+        "600": {
+          "$value": "#B99032",
+          "$type": "color"
+        },
+        "700": {
+          "$value": "#7D5C00",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#563500",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#300F00",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "50": {
+          "$value": "#EEF3FC",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#D4D9E2",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#A1A6AF",
+          "$type": "color"
+        },
+        "300": {
+          "$value": "#6E737C",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#3B4049",
+          "$type": "color"
+        },
+        "500": {
+          "$value": "#080D16",
+          "$type": "color"
+        },
+        "600": {
+          "$value": "#000000",
+          "$type": "color"
+        },
+        "700": {
+          "$value": "#000000",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#000000",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#000000",
+          "$type": "color"
+        }
+      },
+      "accent": {
+        "50": {
+          "$value": "#FFFFFF",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#E6FFFF",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#B3FFFF",
+          "$type": "color"
+        },
+        "300": {
+          "$value": "#80FFD3",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#4DD1A0",
+          "$type": "color"
+        },
+        "500": {
+          "$value": "#1A9E6D",
+          "$type": "color"
+        },
+        "600": {
+          "$value": "#007847",
+          "$type": "color"
+        },
+        "700": {
+          "$value": "#005221",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#002B00",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#000500",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}
