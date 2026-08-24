@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.enseigner.in"),
+  metadataBase: new URL("https://www.enseigner.ai"),
   title: enseignerContent.seo.title,
   description: enseignerContent.seo.description,
   icons: {

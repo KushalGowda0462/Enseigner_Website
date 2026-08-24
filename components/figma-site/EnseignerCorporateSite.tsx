@@ -5,23 +5,23 @@ import {
   Anchor,
   ArrowRight,
   BarChart3,
+  Bot,
+  Boxes,
   Building2,
   Cable,
-  Camera,
   Cpu,
   Factory,
   FileCheck,
   GraduationCap,
   HeartPulse,
-  KeyRound,
   Landmark,
   Mail,
   MapPin,
   Menu,
+  MessageSquare,
   MonitorDot,
   Network,
   Phone,
-  Radio,
   Server,
   Shield,
   ShoppingBag,
@@ -34,7 +34,9 @@ import {
   Eye,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { type CSSProperties, useEffect, useState } from "react";
+import { referenceProjects } from "@/data/reference-projects";
 import ContactForm from "./ContactForm";
 
 const logoPath = "/enseigner-logo-transparent.png";
@@ -75,10 +77,10 @@ const themeVars: Record<ThemeMode, CSSProperties> = {
 };
 
 const metrics = [
-  { icon: Shield, value: "12+", label: "Years Enterprise Execution", sub: "Enterprise execution backbone, now engineering for the GCC" },
+  { icon: Cpu, value: "12+", label: "Years Enterprise Execution", sub: "Enterprise execution backbone, now engineering for the GCC" },
   { icon: Building2, value: "100+", label: "Enterprise Clients Delivered", sub: "Banking, government, healthcare, logistics, and critical infrastructure" },
-  { icon: MapPin, value: "10,000+", label: "Branch & Site Security Installations", sub: "Operational deployments across enterprise locations" },
-  { icon: Network, value: "200+", label: "OEM Partner Ecosystem", sub: "Security, networking, compute, and storage relationships" },
+  { icon: MapPin, value: "10,000+", label: "Branch & Site Deployments", sub: "Operational deployments across enterprise locations" },
+  { icon: Network, value: "200+", label: "OEM Partner Ecosystem", sub: "Compute, storage, networking, and cloud relationships" },
 ];
 
 const visionQuote =
@@ -87,7 +89,7 @@ const visionQuote =
 const strategicPillars = [
   {
     title: "Integration Over Complexity",
-    body: "We design integrated solutions across security, networking, data centre, and intelligent operations — eliminating fragmented vendor exposure and reducing operational risk.",
+    body: "We design integrated solutions across AI, networking, data centre, and intelligent operations — eliminating fragmented vendor exposure and reducing operational risk.",
   },
   {
     title: "Execution Over Theory",
@@ -99,54 +101,81 @@ const strategicPillars = [
   },
 ];
 
-const services = [
+// CORE OFFERINGS — the five blocks a GCC visitor should see first (Website Brief, s.4).
+// `featured: true` marks the three to lead with: AI Services, Computer Vision, Agentic AI.
+// COPY PENDING: final wording for the featured three, plus Track 3D and Hospital Management,
+// is being supplied by the Enseigner team. Descriptions below are drafts — do not treat as locked.
+const coreOfferings = [
   {
-    icon: Camera,
-    code: "SYS-01",
-    title: "Security Systems & Integration",
-    desc: "CCTV surveillance, access control, intrusion alarm, and fire alarm systems — design, supply, installation, and maintenance.",
-    tags: ["CCTV", "Access Control", "Intrusion", "Fire Alarm"],
+    icon: Bot,
+    code: "AI-01",
+    title: "AI Services & Agentic AI",
+    desc: "Agentic AI systems and applied AI services — including the Enseigner chatbot — that answer routine enquiries, classify and route requests, and run multi-step workflows across enterprise systems.",
+    tags: ["Agentic AI", "Chatbot", "Workflow Automation", "LLM Ops"],
+    featured: true,
   },
   {
+    icon: Eye,
+    code: "AI-02",
+    title: "Computer Vision",
+    desc: "AI-powered operational visibility for workforce management, site monitoring, retail intelligence, and anomaly detection — processed on-premise within the client environment.",
+    tags: ["Video Analytics", "Anomaly", "Workforce", "On-Premise AI"],
+    featured: true,
+  },
+  {
+    icon: Boxes,
+    code: "PRD-01",
+    title: "Track 3D",
+    desc: "Real-time 3D tracking and spatial visualisation for enterprise sites — asset, vehicle, and personnel movement rendered against a live model of the facility.",
+    tags: ["3D Tracking", "Spatial Analytics", "Site Visibility"],
+    featured: false,
+  },
+  {
+    icon: HeartPulse,
+    code: "PRD-02",
+    title: "Hospital Management",
+    desc: "Integrated hospital management covering patient administration, departmental workflow, records, and operational reporting for healthcare providers.",
+    tags: ["Healthcare", "Workflow", "Records", "Reporting"],
+    featured: false,
+  },
+  {
+    icon: GraduationCap,
+    code: "TRN-01",
+    title: "Training Services",
+    desc: "Expert-led enablement across infrastructure, networking, cloud, data centre, and AI operations — grounded in real enterprise deployment experience.",
+    tags: ["Infrastructure", "Cloud", "Data Centre", "AI Operations"],
+    featured: false,
+  },
+];
+
+// Retained infrastructure practice areas (Website Brief, s.6 — keep as-is).
+const infrastructureServices = [
+  {
     icon: Server,
-    code: "SYS-02",
+    code: "SYS-01",
     title: "Enterprise Data Centre Solutions",
     desc: "Enterprise data centre design and operations — storage, network fabric, recovery architectures, and structured cabling.",
     tags: ["Compute", "Storage", "Network Fabric", "DR"],
   },
   {
-    icon: Radio,
-    code: "SYS-03",
-    title: "PA, Voice & Command Centre",
-    desc: "Public address systems, voice evacuation, intercom, and centralised command centre solutions for operational control.",
-    tags: ["PA", "Voice Evacuation", "Intercom", "Command"],
-  },
-  {
-    icon: Eye,
-    code: "SYS-04",
-    title: "Computer Vision & Intelligent Operations",
-    desc: "AI-powered operational visibility for access control, workforce management, security, and enterprise monitoring.",
-    tags: ["Video Analytics", "Anomaly", "Workforce", "Monitoring"],
+    icon: Wrench,
+    code: "SYS-02",
+    title: "Managed Services",
+    desc: "Cloud storage, data centre management, and long-term operational support — one partner from consultancy through execution to steady-state operations.",
+    tags: ["Cloud Storage", "DC Management", "Operations"],
   },
   {
     icon: Cable,
-    code: "SYS-05",
+    code: "SYS-03",
     title: "Structured Cabling & Passive Infrastructure",
-    desc: "Structured cabling, CAD design, passive infrastructure, installation, commissioning, and annual maintenance.",
-    tags: ["CAD", "Structured Cabling", "Commissioning", "AMC"],
-  },
-  {
-    icon: Wrench,
-    code: "SYS-06",
-    title: "Managed Services & AMC",
-    desc: "Post-installation maintenance and AMC support — one partner from consultancy through execution to long-term operations.",
-    tags: ["Consultancy", "Design", "Supply", "AMC"],
+    desc: "Structured cabling, CAD design, passive infrastructure, installation, and commissioning.",
+    tags: ["CAD", "Structured Cabling", "Commissioning"],
   },
 ];
 
 const aiModules = [
   { icon: Users, code: "WFI", label: "Workforce & Attendance Intelligence", value: "Contactless", unit: "identification, presence monitoring, exception alerting, and HRMS/payroll API integration", status: "ON-PREMISE" },
-  { icon: KeyRound, code: "SAI", label: "Security & Access Intelligence", value: "Audit-Ready", unit: "biometric access, anomaly detection, timestamped audit trails, and regulatory-grade evidence", status: "COMPLIANT" },
+  { icon: Shield, code: "SAI", label: "Site & Anomaly Intelligence", value: "Audit-Ready", unit: "anomaly detection, timestamped audit trails, and regulatory-grade operational evidence", status: "COMPLIANT" },
   { icon: BarChart3, code: "RCI", label: "Retail & Commercial Intelligence", value: "Operational", unit: "visitor flow analysis, zone engagement, dwell time analytics, POS reconciliation, and behaviour analytics", status: "INSIGHT" },
   { icon: MonitorDot, code: "ECD", label: "Enterprise Command Dashboard", value: "Unified", unit: "real-time visibility across workforce status, security posture, alerts, and compliance readiness", status: "COMMAND" },
   { icon: FileCheck, code: "ODA", label: "On-Premise Data Architecture", value: "Data Residency", unit: "AI inference processed in the client environment with no biometric or operational data transmitted externally — keeping data within the client's jurisdiction", status: "PRIVATE" },
@@ -167,7 +196,7 @@ const deliveryModel = [
   "Design",
   "Supply",
   "Implementation",
-  "AMC",
+  "Training",
 ];
 
 const gpuInfraPoints = [
@@ -177,21 +206,13 @@ const gpuInfraPoints = [
   "Built for regional compliance and data residency requirements",
 ];
 
+// Chatbot and ticket-intelligence cards now live in the Agentic AI section above — kept out of
+// here to avoid repeating the same two claims twice on one page.
 const aiSolutions = [
-  {
-    icon: Users,
-    title: "AI Resident & Customer Assistants",
-    desc: "24/7 multilingual support that deflects 70–80% of routine queries, cutting response times from hours to seconds.",
-  },
-  {
-    icon: FileCheck,
-    title: "AI Ticket Intelligence",
-    desc: "Automatically classifies, routes, and summarizes service requests with 70–85% accuracy, reducing SLA breaches by 40–60%.",
-  },
   {
     icon: Eye,
     title: "VisionOps",
-    desc: "Computer vision for real-time security, access control, and operational monitoring.",
+    desc: "Computer vision for real-time operational monitoring, workforce visibility, and anomaly detection across enterprise sites.",
   },
   {
     icon: BarChart3,
@@ -201,96 +222,42 @@ const aiSolutions = [
 ];
 
 const industries = [
-  { icon: Landmark, code: "IND-01", label: "Banking & Finance", desc: "Branch security, surveillance, compliance infrastructure, and data centre modernization for banks and NBFCs." },
-  { icon: Shield, code: "IND-02", label: "Government & Smart City", desc: "Secure command centres, smart-city surveillance networks, and mission-critical infrastructure for government and public-sector operations." },
-  { icon: Anchor, code: "IND-03", label: "Ports & Logistics", desc: "Container terminal security, perimeter surveillance, cargo visibility, and free-zone & port command centre integration." },
-  { icon: HeartPulse, code: "IND-04", label: "Healthcare", desc: "Hospital security, campus networking, data protection, and managed services for healthcare environments." },
-  { icon: ShoppingBag, code: "IND-05", label: "Retail & Hospitality", desc: "Mall and multi-store security rollouts, loss prevention, footfall analytics, and centralized surveillance management." },
-  { icon: GraduationCap, code: "IND-06", label: "Education", desc: "Campus security, smart classroom infrastructure, network backbone, and access intelligence." },
-  { icon: Factory, code: "IND-07", label: "Manufacturing", desc: "Industrial CCTV, production floor monitoring, OT network security, and plant command operations." },
-  { icon: Zap, code: "IND-08", label: "Energy & Critical Infrastructure", desc: "Oil and gas, power, utilities, and energy — high-availability security and communications infrastructure." },
+  { icon: Landmark, code: "IND-01", label: "Banking & Finance", desc: "Branch infrastructure, compliance-aligned data platforms, AI-assisted service desks, and data centre modernization for banks and NBFCs." },
+  { icon: Shield, code: "IND-02", label: "Government & Smart City", desc: "Command dashboards, smart-city data infrastructure, and mission-critical networks for government and public-sector operations." },
+  { icon: Anchor, code: "IND-03", label: "Ports & Logistics", desc: "Cargo and asset visibility, 3D site tracking, terminal network infrastructure, and free-zone operational dashboards." },
+  { icon: HeartPulse, code: "IND-04", label: "Healthcare", desc: "Hospital management systems, campus networking, data protection, and managed services for healthcare environments." },
+  { icon: ShoppingBag, code: "IND-05", label: "Retail & Hospitality", desc: "Footfall and dwell-time analytics, AI customer assistants, and multi-site network and store infrastructure." },
+  { icon: GraduationCap, code: "IND-06", label: "Education", desc: "Campus network backbone, smart classroom infrastructure, and training and enablement programmes." },
+  { icon: Factory, code: "IND-07", label: "Manufacturing", desc: "Production floor visibility, computer vision quality and safety analytics, OT network infrastructure, and plant operations dashboards." },
+  { icon: Zap, code: "IND-08", label: "Energy & Critical Infrastructure", desc: "Oil and gas, power, and utilities — high-availability compute, networking, and communications infrastructure." },
 ];
 
-const deployments = [
-  {
-    sector: "BFSI",
-    label: "Banking, Financial Services & Insurance",
-    projects: [
-      "Canara Bank · HDB Financial Services · Manappuram Finance · Muthoot Finance · South Indian Bank · IIFL · HDFC ERGO · Cholamandalam Finance · Reserve Bank of India",
-      "Scope: CCTV · Access control · Intrusion alarm · Branch security · Monitoring · Maintenance",
-      "Muthoot Finance: 3,700 branches · Manappuram Finance: 3,000 branches",
-    ],
-  },
-  {
-    sector: "GOV",
-    label: "Government, Public Sector & Defence",
-    projects: [
-      "BSNL · NLC India · EPFO · MEPZ · Officers Training Academy Chennai · Indian Coast Guard · Office of the Development Commissioner",
-      "Scope: Security systems · Networking · Surveillance · Command/control · Operational support",
-      "Government operations, defence establishments, and port-linked public infrastructure engagements",
-    ],
-  },
-  {
-    sector: "PORT",
-    label: "Ports & Logistics",
-    projects: [
-      "Chennai Port Trust · Container Corp. of India · Dakshin Bharat Gateway Terminal · SANS CFS · Distribution Logistics Infrastructure",
-      "Scope: Data centre build · Surveillance · Access control · Structured cabling · Critical operations",
-      "Active DC, enterprise compute and storage deployments, DR architecture, and structured cabling across 100+ enterprise sites",
-    ],
-  },
-  {
-    sector: "HLTH",
-    label: "Healthcare & Education",
-    projects: [
-      "Apollo Hospitals · Raichem Medicare · Annamalai University · Chettinad Academy · Saveetha Dental College · Rajiv Gandhi Institute of Technology",
-      "Scope: Campus security · Surveillance · Access control · Network/passive infra · Institutional systems",
-      "Healthcare campuses, education institutions, and research-linked infrastructure environments",
-    ],
-  },
-  {
-    sector: "RTL",
-    label: "Retail, E-Commerce & Consumer Brands",
-    projects: [
-      "Decathlon · Flipkart · Lenskart · The Chennai Silks · Nilgiris · Royal Enfield · Zudio · Westside · Indospace Facilities",
-      "Scope: Multi-location CCTV · Access control · Monitoring · Multi-branch rollout support",
-      "Flipkart: 200 branches across distributed retail and logistics environments",
-    ],
-  },
-  {
-    sector: "IND",
-    label: "IT, Manufacturing & Industrial",
-    projects: [
-      "TCS · Tata Communications · Techwave · Systel · Accurate Springs · Sungwoo Hitech · Seoyon E-Hwa · Vinfast · Godrej and Boyce",
-      "Scope: Enterprise infra · Networking · Surveillance · Structured cabling · Security systems",
-      "Enterprise infrastructure and operational security for industrial and technology environments",
-    ],
-  },
-];
+// India project case studies moved to /reference-projects (Website Brief, s.9).
+// Source of truth is now data/reference-projects.ts.
 
+// BRAND LIST PENDING (Website Brief, s.8): surveillance, access-control, PA and fire brands have
+// been removed. The categories below are the existing server / storage / networking / cloud names
+// already held by Enseigner — deliberately NOT expanded with guessed names. Replace this list when
+// the finalized brand list arrives from the Enseigner team.
 const oemCategories = [
   {
-    category: "Video Surveillance",
-    brands: ["Hikvision", "Axis", "CP Plus", "Bosch", "Honeywell", "Pelco", "Mobotix", "Prama"],
-  },
-  {
-    category: "Access Control & Intrusion",
-    brands: ["HID", "Suprema", "IDCube", "eSSL", "Spectra", "Matrix", "Edwards", "Bosch", "Texecom", "Optex"],
+    category: "Servers & Storage",
+    brands: ["Dell", "HPE", "NetApp", "Veritas", "Veeam", "VMware"],
   },
   {
     category: "Networking & Switches",
     brands: ["Cisco", "Aruba", "Extreme Networks", "D-Link", "Legrand", "CommScope"],
   },
   {
-    category: "Servers & Storage",
-    brands: ["HPE", "Dell", "Microsoft", "NetApp", "Veritas", "Veeam", "VMware"],
+    category: "Cloud & Platform",
+    brands: ["Microsoft", "VMware", "Veeam"],
   },
   {
-    category: "Fire & Safety",
-    brands: ["Morley IAS", "GST", "Apollo", "Advanced", "Ravel", "Honeywell", "Bosch", "TOA", "Ahuja"],
+    category: "AI & Compute",
+    brands: ["NVIDIA", "Dell", "HPE"],
   },
   {
-    category: "Firewall & Security",
+    category: "Network Security",
     brands: ["Fortinet", "Cisco", "Sophos", "Meraki", "Palo Alto", "Forescout"],
   },
 ];
@@ -299,7 +266,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-4 flex items-center gap-3">
       <span className="h-px w-8 bg-[var(--site-gold)]" />
-      <span className="font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-[var(--site-gold)]">
+      <span className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[var(--site-gold)]">
         {children}
       </span>
     </div>
@@ -323,20 +290,23 @@ function NavBar({
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Labels are kept short on purpose — eight items plus the logo and CTA have to fit
+  // inside max-w-7xl. Long labels here overflow the bar before the mobile breakpoint.
   const links = [
     ["About", "#about"],
-    ["Capabilities", "#capabilities"],
-    ["AI & Operations", "#ai-ops"],
-    ["AI & GPU", "#ai-gpu"],
+    ["Offerings", "#capabilities"],
+    ["Agentic AI", "#agentic-ai"],
+    ["Operations", "#ai-ops"],
+    ["GPU", "#ai-gpu"],
     ["Industries", "#industries"],
-    ["Portfolio", "#deployments"],
+    ["Projects", "/reference-projects"],
     ["Partners", "#partners"],
   ];
 
   return (
     <nav className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${scrolled ? "border-[var(--site-gold)]/20 bg-[var(--site-bg)]/95 backdrop-blur-xl" : "border-transparent bg-transparent"}`}>
-      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8">
-        <a href="#" className="flex items-center">
+      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
+        <a href="#" className="flex shrink-0 items-center">
           <Image
             src={logoPath}
             alt="Enseigner"
@@ -347,16 +317,16 @@ function NavBar({
           />
         </a>
 
-        <div className="hidden items-center gap-5 lg:flex xl:gap-7">
+        <div className="hidden items-center gap-4 xl:flex xl:gap-6">
           {links.map(([label, href]) => (
-            <a key={label} href={href} className="whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--site-muted)] transition hover:text-[var(--site-gold)]">
+            <a key={label} href={href} className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.06em] text-[var(--site-muted)] transition hover:text-[var(--site-gold)]">
               {label}
             </a>
           ))}
         </div>
 
-        <div className="flex items-center gap-3">
-          <a href="#contact" className="hidden border border-[var(--site-gold)] px-5 py-2 text-[15px] font-bold uppercase tracking-[0.08em] text-[var(--site-gold)] transition hover:bg-[var(--site-gold)] hover:text-[var(--site-bg)] sm:inline-flex">
+        <div className="flex shrink-0 items-center gap-3">
+          <a href="#contact" className="hidden shrink-0 border border-[var(--site-gold)] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[var(--site-gold)] transition hover:bg-[var(--site-gold)] hover:text-[var(--site-bg)] sm:inline-flex">
             Contact
           </a>
           <button
@@ -383,20 +353,20 @@ function NavBar({
               }`}
             />
           </button>
-          <button className="text-[var(--site-text)] lg:hidden" onClick={() => setMobileOpen((value) => !value)} aria-label="Toggle menu">
+          <button className="text-[var(--site-text)] xl:hidden" onClick={() => setMobileOpen((value) => !value)} aria-label="Toggle menu">
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-[var(--site-gold)]/15 bg-[var(--site-bg)]/98 px-6 py-4 lg:hidden">
+        <div className="border-t border-[var(--site-gold)]/15 bg-[var(--site-bg)]/98 px-6 py-4 xl:hidden">
           {links.map(([label, href]) => (
             <a key={label} href={href} onClick={() => setMobileOpen(false)} className="block border-b border-[var(--site-gold)]/10 py-3 text-base font-bold uppercase tracking-[0.08em] text-[var(--site-text)]">
               {label}
             </a>
           ))}
-          <a href="#contact" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex border border-[var(--site-gold)] px-5 py-2 text-[15px] font-bold uppercase tracking-[0.08em] text-[var(--site-gold)]">
+          <a href="#contact" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex border border-[var(--site-gold)] px-5 py-2 text-base font-bold uppercase tracking-[0.08em] text-[var(--site-gold)]">
             Contact
           </a>
         </div>
@@ -418,7 +388,7 @@ function HeroSection() {
       <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-12 gap-8 px-5 pb-20 pt-32 sm:px-8 lg:pt-40">
         <div className="col-span-12 max-w-3xl lg:col-span-8">
           <SectionLabel>Enterprise Infrastructure · Built on 12 Years of Enterprise Execution</SectionLabel>
-          <h1 className="text-[clamp(2.6rem,5.4vw,4.7rem)] font-black uppercase leading-[0.96] tracking-tight text-[var(--site-text)] [text-shadow:0_2px_24px_rgba(8,13,22,0.85)]">
+          <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-black uppercase leading-[0.96] tracking-tight text-[var(--site-text)] [text-shadow:0_2px_24px_rgba(8,13,22,0.85)]">
             Engineering <br />
             <span className="text-[var(--site-gold)]">Intelligent</span> <br />
             Enterprise <br />
@@ -427,19 +397,19 @@ function HeroSection() {
           </h1>
           <div className="my-7 h-0.5 w-20 bg-[linear-gradient(to_right,var(--site-gold),transparent)]" />
           <p className="max-w-xl text-lg leading-8 text-[var(--site-muted)]">
-            AI & Computer Vision · Enterprise Data Centre & Infrastructure · Integrated Security Systems · Network Solutions · Audio Video Solutions.
+            AI Services & Agentic AI · Computer Vision · Track 3D · Hospital Management · Enterprise Data Centre & Infrastructure · Training Services.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="#capabilities" className="inline-flex items-center gap-2 bg-[var(--site-gold)] px-8 py-4 text-[15px] font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]">
+            <a href="#capabilities" className="inline-flex items-center gap-2 bg-[var(--site-gold)] px-8 py-4 text-base font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]">
               Explore Capabilities <ArrowRight size={16} />
             </a>
-            <a href="#contact" className="inline-flex items-center gap-2 border border-[var(--site-text)]/25 px-8 py-4 text-[15px] font-black uppercase tracking-[0.1em] text-[var(--site-text)] transition hover:border-[var(--site-gold)] hover:text-[var(--site-gold)]">
+            <a href="#contact" className="inline-flex items-center gap-2 border border-[var(--site-text)]/25 px-8 py-4 text-base font-black uppercase tracking-[0.1em] text-[var(--site-text)] transition hover:border-[var(--site-gold)] hover:text-[var(--site-gold)]">
               <Phone size={16} /> Talk to an Expert
             </a>
           </div>
 
           <div className="mt-12 border-t border-[var(--site-text)]/10 pt-6">
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--site-muted)]">
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--site-muted)]">
               Trusted by enterprises across BFSI, government &amp; retail
             </p>
             <div className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-3">
@@ -460,7 +430,7 @@ function HeroSection() {
           ].map(([value, label]) => (
             <div key={value} className="w-44 border border-[var(--site-gold)]/25 bg-[var(--site-card)]/85 p-5 backdrop-blur-md">
               <div className="text-4xl font-black leading-none text-[var(--site-gold)]">{value}</div>
-              <div className="mt-2 text-[15px] leading-5 text-[var(--site-muted)]">{label}</div>
+              <div className="mt-2 text-base leading-5 text-[var(--site-muted)]">{label}</div>
             </div>
           ))}
         </div>
@@ -479,7 +449,7 @@ function AboutSection() {
         <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-5">
             <SectionLabel>About Enseigner</SectionLabel>
-            <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">
               Who We Are
             </h2>
             <p className="mt-6 text-lg leading-8 text-[var(--site-text)]">
@@ -500,7 +470,10 @@ function AboutSection() {
         </div>
 
         <div className="mt-16 border-y border-[var(--site-gold)]/35 bg-[var(--site-card)]/80 p-8 md:p-12">
-          <blockquote className="mx-auto max-w-5xl text-center text-[clamp(1.6rem,3.5vw,3rem)] font-black italic leading-tight text-[var(--site-text)]">
+          {/* A 40-word quote does not want display sizing — at Display 3 it ran to five
+              shouting lines. Body Large -> H4 keeps it a quote, and the narrower measure
+              holds the line length readable at the smaller size. */}
+          <blockquote className="mx-auto max-w-4xl text-center text-lg font-bold italic leading-snug text-[var(--site-text)] md:text-2xl">
             &quot;{visionQuote}&quot;
           </blockquote>
         </div>
@@ -509,7 +482,7 @@ function AboutSection() {
           {strategicPillars.map((pillar) => (
             <article key={pillar.title} className="bg-[var(--site-card)] p-8">
               <h3 className="text-2xl font-black uppercase leading-tight text-[var(--site-gold)]">{pillar.title}</h3>
-              <p className="mt-4 text-[15px] leading-7 text-[var(--site-muted)]">{pillar.body}</p>
+              <p className="mt-4 text-base leading-7 text-[var(--site-muted)]">{pillar.body}</p>
             </article>
           ))}
         </div>
@@ -532,7 +505,7 @@ function TrustMetrics() {
                 <Icon className="mb-5 text-[var(--site-gold)]" size={24} strokeWidth={1.5} />
                 <div className="text-5xl font-black leading-none text-[var(--site-text)]">{metric.value}</div>
                 <h3 className="mt-3 text-base font-black uppercase tracking-[0.07em] text-[var(--site-gold)]">{metric.label}</h3>
-                <p className="mt-2 text-[15px] leading-6 text-[var(--site-muted)]">{metric.sub}</p>
+                <p className="mt-2 text-base leading-6 text-[var(--site-muted)]">{metric.sub}</p>
               </div>
             );
           })}
@@ -548,34 +521,173 @@ function Capabilities() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(201,168,76,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(201,168,76,0.025)_1px,transparent_1px)] bg-[length:64px_64px]" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="mb-14">
-          <SectionLabel>Capabilities</SectionLabel>
-          <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">What We Do</h2>
+          <SectionLabel>Core Offerings</SectionLabel>
+          <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">What We Do</h2>
           <p className="mt-4 max-w-xl text-base leading-7 text-[var(--site-muted)]">
-            Six integrated practice areas covering enterprise infrastructure, physical security, data centre, networking, command visibility, and AI-driven operations.
+            Five core offerings — AI services and agentic systems, computer vision, Track 3D, hospital management, and training — built on an enterprise infrastructure foundation.
           </p>
         </div>
 
-        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service) => {
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] md:grid-cols-2 xl:grid-cols-6">
+          {coreOfferings.map((service, index) => {
             const Icon = service.icon;
+            // 5 cards on a six-column grid: three across the top (2 cols each), two across
+            // the bottom (3 cols each). Both bottom cards widen equally instead of one being
+            // stretched to fill the remainder, and no empty cell is left to paint gold.
+            const fillsRow = [
+              index < 3 ? "xl:col-span-2" : "xl:col-span-3",
+              index === coreOfferings.length - 1 ? "md:col-span-2 xl:col-span-3" : "",
+            ].join(" ");
             return (
-              <article key={service.code} className="group relative flex min-h-[320px] flex-col gap-4 bg-[var(--site-card)] p-8 transition hover:bg-[var(--site-card-hover)]">
-                <span className="font-mono text-[12px] uppercase tracking-[0.12em] text-[var(--site-gold)]/55">{service.code}</span>
+              <article
+                key={service.code}
+                className={`group relative flex flex-col gap-4 p-8 transition ${fillsRow} ${service.featured ? "bg-[var(--site-card-hover)] hover:bg-[var(--site-card-hover)]" : "bg-[var(--site-card)] hover:bg-[var(--site-card-hover)]"}`}
+              >
+                {service.featured && <span className="absolute inset-x-0 top-0 h-0.5 bg-[var(--site-gold)]" />}
+                <div className="flex items-center justify-between gap-3">
+                  <span className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--site-gold)]/55">{service.code}</span>
+                  {service.featured && (
+                    <span className="border border-[var(--site-gold)]/45 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--site-gold)]">
+                      Featured
+                    </span>
+                  )}
+                </div>
                 <div className="flex items-center gap-4">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-[var(--site-gold)]/35 text-[var(--site-gold)]">
                     <Icon size={22} strokeWidth={1.5} />
                   </span>
                   <h3 className="text-2xl font-black uppercase leading-tight text-[var(--site-text)]">{service.title}</h3>
                 </div>
-                <p className="grow text-[15px] leading-7 text-[var(--site-muted)]">{service.desc}</p>
+                <p className="grow text-base leading-7 text-[var(--site-muted)]">{service.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {service.tags.map((tag) => (
-                    <span key={tag} className="border border-[var(--site-gold)]/25 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--site-gold)]">
+                    <span key={tag} className="border border-[var(--site-gold)]/25 px-2.5 py-1 font-mono text-xs uppercase tracking-[0.08em] text-[var(--site-gold)]">
                       {tag}
                     </span>
                   ))}
                 </div>
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-[linear-gradient(to_right,var(--site-gold),transparent)] opacity-0 transition group-hover:opacity-100" />
+              </article>
+            );
+          })}
+        </div>
+
+        <div className="mb-8 mt-20">
+          <SectionLabel>Infrastructure Foundation</SectionLabel>
+          <h3 className="text-[clamp(1.5rem,3vw,2.25rem)] font-black uppercase leading-tight text-[var(--site-text)]">
+            The Layer Everything Else Runs On
+          </h3>
+        </div>
+
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] md:grid-cols-3">
+          {infrastructureServices.map((service) => {
+            const Icon = service.icon;
+            return (
+              <article key={service.code} className="group relative flex flex-col gap-4 bg-[var(--site-card)] p-8 transition hover:bg-[var(--site-card-hover)]">
+                <span className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--site-gold)]/55">{service.code}</span>
+                <div className="flex items-center gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-[var(--site-gold)]/35 text-[var(--site-gold)]">
+                    <Icon size={22} strokeWidth={1.5} />
+                  </span>
+                  <h3 className="text-xl font-black uppercase leading-tight text-[var(--site-text)]">{service.title}</h3>
+                </div>
+                <p className="grow text-base leading-7 text-[var(--site-muted)]">{service.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {service.tags.map((tag) => (
+                    <span key={tag} className="border border-[var(--site-gold)]/25 px-2.5 py-1 font-mono text-xs uppercase tracking-[0.08em] text-[var(--site-gold)]">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// AGENTIC AI — new heading occupying the layout slot vacated by Security Systems
+// (Website Brief, s.7). COPY PENDING: final wording to follow from the Enseigner team.
+//
+// SUBSCRIBE CTA (Website Brief, s.7 & s.10): the standalone chatbot product site is a later
+// phase. Until that destination exists the CTA routes to #contact so interested visitors can
+// self-serve today. Repoint `subscribeHref` when the chatbot site/signup URL is confirmed.
+const subscribeHref = "#contact";
+
+const agenticCapabilities = [
+  {
+    icon: MessageSquare,
+    title: "Enseigner Chatbot",
+    desc: "24/7 multilingual assistant that deflects 70–80% of routine queries, cutting response times from hours to seconds.",
+  },
+  {
+    icon: FileCheck,
+    title: "Ticket Intelligence",
+    desc: "Automatically classifies, routes, and summarizes service requests with 70–85% accuracy, reducing SLA breaches by 40–60%.",
+  },
+  {
+    icon: Network,
+    title: "Multi-Step Agents",
+    desc: "Agents that carry a task across HR, ERP, ticketing, and reporting systems instead of stopping at a single answer.",
+  },
+  {
+    icon: BarChart3,
+    title: "Value Reporting",
+    desc: "Cross-site visibility into what the agents handled, what they escalated, and what that saved.",
+  },
+];
+
+function AgenticAISection() {
+  return (
+    <section id="agentic-ai" className="relative overflow-hidden bg-[var(--site-bg)] py-24">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(201,168,76,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(201,168,76,0.025)_1px,transparent_1px)] bg-[length:64px_64px]" />
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="mb-14 grid gap-10 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <SectionLabel>Agentic AI</SectionLabel>
+            <div className="mt-3 flex items-start gap-4">
+              <span className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center border border-[var(--site-divider)] text-[var(--site-gold)] [box-shadow:0_0_14px_-4px_var(--site-divider-glow)]">
+                <Bot size={24} strokeWidth={1.5} />
+              </span>
+              <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">
+                Agents That <span className="text-[var(--site-gold)]">Finish the Work</span>
+              </h2>
+            </div>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
+              Enseigner&apos;s agentic layer goes past answering questions. Agents read the request, decide what it needs, act across the systems that hold the answer, and report what they did — with a human in the loop wherever the decision warrants one.
+            </p>
+          </div>
+
+          <div className="lg:col-span-5">
+            <div className="border border-[var(--site-divider)] bg-[var(--site-card)]/80 p-7 [box-shadow:0_0_18px_-4px_var(--site-divider-glow)]">
+              <div className="font-mono text-xs font-black uppercase tracking-[0.12em] text-[var(--site-gold)]">
+                Enseigner Chatbot
+              </div>
+              <p className="mt-3 text-base leading-7 text-[var(--site-muted)]">
+                Deploy the chatbot against your own knowledge base, ticketing, and enterprise systems. Subscribe to get access details and onboarding as soon as they open.
+              </p>
+              <a
+                href={subscribeHref}
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 bg-[var(--site-gold)] px-8 py-4 text-base font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]"
+              >
+                Subscribe <ArrowRight size={16} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 xl:grid-cols-4">
+          {agenticCapabilities.map((capability) => {
+            const Icon = capability.icon;
+            return (
+              <article key={capability.title} className="flex flex-col gap-4 bg-[var(--site-card)] p-7 transition hover:bg-[var(--site-card-hover)]">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-[var(--site-gold)]/35 text-[var(--site-gold)]">
+                  <Icon size={22} strokeWidth={1.5} />
+                </span>
+                <h3 className="text-xl font-black uppercase leading-tight text-[var(--site-text)]">{capability.title}</h3>
+                <p className="text-base leading-7 text-[var(--site-muted)]">{capability.desc}</p>
               </article>
             );
           })}
@@ -592,7 +704,7 @@ function DataCentreAISection() {
         <div className="mb-14 grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <SectionLabel>Data Centre & AI</SectionLabel>
-            <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">
               Enterprise Data Centre & AI Solutions
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
@@ -602,7 +714,7 @@ function DataCentreAISection() {
           <div className="lg:col-span-5">
             <div className="flex gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)]">
               {deliveryModel.map((step) => (
-                <div key={step} className="flex-auto whitespace-nowrap bg-[var(--site-card)] px-5 py-5 text-center font-mono text-[11px] font-black uppercase tracking-[0.08em] text-[var(--site-gold)]">
+                <div key={step} className="flex-auto whitespace-nowrap bg-[var(--site-card)] px-5 py-5 text-center font-mono text-xs font-black uppercase tracking-[0.08em] text-[var(--site-gold)]">
                   {step}
                 </div>
               ))}
@@ -613,27 +725,27 @@ function DataCentreAISection() {
         <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] lg:grid-cols-2">
           {dataCentreCapabilities.map((capability, index) => (
             <article key={capability} className="flex gap-5 bg-[var(--site-card)] p-7">
-              <span className="font-mono text-[15px] font-black text-[var(--site-gold)]">0{index + 1}</span>
-              <p className="text-[15px] leading-7 text-[var(--site-text)]">{capability}</p>
+              <span className="font-mono text-base font-black text-[var(--site-gold)]">0{index + 1}</span>
+              <p className="text-base leading-7 text-[var(--site-text)]">{capability}</p>
             </article>
           ))}
         </div>
 
         <div className="mt-10 grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] md:grid-cols-4">
           {[
-            ["End-to-End Delivery", "Consultancy, design, supply, implementation, and AMC — one partner for the full lifecycle"],
-            ["200+ OEM Partners", "HPE · Dell · Cisco · Fortinet · Hikvision · Axis · NetApp and 200+ brands"],
+            ["End-to-End Delivery", "Consultancy, design, supply, implementation, and training — one partner for the full lifecycle"],
+            ["200+ OEM Partners", "HPE · Dell · Cisco · Fortinet · NetApp · Microsoft · NVIDIA and 200+ brands"],
             ["Operational Continuity", "10,000+ installations delivered across enterprise client sites"],
             ["Scalable Architecture", "From single site to enterprise-wide multi-location deployments"],
           ].map(([title, body]) => (
             <div key={title} className="bg-[var(--site-card)] p-6">
               <h3 className="text-xl font-black uppercase text-[var(--site-gold)]">{title}</h3>
-              <p className="mt-3 text-[15px] leading-6 text-[var(--site-muted)]">{body}</p>
+              <p className="mt-3 text-base leading-6 text-[var(--site-muted)]">{body}</p>
             </div>
           ))}
         </div>
 
-        <p className="mt-8 text-center font-mono text-[12px] uppercase tracking-[0.12em] text-[var(--site-muted)]">
+        <p className="mt-8 text-center font-mono text-xs uppercase tracking-[0.12em] text-[var(--site-muted)]">
           ISO 14001 Certified · ASCB(E) Accredited · Electronic Security Association of India Member
         </p>
       </div>
@@ -659,7 +771,7 @@ function AISection() {
         <div className="mb-14 grid gap-10 lg:grid-cols-2 lg:items-end">
           <div>
             <SectionLabel>Intelligent Operations</SectionLabel>
-            <h2 className="text-[clamp(2.2rem,4.5vw,3.6rem)] font-black uppercase leading-none text-[var(--site-text)]">
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">
               AI-Enabled Operations <br />
               <span className="text-[var(--site-gold)]">Built on Enterprise</span> <br />
               Infrastructure
@@ -669,7 +781,7 @@ function AISection() {
             <p className="text-base leading-8 text-[var(--site-muted)]">
               Enseigner&apos;s AI layer sits on top of proven physical infrastructure. Computer vision, edge analytics, and command intelligence turn site activity into operational visibility.
             </p>
-            <div className="mt-5 flex flex-wrap gap-5 font-mono text-[13px] uppercase tracking-[0.08em]">
+            <div className="mt-5 flex flex-wrap gap-5 font-mono text-sm uppercase tracking-[0.08em]">
               <span className="text-[#1a9e6d]">On-Premise AI Processing</span>
               <span className="text-[var(--site-muted)]">On-Premise Data by Design</span>
               <span className="text-[var(--site-muted)]">GCC Data Sovereignty Aligned</span>
@@ -685,9 +797,9 @@ function AISection() {
                   <span key={color} className="h-2.5 w-2.5 rounded-full" style={{ background: color }} />
                 ))}
               </span>
-              <span className="font-mono text-[12px] uppercase tracking-[0.08em] text-[var(--site-muted)]">Centralised Command · Distributed Intelligence</span>
+              <span className="font-mono text-xs uppercase tracking-[0.08em] text-[var(--site-muted)]">Centralised Command · Distributed Intelligence</span>
             </div>
-            <span className="font-mono text-[12px] uppercase tracking-[0.08em] text-[var(--site-gold)]">On-Premise by Design</span>
+            <span className="font-mono text-xs uppercase tracking-[0.08em] text-[var(--site-gold)]">On-Premise by Design</span>
           </div>
 
           <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] p-px sm:grid-cols-2 xl:grid-cols-3">
@@ -701,7 +813,7 @@ function AISection() {
                   className={`relative border-l-2 p-6 text-left transition ${isActive ? "border-[var(--site-gold)] bg-[var(--site-card-hover)]" : "border-transparent bg-[var(--site-card)] hover:bg-[var(--site-card-hover)]"}`}
                 >
                   <div className="mb-4 flex items-center justify-between gap-3">
-                    <span className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--site-gold)]/70">
+                    <span className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.08em] text-[var(--site-gold)]/70">
                       <Icon size={16} strokeWidth={1.5} />
                       {module.code}
                     </span>
@@ -709,10 +821,10 @@ function AISection() {
                       {module.status}
                     </span>
                   </div>
-                  <div className="text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--site-muted)]">{module.label}</div>
+                  <div className="text-sm font-bold uppercase tracking-[0.08em] text-[var(--site-muted)]">{module.label}</div>
                   <div className={`mt-2 text-4xl font-black leading-none ${isActive ? "text-[var(--site-gold)]" : "text-[var(--site-text)]"}`}>{module.value}</div>
-                  <div className="mt-1 text-[13px] text-[var(--site-muted)]">{module.unit}</div>
-                  <div className="mt-3 font-mono text-[11px] uppercase text-[#1a9e6d]">{module.status}</div>
+                  <div className="mt-1 text-sm text-[var(--site-muted)]">{module.unit}</div>
+                  <div className="mt-3 font-mono text-xs uppercase text-[#1a9e6d]">{module.status}</div>
                 </button>
               );
             })}
@@ -733,7 +845,7 @@ function GpuInfrastructure() {
             <span className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center border border-[var(--site-divider)] text-[var(--site-gold)] [box-shadow:0_0_14px_-4px_var(--site-divider-glow)]">
               <Cpu size={24} strokeWidth={1.5} />
             </span>
-            <h2 className="text-[clamp(2.1rem,4.5vw,3.4rem)] font-black uppercase leading-none text-[var(--site-text)]">
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">
               Sovereign AI Infrastructure for the Region
             </h2>
           </div>
@@ -745,14 +857,14 @@ function GpuInfrastructure() {
         <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] lg:grid-cols-2">
           {gpuInfraPoints.map((point, index) => (
             <article key={point} className="flex gap-5 bg-[var(--site-card)] p-7">
-              <span className="font-mono text-[15px] font-black text-[var(--site-gold)]">0{index + 1}</span>
-              <p className="text-[15px] leading-7 text-[var(--site-text)]">{point}</p>
+              <span className="font-mono text-base font-black text-[var(--site-gold)]">0{index + 1}</span>
+              <p className="text-base leading-7 text-[var(--site-text)]">{point}</p>
             </article>
           ))}
         </div>
 
         <div className="mb-10 mt-20 max-w-3xl">
-          <h3 className="text-[clamp(1.8rem,3.6vw,2.7rem)] font-black uppercase leading-tight text-[var(--site-text)]">
+          <h3 className="text-[clamp(1.5rem,3vw,2.25rem)] font-black uppercase leading-tight text-[var(--site-text)]">
             AI Solutions That Solve <span className="text-[var(--site-gold)]">Real Operational Problems</span>
           </h3>
           <p className="mt-4 text-base leading-8 text-[var(--site-muted)]">
@@ -769,7 +881,7 @@ function GpuInfrastructure() {
                   <Icon size={22} strokeWidth={1.5} />
                 </span>
                 <h4 className="text-xl font-black uppercase leading-tight text-[var(--site-text)]">{solution.title}</h4>
-                <p className="text-[15px] leading-7 text-[var(--site-muted)]">{solution.desc}</p>
+                <p className="text-base leading-7 text-[var(--site-muted)]">{solution.desc}</p>
               </article>
             );
           })}
@@ -793,7 +905,7 @@ function Industries() {
         <div className="mb-14 flex flex-wrap items-end justify-between gap-8">
           <div>
             <SectionLabel>Industries Served</SectionLabel>
-            <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">
               Built for the GCC&apos;s Most <br /> Demanding Sectors
             </h2>
           </div>
@@ -802,17 +914,22 @@ function Industries() {
           </p>
         </div>
 
-        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {industries.map((industry) => {
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-4">
+          {industries.map((industry, index) => {
             const Icon = industry.icon;
+            // 8 cards divide evenly into 2 and 4 columns but not 3. At lg the grid runs on six
+            // columns: six cards at 2 each, then the final two at 3 each — a balanced last row.
+            const fillsRow = index < 6
+              ? "lg:col-span-2 xl:col-span-1"
+              : "lg:col-span-3 xl:col-span-1";
             return (
-              <article key={industry.code} className="group relative min-h-[260px] bg-[var(--site-card)] p-7 transition hover:bg-[var(--site-card-hover)]">
-                <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--site-gold)]/45">{industry.code}</span>
+              <article key={industry.code} className={`group relative min-h-[260px] bg-[var(--site-card)] p-7 transition hover:bg-[var(--site-card-hover)] ${fillsRow}`}>
+                <span className="font-mono text-xs uppercase tracking-[0.1em] text-[var(--site-gold)]/45">{industry.code}</span>
                 <div className="my-5 flex h-12 w-12 items-center justify-center border border-[var(--site-gold)]/25 text-[var(--site-muted)] transition group-hover:border-[var(--site-gold)] group-hover:text-[var(--site-gold)]">
                   <Icon size={22} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-black uppercase leading-tight text-[var(--site-text)]">{industry.label}</h3>
-                <p className="mt-3 text-[15px] leading-6 text-[var(--site-muted)]">{industry.desc}</p>
+                <p className="mt-3 text-base leading-6 text-[var(--site-muted)]">{industry.desc}</p>
                 <span className="absolute bottom-0 right-0 h-7 w-7 border-b-2 border-r-2 border-transparent transition group-hover:border-[var(--site-gold)]" />
               </article>
             );
@@ -823,36 +940,47 @@ function Industries() {
   );
 }
 
-function DeploymentRecord() {
+// Compact credibility strip. The India project detail now lives on /reference-projects
+// (Website Brief, s.9) so it stays available without dominating the GCC-facing homepage.
+function TrackRecordStrip() {
   return (
-    <section id="deployments" className="relative bg-[var(--site-bg-deep)] py-24">
+    <section id="track-record" className="relative bg-[var(--site-bg-deep)] py-24">
       <div className="absolute inset-x-0 top-0 h-0.5 bg-[linear-gradient(to_right,transparent,rgba(201,168,76,0.45)_30%,rgba(201,168,76,0.45)_70%,transparent)]" />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="mb-14">
-          <SectionLabel>Deployment Track Record</SectionLabel>
-          <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">Enterprise Credibility Built Over 12 Years</h2>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
-            A proven India delivery backbone — a cross-sector portfolio of enterprise deployments demonstrating the technical capability and project execution that now underwrites our work for GCC enterprises.
-          </p>
-        </div>
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-7">
+            <SectionLabel>Delivery Track Record</SectionLabel>
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">
+              Enterprise Credibility Built Over 12 Years
+            </h2>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--site-muted)]">
+              A proven delivery backbone across banking, government, ports, healthcare, retail, and industrial environments — the technical capability and project execution that now underwrites our work for GCC enterprises.
+            </p>
+            <Link
+              href="/reference-projects"
+              className="mt-8 inline-flex items-center gap-2 bg-[var(--site-gold)] px-8 py-4 text-base font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]"
+            >
+              View Reference Projects <ArrowRight size={16} />
+            </Link>
+          </div>
 
-        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] lg:grid-cols-2">
-          {deployments.map((deployment) => (
-            <article key={deployment.sector} className="bg-[var(--site-card)] p-8">
-              <div className="mb-7 flex flex-wrap items-center gap-4">
-                <span className="bg-[var(--site-gold)] px-3 py-1 font-mono text-[12px] font-black uppercase tracking-[0.12em] text-[var(--site-bg)]">{deployment.sector}</span>
-                <span className="text-base font-black uppercase tracking-[0.06em] text-[var(--site-muted)]">{deployment.label}</span>
-              </div>
-              <div className="space-y-5">
-                {deployment.projects.map((project) => (
-                  <div key={project} className="flex gap-4 border-b border-[var(--site-gold)]/22 pb-5 last:border-b-0 last:pb-0">
-                    <span className="mt-1 w-0.5 shrink-0 bg-[var(--site-gold)]/35" />
-                    <p className="text-[15px] leading-7 text-[var(--site-text)]">{project}</p>
-                  </div>
-                ))}
-              </div>
-            </article>
-          ))}
+          <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:col-span-5">
+            {referenceProjects.map((project) => (
+              <Link
+                key={project.slug}
+                href={`/reference-projects/${project.slug}`}
+                className="group bg-[var(--site-card)] p-6 transition hover:bg-[var(--site-card-hover)]"
+              >
+                <span className="bg-[var(--site-gold)] px-2.5 py-1 font-mono text-xs font-black uppercase tracking-[0.12em] text-[var(--site-bg)]">
+                  {project.sector}
+                </span>
+                <h3 className="mt-4 text-base font-black uppercase leading-tight text-[var(--site-text)] transition group-hover:text-[var(--site-gold)]">
+                  {project.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--site-muted)]">{project.sectorLabel}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -866,18 +994,22 @@ function OEMPartners() {
         <div className="mb-12">
           <SectionLabel>OEM Partners</SectionLabel>
           <div className="flex flex-wrap items-end justify-between gap-8">
-            <h2 className="text-[clamp(2.4rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">Technology Partners &amp; OEM Ecosystem</h2>
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">Technology Partners &amp; OEM Ecosystem</h2>
             <p className="max-w-md text-base leading-8 text-[var(--site-muted)]">
-              200+ OEM relationships across security, networking, compute, and storage.
+              200+ OEM relationships across servers, storage, networking, and cloud.
             </p>
           </div>
         </div>
 
-        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-3">
-          {oemCategories.map((group) => (
-            <div key={group.category} className="bg-[var(--site-card)] p-7 transition hover:bg-[var(--site-card-hover)]">
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-6">
+          {oemCategories.map((group, index) => (
+            // 5 categories, same 3 + 2 split as the offerings grid.
+            <div
+              key={group.category}
+              className={`bg-[var(--site-card)] p-7 transition hover:bg-[var(--site-card-hover)] ${index < 3 ? "lg:col-span-2" : "lg:col-span-3"} ${index === oemCategories.length - 1 ? "sm:col-span-2 lg:col-span-3" : ""}`}
+            >
               <h3 className="text-lg font-black uppercase tracking-[0.04em] text-[var(--site-gold)]">{group.category}</h3>
-              <p className="mt-4 text-[15px] leading-7 text-[var(--site-muted)]">{group.brands.join(" · ")}</p>
+              <p className="mt-4 text-base leading-7 text-[var(--site-muted)]">{group.brands.join(" · ")}</p>
             </div>
           ))}
         </div>
@@ -894,10 +1026,10 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
         <div className="mx-auto mb-20 max-w-4xl text-center">
           <div className="mb-6 flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-[var(--site-gold)]" />
-            <span className="font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-[var(--site-gold)]">Start a Conversation</span>
+            <span className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[var(--site-gold)]">Start a Conversation</span>
             <span className="h-px w-10 bg-[var(--site-gold)]" />
           </div>
-          <h2 className="text-[clamp(2.7rem,6vw,5.3rem)] font-black uppercase leading-none text-[var(--site-text)]">
+          <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-black uppercase leading-none text-[var(--site-text)]">
             Enterprise Success in the GCC <br />
             <span className="text-[var(--site-gold)]">Depends on Infrastructure Integration</span>
           </h2>
@@ -908,12 +1040,19 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
         </div>
 
         <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-6">
+          {/*
+            CONTACT DETAILS PENDING (Website Brief, s.3):
+            - Email: the common email ID must be confirmed with Ramesh/Kumar before publishing.
+              Left at the existing address until then — do NOT publish a guessed .ai address.
+            - Phone: to be confirmed whether this is Imran's direct Dubai line or Vijay's number.
+            - Website updated to the purchased enseigner.ai domain (Website Brief, s.2).
+          */}
           {[
             { icon: MapPin, label: "Head Office", value: "Dubai International Financial Centre, Dubai, UAE", sub: "Unit IH-00-01-02-OF-01, Level 2, H-00-01-CP-05" },
             { icon: Phone, label: "Phone", value: "+971 505951062", sub: "Direct line for enterprise enquiries" },
             { icon: Mail, label: "Email", value: "Info.ai@enseigner.in", sub: "Enterprise enquiries" },
-            { icon: Users, label: "Founder & MD", value: "Abubucker Mansoor Mohamed", sub: "Infrastructure-led. AI-enabled. Security-first. GCC-focused, India-proven." },
-            { icon: MonitorDot, label: "Website", value: "www.enseigner.in", sub: "Engineers the Systems of the World" },
+            { icon: Users, label: "Founder & MD", value: "Abubucker Mansoor Mohamed", sub: "Infrastructure-led. AI-enabled. GCC-focused, India-proven." },
+            { icon: MonitorDot, label: "Website", value: "www.enseigner.ai", sub: "Engineers the Systems of the World" },
           ].map((contact, i) => {
             const Icon = contact.icon;
             const lgSpan = i < 3 ? "lg:col-span-2" : "lg:col-span-3";
@@ -924,9 +1063,9 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
                   <Icon size={18} strokeWidth={1.5} />
                 </span>
                 <div>
-                  <div className="font-mono text-[12px] font-black uppercase tracking-[0.12em] text-[var(--site-gold)]">{contact.label}</div>
+                  <div className="font-mono text-xs font-black uppercase tracking-[0.12em] text-[var(--site-gold)]">{contact.label}</div>
                   <div className="mt-1 text-xl font-black text-[var(--site-text)]">{contact.value}</div>
-                  <div className="mt-1 text-[15px] text-[var(--site-muted)]">{contact.sub}</div>
+                  <div className="mt-1 text-base text-[var(--site-muted)]">{contact.sub}</div>
                 </div>
               </div>
             );
@@ -943,8 +1082,8 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
             height={223}
             className={`h-7 w-auto object-contain opacity-85 ${themeMode === "dark" ? "brightness-0 invert" : ""}`}
           />
-          <p className="text-[15px] text-[var(--site-muted)]">© 2026 Enseigner · Engineers the Systems of the World</p>
-          <div className="flex gap-5 text-[15px] text-[var(--site-muted)]">
+          <p className="text-base text-[var(--site-muted)]">© 2026 Enseigner · Engineers the Systems of the World</p>
+          <div className="flex gap-5 text-base text-[var(--site-muted)]">
             <span>Privacy</span>
             <span>Terms</span>
             <span>Certifications</span>
@@ -971,11 +1110,12 @@ export default function EnseignerCorporateSite() {
       <TrustMetrics />
       <AboutSection />
       <Capabilities />
+      <AgenticAISection />
       <DataCentreAISection />
       <AISection />
       <GpuInfrastructure />
       <Industries />
-      <DeploymentRecord />
+      <TrackRecordStrip />
       <OEMPartners />
       <FinalCTA themeMode={themeMode} />
     </main>
