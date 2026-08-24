@@ -6,9 +6,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* Typeface comes from tailwind.config.ts (fontFamily.sans -> --font-geist-sans),
+   applied by Tailwind preflight. Do not hard-set font-family here. */
 
 @layer base {
   :root {
