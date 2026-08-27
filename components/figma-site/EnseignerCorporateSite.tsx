@@ -33,10 +33,11 @@ import {
   Zap,
   Eye,
 } from "lucide-react";
+import * as Dialog from "@radix-ui/react-dialog";
 import Image from "next/image";
 import Link from "next/link";
-import { type CSSProperties, useEffect, useState } from "react";
-import { referenceProjects } from "@/data/reference-projects";
+import { type CSSProperties, useEffect, useRef, useState } from "react";
+import { referenceProjects, type ReferenceProject } from "@/data/reference-projects";
 import ContactForm from "./ContactForm";
 
 const logoPath = "/enseigner-logo-transparent.png";
@@ -410,10 +411,10 @@ function HeroSection() {
 
           <div className="mt-12 border-t border-[var(--site-text)]/10 pt-6">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--site-muted)]">
-              Trusted by enterprises across BFSI, government &amp; retail
+              OEM &amp; technology partners
             </p>
             <div className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-3">
-              {["Canara Bank", "Muthoot Finance", "Flipkart", "Apollo Hospitals"].map((client) => (
+              {["Dell", "HP", "Cisco", "Juniper", "NetApp", "Super Micro"].map((client) => (
                 <span key={client} className="text-base font-black uppercase tracking-[0.04em] text-[var(--site-text)]/65 transition hover:text-[var(--site-gold)]">
                   {client}
                 </span>
@@ -948,7 +949,7 @@ function TrackRecordStrip() {
       <div className="absolute inset-x-0 top-0 h-0.5 bg-[linear-gradient(to_right,transparent,rgba(201,168,76,0.45)_30%,rgba(201,168,76,0.45)_70%,transparent)]" />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-8">
             <SectionLabel>Delivery Track Record</SectionLabel>
             <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">
               Enterprise Credibility Built Over 12 Years
@@ -963,26 +964,164 @@ function TrackRecordStrip() {
               View Reference Projects <ArrowRight size={16} />
             </Link>
           </div>
-
-          <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:col-span-5">
-            {referenceProjects.map((project) => (
-              <Link
-                key={project.slug}
-                href={`/reference-projects/${project.slug}`}
-                className="group bg-[var(--site-card)] p-6 transition hover:bg-[var(--site-card-hover)]"
-              >
-                <span className="bg-[var(--site-gold)] px-2.5 py-1 font-mono text-xs font-black uppercase tracking-[0.12em] text-[var(--site-bg)]">
-                  {project.sector}
-                </span>
-                <h3 className="mt-4 text-base font-black uppercase leading-tight text-[var(--site-text)] transition group-hover:text-[var(--site-gold)]">
-                  {project.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-[var(--site-muted)]">{project.sectorLabel}</p>
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
+    </section>
+  );
+}
+
+function ReferenceProjectDialog({
+  project,
+  onClose,
+  triggerRef,
+}: {
+  project: ReferenceProject | null;
+  onClose: () => void;
+  triggerRef: React.RefObject<HTMLButtonElement | null>;
+}) {
+  // NOTE: rendered WITHOUT Dialog.Portal on purpose. The site colour tokens
+  // (--site-card, --site-gold, ...) are set as inline styles on <main>, so a
+  // portal into document.body would render the modal with every var undefined.
+  // Keeping it in the tree means the tokens resolve and the theme toggle works.
+  return (
+    <Dialog.Root open={project !== null} onOpenChange={(open) => { if (!open) onClose(); }}>
+      <Dialog.Overlay className="fixed inset-0 z-[60] bg-[#04070C]/85 backdrop-blur-sm" />
+      <Dialog.Content
+        onCloseAutoFocus={(event) => {
+          event.preventDefault();
+          triggerRef.current?.focus();
+        }}
+        className="fixed left-1/2 top-1/2 z-[70] max-h-[88vh] w-[min(920px,calc(100vw-2rem))] -translate-x-1/2 -translate-y-1/2 overflow-y-auto border border-[var(--site-gold)]/25 bg-[var(--site-card)] shadow-[0_24px_80px_-12px_rgba(0,0,0,0.8)] focus:outline-none"
+      >
+        {project && (
+          <>
+            <div className="sticky top-0 z-10 flex items-start justify-between gap-6 border-b border-[var(--site-gold)]/15 bg-[var(--site-card)] px-8 py-6">
+              <div>
+                <span className="inline-block bg-[var(--site-gold)] px-2.5 py-1 font-mono text-xs font-black uppercase tracking-[0.12em] text-[var(--site-bg)]">
+                  {project.sector}
+                </span>
+                <Dialog.Title className="mt-4 text-[clamp(1.375rem,2.5vw,1.875rem)] font-black uppercase leading-tight text-[var(--site-text)]">
+                  {project.title}
+                </Dialog.Title>
+                <p className="mt-2 font-mono text-xs uppercase tracking-[0.14em] text-[var(--site-muted)]">
+                  {project.sectorLabel} &middot; {project.date}
+                </p>
+              </div>
+              <Dialog.Close
+                aria-label="Close project"
+                className="shrink-0 border border-[var(--site-text)]/20 p-2 text-[var(--site-muted)] transition hover:border-[var(--site-gold)] hover:text-[var(--site-gold)]"
+              >
+                <X size={18} />
+              </Dialog.Close>
+            </div>
+
+            <div className="px-8 py-7">
+              <Dialog.Description className="text-base leading-8 text-[var(--site-muted)]">
+                {project.summary}
+              </Dialog.Description>
+
+              <div className="mt-7 flex flex-wrap gap-2">
+                {project.scope.map((item) => (
+                  <span
+                    key={item}
+                    className="border border-[var(--site-gold)]/25 px-3 py-1.5 font-mono text-xs uppercase tracking-[0.1em] text-[var(--site-gold)]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-8 border-t border-[var(--site-text)]/10 pt-7">
+                <h4 className="font-mono text-xs font-black uppercase tracking-[0.16em] text-[var(--site-gold)]">
+                  Scale &amp; Highlights
+                </h4>
+                <ul className="mt-4 space-y-3">
+                  {project.highlights.map((item) => (
+                    <li key={item} className="flex gap-3 text-base leading-7 text-[var(--site-text)]/85">
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 bg-[var(--site-gold)]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-8 space-y-5 border-t border-[var(--site-text)]/10 pt-7">
+                {project.body.map((para) => (
+                  <p key={para.slice(0, 48)} className="text-base leading-8 text-[var(--site-muted)]">
+                    {para}
+                  </p>
+                ))}
+              </div>
+
+              <Link
+                href={`/reference-projects/${project.slug}`}
+                className="mt-9 inline-flex items-center gap-2 bg-[var(--site-gold)] px-7 py-3.5 text-sm font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]"
+              >
+                Open Full Write-Up <ArrowRight size={16} />
+              </Link>
+            </div>
+          </>
+        )}
+      </Dialog.Content>
+    </Dialog.Root>
+  );
+}
+
+function ReferenceProjects() {
+  const [openSlug, setOpenSlug] = useState<string | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const active = referenceProjects.find((project) => project.slug === openSlug) ?? null;
+
+  return (
+    <section id="reference-projects" className="relative bg-[var(--site-bg)] py-24">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(201,168,76,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(201,168,76,0.03)_1px,transparent_1px)] bg-[length:48px_48px]" />
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="max-w-3xl">
+          <SectionLabel>Reference Projects</SectionLabel>
+          <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">
+            Delivered Programmes,{" "}
+            <span className="text-[var(--site-gold)]">Documented</span>
+          </h2>
+          <p className="mt-6 text-base leading-8 text-[var(--site-muted)]">
+            Representative programmes from the India delivery record &mdash; sector, scope, and the scale each was executed at. Open any project to read the full write-up.
+          </p>
+        </div>
+
+        <div className="mt-14 grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-4">
+          {referenceProjects.map((project) => (
+            <button
+              key={project.slug}
+              type="button"
+              aria-haspopup="dialog"
+              onClick={(event) => {
+                triggerRef.current = event.currentTarget;
+                setOpenSlug(project.slug);
+              }}
+              className="group flex h-full flex-col bg-[var(--site-card)] p-7 text-left transition hover:bg-[var(--site-card-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[var(--site-gold)]"
+            >
+              <span className="self-start bg-[var(--site-gold)] px-2.5 py-1 font-mono text-xs font-black uppercase tracking-[0.12em] text-[var(--site-bg)]">
+                {project.sector}
+              </span>
+              <h3 className="mt-5 text-base font-black uppercase leading-tight text-[var(--site-text)] transition group-hover:text-[var(--site-gold)]">
+                {project.title}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-[var(--site-muted)]">{project.summary}</p>
+              <span className="mt-auto inline-flex items-center gap-2 pt-6 font-mono text-xs font-black uppercase tracking-[0.12em] text-[var(--site-gold)]">
+                View Project <ArrowRight size={14} />
+              </span>
+            </button>
+          ))}
+        </div>
+
+        <Link
+          href="/reference-projects"
+          className="mt-10 inline-flex items-center gap-2 border border-[var(--site-text)]/25 px-7 py-3.5 text-sm font-black uppercase tracking-[0.1em] text-[var(--site-text)] transition hover:border-[var(--site-gold)] hover:text-[var(--site-gold)]"
+        >
+          All Reference Projects <ArrowRight size={16} />
+        </Link>
+      </div>
+
+      <ReferenceProjectDialog project={active} onClose={() => setOpenSlug(null)} triggerRef={triggerRef} />
     </section>
   );
 }
@@ -1022,7 +1161,7 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
   return (
     <section id="contact" className="relative overflow-hidden bg-[var(--site-bg-deep)] pt-28">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(201,168,76,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(201,168,76,0.03)_1px,transparent_1px)] bg-[length:48px_48px]" />
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 pb-24 sm:px-8">
         <div className="mx-auto mb-20 max-w-4xl text-center">
           <div className="mb-6 flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-[var(--site-gold)]" />
@@ -1039,7 +1178,7 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
           <ContactForm />
         </div>
 
-        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-6">
+        <div className="grid gap-px bg-[var(--site-divider)] [&>*]:[box-shadow:0_0_12px_-1px_var(--site-divider-glow)] sm:grid-cols-2 lg:grid-cols-4">
           {/*
             CONTACT DETAILS PENDING (Website Brief, s.3):
             - Email: the common email ID must be confirmed with Ramesh/Kumar before publishing.
@@ -1051,14 +1190,11 @@ function FinalCTA({ themeMode }: { themeMode: ThemeMode }) {
             { icon: MapPin, label: "Head Office", value: "Dubai International Financial Centre, Dubai, UAE", sub: "Unit IH-00-01-02-OF-01, Level 2, H-00-01-CP-05" },
             { icon: Phone, label: "Phone", value: "+971 505951062", sub: "Direct line for enterprise enquiries" },
             { icon: Mail, label: "Email", value: "Info.ai@enseigner.in", sub: "Enterprise enquiries" },
-            { icon: Users, label: "Founder & MD", value: "Abubucker Mansoor Mohamed", sub: "Infrastructure-led. AI-enabled. GCC-focused, India-proven." },
             { icon: MonitorDot, label: "Website", value: "www.enseigner.ai", sub: "Engineers the Systems of the World" },
-          ].map((contact, i) => {
+          ].map((contact) => {
             const Icon = contact.icon;
-            const lgSpan = i < 3 ? "lg:col-span-2" : "lg:col-span-3";
-            const smSpan = i === 4 ? "sm:col-span-2" : "";
             return (
-              <div key={contact.label} className={`flex gap-4 bg-[var(--site-card)] p-8 ${smSpan} ${lgSpan}`}>
+              <div key={contact.label} className="flex gap-4 bg-[var(--site-card)] p-8">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-[var(--site-gold)]/25 text-[var(--site-gold)]">
                   <Icon size={18} strokeWidth={1.5} />
                 </span>
@@ -1116,6 +1252,7 @@ export default function EnseignerCorporateSite() {
       <GpuInfrastructure />
       <Industries />
       <TrackRecordStrip />
+      <ReferenceProjects />
       <OEMPartners />
       <FinalCTA themeMode={themeMode} />
     </main>
