@@ -10,7 +10,7 @@
   },
   "seo": {
     "title": "Enseigner — Engineers the Systems of the World",
-    "description": "Enseigner is an AI-enabled enterprise technology company delivering agentic AI, computer vision, Track 3D, hospital management, training services, and enterprise data centre and networking infrastructure across the GCC, built on a proven India delivery backbone.",
+    "description": "Enseigner is an AI-enabled enterprise technology company delivering agentic AI, computer vision, construction progress monitoring, hospital management, training services, and enterprise data centre and networking infrastructure across the GCC, built on a proven India delivery backbone.",
     "ogImage": "/enseigner-logo-transparent.png"
   },
   "nav": {
@@ -45,7 +45,7 @@
   "hero": {
     "topLabel": "ENGINEERS THE SYSTEMS OF THE WORLD",
     "headline": "Engineering the Intelligent Enterprise",
-    "subheadline": "Enseigner delivers AI services and agentic systems, computer vision, Track 3D, hospital management, training services, and the enterprise data centre and networking infrastructure underneath them for GCC enterprises.",
+    "subheadline": "Enseigner delivers AI services and agentic systems, computer vision, construction progress monitoring, hospital management, training services, and the enterprise data centre and networking infrastructure underneath them for GCC enterprises.",
     "primaryCta": {
       "label": "Contact Enseigner",
       "href": "/contact"
@@ -139,8 +139,8 @@
         "desc": "AI-powered operational visibility for workforce management, site monitoring, retail intelligence, and anomaly detection, processed on-premise within the client environment."
       },
       {
-        "title": "Track 3D",
-        "desc": "Real-time 3D tracking and spatial visualisation for enterprise sites - asset, vehicle, and personnel movement rendered against a live model of the facility."
+        "title": "Construction Progress Monitoring",
+        "desc": "Construction and infrastructure progress tracked against plan - periodic site capture turned into objective progress, deviation, and delay reporting for project stakeholders."
       },
       {
         "title": "Hospital Management",
@@ -249,7 +249,7 @@
   "contact": {
     "id": "contact",
     "title": "Get in Touch",
-    "subtitle": "Talk to Enseigner about AI services, agentic AI, computer vision, Track 3D, hospital management, training, and enterprise data centre and networking infrastructure.",
+    "subtitle": "Talk to Enseigner about AI services, agentic AI, computer vision, construction progress monitoring, hospital management, training, and enterprise data centre and networking infrastructure.",
     "fields": [
       "Name",
       "Work Email",
@@ -290,8 +290,8 @@
         "description": "AI-powered operational visibility across workforce management, site monitoring, retail intelligence, and anomaly detection."
       },
       {
-        "title": "Track 3D",
-        "description": "Real-time 3D tracking and spatial visualisation of assets, vehicles, and personnel across enterprise sites."
+        "title": "Construction Progress Monitoring",
+        "description": "Site progress tracked against plan, with objective progress, deviation, and delay reporting for construction and infrastructure projects."
       },
       {
         "title": "Hospital Management",
