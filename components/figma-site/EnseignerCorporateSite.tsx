@@ -6,7 +6,6 @@ import {
   ArrowRight,
   BarChart3,
   Bot,
-  Boxes,
   Building2,
   Cable,
   Cpu,
