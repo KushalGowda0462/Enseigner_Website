@@ -32,6 +32,7 @@ import {
   X,
   Zap,
   Eye,
+  HardHat,
 } from "lucide-react";
 import * as Dialog from "@radix-ui/react-dialog";
 import Image from "next/image";
@@ -104,7 +105,7 @@ const strategicPillars = [
 
 // CORE OFFERINGS — the five blocks a GCC visitor should see first (Website Brief, s.4).
 // `featured: true` marks the three to lead with: AI Services, Computer Vision, Agentic AI.
-// COPY PENDING: final wording for the featured three, plus Track 3D and Hospital Management,
+// COPY PENDING: final wording for the featured three, plus Construction Progress Monitoring and Hospital Management,
 // is being supplied by the Enseigner team. Descriptions below are drafts — do not treat as locked.
 const coreOfferings = [
   {
@@ -124,11 +125,11 @@ const coreOfferings = [
     featured: true,
   },
   {
-    icon: Boxes,
+    icon: HardHat,
     code: "PRD-01",
-    title: "Track 3D",
-    desc: "Real-time 3D tracking and spatial visualisation for enterprise sites — asset, vehicle, and personnel movement rendered against a live model of the facility.",
-    tags: ["3D Tracking", "Spatial Analytics", "Site Visibility"],
+    title: "Construction Progress Monitoring",
+    desc: "Construction and infrastructure progress tracked against plan — periodic site capture turned into objective progress, deviation, and delay reporting for project stakeholders.",
+    tags: ["Progress Tracking", "Site Capture", "Deviation Reporting"],
     featured: false,
   },
   {
@@ -398,7 +399,7 @@ function HeroSection() {
           </h1>
           <div className="my-7 h-0.5 w-20 bg-[linear-gradient(to_right,var(--site-gold),transparent)]" />
           <p className="max-w-xl text-lg leading-8 text-[var(--site-muted)]">
-            AI Services & Agentic AI · Computer Vision · Track 3D · Hospital Management · Enterprise Data Centre & Infrastructure · Training Services.
+            AI Services & Agentic AI · Computer Vision · Construction Progress Monitoring · Hospital Management · Enterprise Data Centre & Infrastructure · Training Services.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a href="#capabilities" className="inline-flex items-center gap-2 bg-[var(--site-gold)] px-8 py-4 text-base font-black uppercase tracking-[0.1em] text-[var(--site-bg)] transition hover:bg-[var(--site-gold-hover)]">
@@ -525,7 +526,7 @@ function Capabilities() {
           <SectionLabel>Core Offerings</SectionLabel>
           <h2 className="text-[clamp(2rem,4vw,3rem)] font-black uppercase leading-none text-[var(--site-text)]">What We Do</h2>
           <p className="mt-4 max-w-xl text-base leading-7 text-[var(--site-muted)]">
-            Five core offerings — AI services and agentic systems, computer vision, Track 3D, hospital management, and training — built on an enterprise infrastructure foundation.
+            Five core offerings — AI services and agentic systems, computer vision, construction progress monitoring, hospital management, and training — built on an enterprise infrastructure foundation.
           </p>
         </div>
 

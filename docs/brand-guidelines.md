@@ -31,7 +31,7 @@ The brand now leads with five core offerings:
 
 1. AI Services & Agentic AI (includes the chatbot)
 2. Computer Vision — positioned under AI / Intelligent Operations, **never** under security
-3. Track 3D
+3. Construction Progress Monitoring
 4. Hospital Management
 5. Training Services (formerly "AMC" — the block was reworded, not removed)
 
@@ -280,7 +280,7 @@ Minimum clear space on all sides = the cap height of the wordmark.
 
 ### Approved Vocabulary
 
-Agentic AI · AI Services · Computer Vision · Track 3D · Hospital Management ·
+Agentic AI · AI Services · Computer Vision · Construction Progress Monitoring · Hospital Management ·
 Training Services · Enterprise Data Centre · Managed Services · Structured Cabling ·
 Intelligent Operations · On-premise · Data residency · Delivery lifecycle · GCC
 
@@ -413,7 +413,7 @@ Per the Website Brief, these are **not** locked. Do not fill them in by inferenc
 | Item | Owner | Status |
 |------|-------|--------|
 | Final wording for the three featured offerings | Enseigner team | Draft copy in place, marked `COPY PENDING` |
-| Track 3D / Hospital Management copy | Enseigner team | Draft copy in place |
+| Construction Progress Monitoring / Hospital Management copy | Enseigner team | Draft copy in place |
 | Whether Hospital Management stays in the core five | Enseigner team | In, unless told otherwise |
 | Public email address | Ramesh / Kumar | Existing `.in` address retained |
 | Dubai phone number (Imran's direct vs Vijay's) | Enseigner team | Existing number retained |
